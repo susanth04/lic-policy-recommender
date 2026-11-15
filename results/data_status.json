@@ -1,6 +1,6 @@
 {
   "mode": "smoke_test_only",
-  "catalogue_rows_exported": 20,
+  "catalogue_rows_exported": 47,
   "synthetic_queries_exported": 18,
   "query_groups": 18,
   "human_label_source": null,

@@ -11,6 +11,8 @@ The workflow is a sequence of Colab-compatible notebooks with file-based handoff
 
 Notebooks exchange files through `artifacts/` and `results/`; they do not depend on in-memory state from another notebook. The catalogue CSV preserves the source verification wording as `claimed_verification`; all exported catalogue records have `verified=False`.
 
+Additional plan identifiers and source notes supplied by the user are maintained in `data/policy_additions.csv`. Missing product facts, especially statutory age and term bounds, remain blank; those records have `unknown` eligibility and are excluded from recommendations until their limits are verified and supplied.
+
 ## Reproduce and test
 
 Run `make reproduce` to execute notebooks 01–04 in order, or run each notebook in Colab. Use `make test` for the smoke tests. On Windows, set the Python launcher explicitly if needed, for example `make reproduce PYTHON="py -3.11"`.

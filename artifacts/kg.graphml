@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d10" for="edge" attr.name="relation" attr.type="string"/>
-<key id="d9" for="node" attr.name="value" attr.type="string"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d15" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d14" for="node" attr.name="max_term" attr.type="string"/>
+<key id="d13" for="node" attr.name="min_term" attr.type="string"/>
+<key id="d12" for="node" attr.name="max_age" attr.type="string"/>
+<key id="d11" for="node" attr.name="min_age" attr.type="string"/>
+<key id="d10" for="node" attr.name="value" attr.type="string"/>
+<key id="d9" for="node" attr.name="source_note" attr.type="string"/>
 <key id="d8" for="node" attr.name="source_url" attr.type="string"/>
 <key id="d7" for="node" attr.name="claimed_verification" attr.type="string"/>
 <key id="d6" for="node" attr.name="verified" attr.type="boolean"/>
@@ -20,22 +25,23 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-labh-plan-no.-936-uin-512n304v02</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Savings">
   <data key="d0">Goal</data>
-  <data key="d9">Savings</data>
+  <data key="d10">Savings</data>
 </node>
 <node id="Category:Endowment">
   <data key="d0">Category</data>
-  <data key="d9">Endowment</data>
+  <data key="d10">Endowment</data>
 </node>
 <node id="Risk:Low">
   <data key="d0">Risk</data>
-  <data key="d9">Low</data>
+  <data key="d10">Low</data>
 </node>
 <node id="Premium:Moderate">
   <data key="d0">Premium</data>
-  <data key="d9">Moderate</data>
+  <data key="d10">Moderate</data>
 </node>
 <node id="LIC_945">
   <data key="d0">Policy</data>
@@ -47,14 +53,15 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-umang-plan-no.-945-uin-512n312v02</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Retirement">
   <data key="d0">Goal</data>
-  <data key="d9">Retirement</data>
+  <data key="d10">Retirement</data>
 </node>
 <node id="Category:Whole Life">
   <data key="d0">Category</data>
-  <data key="d9">Whole Life</data>
+  <data key="d10">Whole Life</data>
 </node>
 <node id="LIC_871">
   <data key="d0">Policy</data>
@@ -66,14 +73,15 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-utsav-plan-no-871-uin-512n363v01</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Income">
   <data key="d0">Goal</data>
-  <data key="d9">Income</data>
+  <data key="d10">Income</data>
 </node>
 <node id="Premium:High">
   <data key="d0">Premium</data>
-  <data key="d9">High</data>
+  <data key="d10">High</data>
 </node>
 <node id="LIC_854">
   <data key="d0">Policy</data>
@@ -85,18 +93,19 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-tech-term-plan-no.-854-uin-512n333v01</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Life Cover">
   <data key="d0">Goal</data>
-  <data key="d9">Life Cover</data>
+  <data key="d10">Life Cover</data>
 </node>
 <node id="Category:Term Assurance">
   <data key="d0">Category</data>
-  <data key="d9">Term Assurance</data>
+  <data key="d10">Term Assurance</data>
 </node>
 <node id="Premium:Low">
   <data key="d0">Premium</data>
-  <data key="d9">Low</data>
+  <data key="d10">Low</data>
 </node>
 <node id="LIC_859">
   <data key="d0">Policy</data>
@@ -108,6 +117,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-saral-jeevan-bima-plan-no.-859-uin-512n341v01</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_858">
   <data key="d0">Policy</data>
@@ -119,10 +129,11 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-new-jeevan-shanti-plan-no.-858-uin-512n338v04</data>
+  <data key="d9"></data>
 </node>
 <node id="Category:Pension">
   <data key="d0">Category</data>
-  <data key="d9">Pension</data>
+  <data key="d10">Pension</data>
 </node>
 <node id="LIC_857">
   <data key="d0">Policy</data>
@@ -134,6 +145,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-akshay-vii-plan-no.-857-uin-512n337v04</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_934">
   <data key="d0">Policy</data>
@@ -145,14 +157,15 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-tarun-plan-no.-934-uin-512n299v02</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Child Education">
   <data key="d0">Goal</data>
-  <data key="d9">Child Education</data>
+  <data key="d10">Child Education</data>
 </node>
 <node id="Category:Child Plan">
   <data key="d0">Category</data>
-  <data key="d9">Child Plan</data>
+  <data key="d10">Child Plan</data>
 </node>
 <node id="LIC_933">
   <data key="d0">Policy</data>
@@ -164,6 +177,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-jeevan-lakshya-plan-no.-933-uin-512n297v02</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_948">
   <data key="d0">Policy</data>
@@ -175,18 +189,19 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-bima-shree-plan-no.-948-uin-512n316v02</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Wealth Creation">
   <data key="d0">Goal</data>
-  <data key="d9">Wealth Creation</data>
+  <data key="d10">Wealth Creation</data>
 </node>
 <node id="Category:Money Back">
   <data key="d0">Category</data>
-  <data key="d9">Money Back</data>
+  <data key="d10">Money Back</data>
 </node>
 <node id="Risk:Moderate">
   <data key="d0">Risk</data>
-  <data key="d9">Moderate</data>
+  <data key="d10">Moderate</data>
 </node>
 <node id="LIC_863">
   <data key="d0">Policy</data>
@@ -198,6 +213,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-dhan-rekha-plan-no-863-uin-512n343v01</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_916">
   <data key="d0">Policy</data>
@@ -209,6 +225,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-new-bima-bachat-plan-no.-916-uin-512n284v02</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_932">
   <data key="d0">Policy</data>
@@ -220,6 +237,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-new-children-s-money-back-plan-plan-no.-932-uin-512n296v02</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_852">
   <data key="d0">Policy</data>
@@ -231,14 +249,15 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-siip-plan-no.-852-uin-512l334v01</data>
+  <data key="d9"></data>
 </node>
 <node id="Category:ULIP">
   <data key="d0">Category</data>
-  <data key="d9">ULIP</data>
+  <data key="d10">ULIP</data>
 </node>
 <node id="Risk:High">
   <data key="d0">Risk</data>
-  <data key="d9">High</data>
+  <data key="d10">High</data>
 </node>
 <node id="LIC_849">
   <data key="d0">Policy</data>
@@ -250,6 +269,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-nivesh-plus-plan-no.-849-uin-512l335v01</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_905">
   <data key="d0">Policy</data>
@@ -261,14 +281,15 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-cancer-cover-plan-no.-905-uin-512n314v01</data>
+  <data key="d9"></data>
 </node>
 <node id="Goal:Health Protection">
   <data key="d0">Goal</data>
-  <data key="d9">Health Protection</data>
+  <data key="d10">Health Protection</data>
 </node>
 <node id="Category:Health">
   <data key="d0">Category</data>
-  <data key="d9">Health</data>
+  <data key="d10">Health</data>
 </node>
 <node id="LIC_906">
   <data key="d0">Policy</data>
@@ -280,6 +301,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-arogya-sanjeevani-policy-plan-no.-906-uin-512n339v01</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_PMJJBY">
   <data key="d0">Policy</data>
@@ -291,10 +313,11 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official Government Scheme Rules</data>
   <data key="d8">https://licindia.in/pradhan-mantri-jeevan-jyoti-bima-yojana</data>
+  <data key="d9"></data>
 </node>
 <node id="Category:Micro Insurance">
   <data key="d0">Category</data>
-  <data key="d9">Micro Insurance</data>
+  <data key="d10">Micro Insurance</data>
 </node>
 <node id="LIC_951">
   <data key="d0">Policy</data>
@@ -306,6 +329,7 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-micro-bachat-plan-no.-951-uin-512n329v02</data>
+  <data key="d9"></data>
 </node>
 <node id="LIC_939">
   <data key="d0">Policy</data>
@@ -317,245 +341,570 @@
   <data key="d6">False</data>
   <data key="d7">Verified against Official LIC Public Disclosure</data>
   <data key="d8">https://licindia.in/lic-s-bhagya-lakshmi-plan-no.-939-uin-512n292v02</data>
+  <data key="d9"></data>
+</node>
+<node id="LIC_770">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Platinum</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release; on sale from 7 Sep 2026</data>
+</node>
+<node id="LIC_894">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Raksha</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release; on sale from 7 Sep 2026</data>
+</node>
+<node id="LIC_892">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Dhara-II</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">On sale from 19 Oct 2026</data>
+</node>
+<node id="LIC_907">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Health Shield</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">On sale from 19 Oct 2026</data>
+</node>
+<node id="LIC_908">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Cancer Cover</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">On sale from 19 Oct 2026</data>
+</node>
+<node id="LIC_888">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Sathi, Single Premium</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">On sale from 1 Jun 2026</data>
+</node>
+<node id="LIC_889">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Sathi, Limited Premium</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">On sale from 1 Jun 2026</data>
+</node>
+<node id="LIC_883">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Utsav Single Premium</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Jan 2026</data>
+</node>
+<node id="LIC_886">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Protection Plus</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Dec 2025</data>
+</node>
+<node id="LIC_887">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Kavach</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Dec 2025</data>
+</node>
+<node id="LIC_912">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Nav Jeevan Shree</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Jul 2025</data>
+</node>
+<node id="LIC_911">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Nav Jeevan Shree Single Premium</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Jul 2025</data>
+</node>
+<node id="LIC_875">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Term</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Aug 2024</data>
+</node>
+<node id="LIC_876">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Digi Term</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Aug 2024</data>
+</node>
+<node id="LIC_877">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Credit Life</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Aug 2024</data>
+</node>
+<node id="LIC_878">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Digi Credit Life</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Aug 2024</data>
+</node>
+<node id="LIC_873">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Index Plus</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Feb 2024</data>
+</node>
+<node id="LIC_872">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Dhara II</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Press release, Jan 2024</data>
+</node>
+<node id="LIC_860">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Jyoti</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_864">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Ratna</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_865">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Dhan Sanchay</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_866">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Dhan Varsha</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_914">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Endowment Plan</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_915">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Anand</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_868">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Azad</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_870">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Kiran</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">LIC sitemap</data>
+</node>
+<node id="LIC_SMART_PENSION">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Smart Pension</data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d6">False</data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9">Pension &amp; group schemes page</data>
 </node>
 <edge source="LIC_936" target="Goal:Savings">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_936" target="Category:Endowment">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_936" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_936" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_945" target="Goal:Retirement">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_945" target="Category:Whole Life">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_945" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_945" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_871" target="Goal:Income">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_871" target="Category:Whole Life">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_871" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_871" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_854" target="Goal:Life Cover">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_854" target="Category:Term Assurance">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_854" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_854" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_859" target="Goal:Life Cover">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_859" target="Category:Term Assurance">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_859" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_859" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_858" target="Goal:Retirement">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_858" target="Category:Pension">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_858" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_858" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_857" target="Goal:Retirement">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_857" target="Category:Pension">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_857" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_857" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_934" target="Goal:Child Education">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_934" target="Category:Child Plan">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_934" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_934" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_933" target="Goal:Child Education">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_933" target="Category:Endowment">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_933" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_933" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_948" target="Goal:Wealth Creation">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_948" target="Category:Money Back">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_948" target="Risk:Moderate">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_948" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_863" target="Goal:Savings">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_863" target="Category:Money Back">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_863" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_863" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_916" target="Goal:Savings">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_916" target="Category:Money Back">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_916" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_916" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_932" target="Goal:Child Education">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_932" target="Category:Child Plan">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_932" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_932" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_852" target="Goal:Wealth Creation">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_852" target="Category:ULIP">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_852" target="Risk:High">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_852" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_849" target="Goal:Wealth Creation">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_849" target="Category:ULIP">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_849" target="Risk:High">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_849" target="Premium:High">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_905" target="Goal:Health Protection">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_905" target="Category:Health">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_905" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_905" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_906" target="Goal:Health Protection">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_906" target="Category:Health">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_906" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_906" target="Premium:Moderate">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_PMJJBY" target="Goal:Life Cover">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_PMJJBY" target="Category:Micro Insurance">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_PMJJBY" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_PMJJBY" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_951" target="Goal:Savings">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_951" target="Category:Micro Insurance">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_951" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_951" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 <edge source="LIC_939" target="Goal:Life Cover">
-  <data key="d10">HAS_GOAL</data>
+  <data key="d15">HAS_GOAL</data>
 </edge>
 <edge source="LIC_939" target="Category:Micro Insurance">
-  <data key="d10">IN_CATEGORY</data>
+  <data key="d15">IN_CATEGORY</data>
 </edge>
 <edge source="LIC_939" target="Risk:Low">
-  <data key="d10">SUITS_RISK</data>
+  <data key="d15">SUITS_RISK</data>
 </edge>
 <edge source="LIC_939" target="Premium:Low">
-  <data key="d10">HAS_PREMIUM</data>
+  <data key="d15">HAS_PREMIUM</data>
 </edge>
 </graph></graphml>

@@ -31,6 +31,23 @@ def test_entry_age_and_term_boundaries_are_hard_gates(notebook_state):
     assert gate(policy, {"customer_age": int(policy["min_age"]), "term": int(policy["max_term"]) + 1})["status"] == "ineligible"
 
 
+def test_added_policies_with_unknown_limits_are_not_eligible(notebook_state):
+    gate = notebook_state["eligibility"]
+    added = notebook_state["policies_df"].loc[
+        notebook_state["policies_df"]["source_note"].fillna("").ne("")
+    ]
+
+    assert len(added) == 27
+    assert all(
+        gate(row, {"customer_age": 40, "term": None})["status"] == "unknown"
+        for row in added.to_dict(orient="records")
+    )
+    assert all(
+        gate(row, {"customer_age": 40, "term": 20})["status"] == "unknown"
+        for row in added.to_dict(orient="records")
+    )
+
+
 def test_unknown_age_and_age_95_never_produce_recommendations(notebook_state):
     result = notebook_state["recommend"]
 
@@ -55,5 +72,5 @@ def test_graphml_keeps_every_policy_unverified():
     graph = nx.read_graphml(ROOT / "artifacts" / "kg.graphml")
     policy_nodes = [attrs for _, attrs in graph.nodes(data=True) if attrs.get("type") == "Policy"]
 
-    assert len(policy_nodes) == 20
+    assert len(policy_nodes) == 47
     assert all(attrs.get("verified") in (False, "False") for attrs in policy_nodes)

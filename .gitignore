@@ -1,5 +1,6 @@
 __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
-artifacts/model/
+artifacts/model/*
+!artifacts/model/manifest.json
 artifacts/embeddings/

@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "train_group_count": 10,
+  "validation_group_count": 4,
+  "test_group_count": 4,
+  "policy_held_out_count": 4,
+  "policy_training_count": 16,
+  "base_encoder": "all-MiniLM-L6-v2",
+  "fine_tuning_loss": "MultipleNegativesRankingLoss",
+  "cache_directory": "artifacts/model",
+  "experiment_results": {
+    "mode": "smoke_test_only",
+    "status": "SKIPPED_NO_HUMAN_GRADED_LABELS",
+    "human_graded_rows": 0,
+    "positive_training_examples": 0,
+    "trained_on_synthetic_labels": false,
+    "model_load_included_in_latency": null,
+    "experiments": {},
+    "reason": "The provided CSV is a blank template; no relevance grades are available for MNRL training or evaluation."
+  }
+}

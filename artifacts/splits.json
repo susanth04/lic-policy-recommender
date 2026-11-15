@@ -1,0 +1,83 @@
+{
+  "seed": 42,
+  "group_split": {
+    "groups": {
+      "train": [
+        "SYN_Q_014",
+        "SYN_Q_013",
+        "SYN_Q_005",
+        "SYN_Q_010",
+        "SYN_Q_006",
+        "SYN_Q_008",
+        "SYN_Q_017",
+        "SYN_Q_007",
+        "SYN_Q_011",
+        "SYN_Q_016"
+      ],
+      "validation": [
+        "SYN_Q_002",
+        "SYN_Q_012",
+        "SYN_Q_003",
+        "SYN_Q_015"
+      ],
+      "test": [
+        "SYN_Q_018",
+        "SYN_Q_009",
+        "SYN_Q_001",
+        "SYN_Q_004"
+      ]
+    },
+    "query_ids": {
+      "train": [
+        "SYN_Q_005",
+        "SYN_Q_006",
+        "SYN_Q_007",
+        "SYN_Q_008",
+        "SYN_Q_010",
+        "SYN_Q_011",
+        "SYN_Q_013",
+        "SYN_Q_014",
+        "SYN_Q_016",
+        "SYN_Q_017"
+      ],
+      "validation": [
+        "SYN_Q_002",
+        "SYN_Q_003",
+        "SYN_Q_012",
+        "SYN_Q_015"
+      ],
+      "test": [
+        "SYN_Q_001",
+        "SYN_Q_004",
+        "SYN_Q_009",
+        "SYN_Q_018"
+      ]
+    }
+  },
+  "policy_held_out": {
+    "training_policy_ids": [
+      "LIC_849",
+      "LIC_852",
+      "LIC_857",
+      "LIC_858",
+      "LIC_863",
+      "LIC_871",
+      "LIC_906",
+      "LIC_916",
+      "LIC_932",
+      "LIC_933",
+      "LIC_936",
+      "LIC_939",
+      "LIC_945",
+      "LIC_948",
+      "LIC_951",
+      "LIC_PMJJBY"
+    ],
+    "held_out_policy_ids": [
+      "LIC_854",
+      "LIC_859",
+      "LIC_905",
+      "LIC_934"
+    ]
+  }
+}

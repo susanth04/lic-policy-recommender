@@ -1,0 +1,18 @@
+{
+  "mode": "smoke_test_only",
+  "status": "SKIPPED_NO_HUMAN_GRADED_LABELS",
+  "selected_alpha": null,
+  "selected_beta": null,
+  "selected_kg_preference_weights": null,
+  "sweep": null,
+  "reason": "Alpha, beta, and KG preference weights require real training/validation relevance grades; no synthetic-label tuning is permitted.",
+  "smoke_only_constants": {
+    "alpha": 0.5,
+    "beta": 0.5,
+    "kg_preference_weights": {
+      "goal": 0.3333333333333333,
+      "risk": 0.3333333333333333,
+      "premium": 0.3333333333333333
+    }
+  }
+}

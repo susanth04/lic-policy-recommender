@@ -1,0 +1,453 @@
+{
+  "mode": "SYNTHETIC_SMOKE_TEST",
+  "provenance": "SYNTHETIC",
+  "human_labels_used": false,
+  "train_customer_profiles": [
+    "Edge Cases & Contradictory Queries",
+    "Health Conscious Individual",
+    "Low Budget Micro Insurance Seeker"
+  ],
+  "validation_customer_profiles": [
+    "Parent Saving for Child",
+    "Young Salaried Professional"
+  ],
+  "test_customer_profiles": [
+    "Pre-Retiree / Senior Citizen"
+  ],
+  "test_metric_status": "NOT_EVALUABLE_NO_ELIGIBLE_RELEVANT_JUDGMENTS",
+  "test_results": {
+    "baseline": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 0.0
+      },
+      "tied_rank_fraction": 0.0,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        }
+      }
+    },
+    "fine_tuned": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 0.0
+      },
+      "tied_rank_fraction": 0.0,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        }
+      }
+    }
+  },
+  "ranker_results": {
+    "pipeline": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 0.0
+      },
+      "tied_rank_fraction": 0.0,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        }
+      }
+    },
+    "id_order": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 0.0
+      },
+      "tied_rank_fraction": 0.0,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        }
+      }
+    },
+    "bm25_only": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 1.0
+      },
+      "tied_rank_fraction": 1.0,
+      "all_equal_score_list_count": 3,
+      "all_equal_list_fraction": 1.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        }
+      }
+    }
+  },
+  "baselines": {
+    "id_order": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 0.0
+      },
+      "tied_rank_fraction": 0.0,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 0.0,
+          "all_equal_final_scores": false
+        }
+      }
+    },
+    "bm25_only": {
+      "n_queries": 3,
+      "eligible_relevant_judgments": 0,
+      "test_customer_profiles": [
+        "Pre-Retiree / Senior Citizen"
+      ],
+      "mean_metrics": {
+        "p_at_1": 0.0,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_4": 0.0,
+        "eligibility_violations": 0.0,
+        "tied_rank_fraction": 1.0
+      },
+      "tied_rank_fraction": 1.0,
+      "all_equal_score_list_count": 3,
+      "all_equal_list_fraction": 1.0,
+      "per_query": {
+        "SYN_Q_007": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 3,
+          "recommendation_count": 6,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        },
+        "SYN_Q_008": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 3,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        },
+        "SYN_Q_009": {
+          "p_at_1": 0.0,
+          "p_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "mrr": 0.0,
+          "ndcg_at_4": 0.0,
+          "eligible_relevant_judgments": 0,
+          "eligibility_violations": 0,
+          "judged_recommendations": 2,
+          "recommendation_count": 5,
+          "tied_rank_fraction": 1.0,
+          "all_equal_final_scores": true
+        }
+      }
+    }
+  },
+  "comparison": {
+    "p_at_1": 0.0,
+    "p_at_3": 0.0,
+    "recall_at_5": 0.0,
+    "mrr": 0.0,
+    "ndcg_at_4": 0.0
+  },
+  "eligibility_violations": 0,
+  "limitation": "A small synthetic label set is used only to exercise fine-tuning and evaluation code; no real-world relevance or KG benefit is claimed."
+}

@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import nbformat
+import pandas as pd
 import pytest
 
 
@@ -18,25 +19,53 @@ def retrieval_state():
     return state
 
 
-def test_smoke_ranking_is_eligible_monotone_and_not_tuned(retrieval_state):
+def test_synthetic_ranking_is_eligible_monotone_and_validation_tuned(retrieval_state):
     results = json.loads((ROOT / "results" / "retrieval_smoke.json").read_text(encoding="utf-8"))
     weights = json.loads((ROOT / "results" / "weights_smoke.json").read_text(encoding="utf-8"))
+    evaluation = json.loads((ROOT / "results" / "synthetic_smoke_evaluation.json").read_text(encoding="utf-8"))
 
     assert results["eligibility_violations"] == 0
     assert results["eligibility_violation_rate"] == 0.0
+    assert results["provenance"] == "SYNTHETIC"
     assert all(
         recommendation["eligibility"] == "eligible"
         and recommendation["score_kind"] == "ranking_score_not_probability"
         for row in results["queries"]
         for recommendation in row["recommendations"]
     )
-    assert weights["selected_alpha"] is None
-    assert weights["selected_beta"] is None
-    assert weights["selected_kg_preference_weights"] is None
-    assert weights["status"] == "SKIPPED_NO_HUMAN_GRADED_LABELS"
+    assert weights["status"] == "COMPLETED_SYNTHETIC_SMOKE_TEST"
+    assert 0 <= weights["selected_alpha"] <= 1
+    assert 0 <= weights["selected_beta"] <= 1
+    assert len(weights["sweep"]) == 441
+    assert weights["human_labels_used"] is False
+    for model_sweep in weights["models"].values():
+        assert model_sweep["selection_method"] in {
+            "SYNTHETIC_VALIDATION_SWEEP",
+            "UNTUNED_DOCUMENTED_DEFAULT",
+        }
+        for row in model_sweep["sweep"]:
+            if (
+                row["beta"] == 0
+                and row["scored_validation_list_count"] > 0
+                and row["all_equal_final_score_lists"]
+                == row["scored_validation_list_count"]
+            ):
+                assert row["informative"] is False
+                assert row["selection_note"] == "NON_INFORMATIVE_ALL_SCORES_TIED"
+    assert evaluation["provenance"] == "SYNTHETIC"
+    assert evaluation["test_metric_status"] == "NOT_EVALUABLE_NO_ELIGIBLE_RELEVANT_JUDGMENTS"
+    assert evaluation["test_results"]["fine_tuned"]["eligible_relevant_judgments"] == 0
+    assert set(evaluation["test_customer_profiles"]).isdisjoint(
+        evaluation["train_customer_profiles"]
+    )
+    assert set(evaluation["test_customer_profiles"]).isdisjoint(
+        evaluation["validation_customer_profiles"]
+    )
+    assert set(evaluation["test_results"]) == {"baseline", "fine_tuned"}
 
 
 def test_offline_fallbacks_and_repeatable_ranking(retrieval_state):
+    assert retrieval_state["minmax"]([0.0, 0.0]) == pytest.approx([0.5, 0.5])
     fallback = retrieval_state["backend_plan"](False, False, False, False)
     assert fallback["vector"] == "numpy_exact"
     assert fallback["encoder"] == "tfidf_fallback"
@@ -53,3 +82,101 @@ def test_offline_fallbacks_and_repeatable_ranking(retrieval_state):
     assert first_ids == second_ids
     scores = [record["final_ranking_score"] for record in first["recommendations"]]
     assert all(left >= right for left, right in zip(scores, scores[1:]))
+    assert all(score > 0.0 for score in scores)
+
+
+def test_score_ties_use_dense_then_bm25_then_cross_encoder(retrieval_state):
+    order = retrieval_state["rank_order"](
+        ["LIC_2", "LIC_1"],
+        [0.5, 0.5],
+        [0.2, 0.9],
+        [0.9, 0.1],
+        [0.9, 0.1],
+    )
+    assert order == [1, 0]
+
+    order = retrieval_state["rank_order"](
+        ["LIC_2", "LIC_1"],
+        [0.5, 0.5],
+        [0.9, 0.9],
+        [0.1, 0.1],
+        [0.2, 0.8],
+    )
+    assert order == [1, 0]
+
+
+def test_tied_rank_metrics_and_collapse_guard(retrieval_state):
+    rank_list = lambda scores: {
+        "recommendations": [
+            {"final_ranking_score": score} for score in scores
+        ]
+    }
+
+    metrics = retrieval_state["summarize_rank_ties"](
+        [rank_list([0.5, 0.5]), rank_list([0.9, 0.4])]
+    )
+    assert metrics["tied_rank_fraction"] == pytest.approx(0.5)
+    assert metrics["all_equal_list_fraction"] == pytest.approx(0.5)
+    with pytest.raises(RuntimeError, match="20%"):
+        retrieval_state["assert_tie_collapse_limit"](
+            [rank_list([1, 1]), rank_list([1, 1]), rank_list([1, 2]), rank_list([1, 2]), rank_list([1, 2])]
+        )
+
+
+def test_ranker_baselines_are_label_free(retrieval_state):
+    query = retrieval_state["queries_df"].iloc[0]
+    intent = retrieval_state["intents"][query.query_id]["intent"]
+    id_order = retrieval_state["rank_query"](
+        query.raw_query, intent, query_id=query.query_id, ranker="id_order"
+    )
+    bm25_only = retrieval_state["rank_query"](
+        query.raw_query, intent, query_id=query.query_id, ranker="bm25_only"
+    )
+
+    assert [row["policy_id"] for row in id_order["recommendations"]] == sorted(
+        row["policy_id"] for row in id_order["recommendations"]
+    )
+    assert len({row["final_ranking_score"] for row in id_order["recommendations"]}) == len(
+        id_order["recommendations"]
+    )
+    bm25_scores = [row["final_ranking_score"] for row in bm25_only["recommendations"]]
+    assert all(left >= right for left, right in zip(bm25_scores, bm25_scores[1:]))
+
+
+def test_corrected_catalogue_hard_gates_apply_before_ranking(retrieval_state):
+    gate = retrieval_state["eligibility_status"]
+    policies = retrieval_state["policy_by_id"]
+
+    assert gate(policies["LIC_911"], {"customer_age": 40, "term": 20}) == "ineligible"
+    assert gate(policies["LIC_873"], {"customer_age": 40, "term": 20}) == "unknown"
+    assert gate(policies["LIC_887"], {"customer_age": 65, "term": 35}) == "eligible"
+    assert gate(policies["LIC_879"], {"customer_age": 95, "term": None}) == "unknown"
+    age_95 = retrieval_state["rank_query"](
+        "age 95", {"customer_age": 95, "term": None, "all_goals": []}
+    )
+    assert age_95["status"] == "NO_ELIGIBLE_POLICIES"
+    assert age_95["recommendations"] == []
+
+
+def test_human_evaluation_is_separate_and_eligibility_filtered():
+    evaluation = json.loads(
+        (ROOT / "results" / "human_evaluation.json").read_text(encoding="utf-8")
+    )
+    candidates = pd.read_csv(ROOT / "results" / "human_evaluation_candidates.csv")
+
+    assert evaluation["provenance"] == "HUMAN_REVIEWED_BY_USER"
+    assert evaluation["query_provenance"] == ["UNSPECIFIED"]
+    assert evaluation["training_labels_used"] is False
+    assert evaluation["human_labels_used_for_tuning"] is False
+    assert evaluation["eligibility_violations"] == 0
+    assert set(evaluation["non_evaluable_query_ids"]).issuperset(
+        evaluation["ungraded_query_ids"]
+    )
+    assert candidates["eligibility"].eq("eligible").all()
+    assert {"human_grade", "policy_id", "query_id"}.issubset(candidates.columns)
+    assert set(evaluation["ranker_results"]) == {"pipeline", "id_order", "bm25_only"}
+    assert set(evaluation["baselines"]) == {"id_order", "bm25_only"}
+    assert all(
+        0 <= result["tied_rank_fraction"] <= 1
+        for result in evaluation["ranker_results"].values()
+    )

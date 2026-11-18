@@ -123,6 +123,8 @@ Descriptions were checked against the linked official LIC brochures; their sourc
 
 `tools/policy_eligibility.py` is the canonical gate. It returns `eligible`, `ineligible`, or `unknown`, plus reasons. Retrieval in notebook 04 removes every policy that is not `eligible` before ranking.
 
+An `eligibility_violations: 0` result means only that the gate agreed with the parsed intent. Notebook 04 separately reruns the gate on returned policies using hand-corrected intents for the five parser regression queries; any ineligible returned policy fails the run. The detailed audit is `results/eligibility_corrected_intent_audit.json`.
+
 The gate:
 
 1. Rejects withdrawn plans; unresolved/out-of-pool plans remain unknown.

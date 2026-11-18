@@ -4,8 +4,12 @@
     "raw_query": "I am 26 years old looking for affordable pure term life cover for 30 years.",
     "intent": {
       "customer_age": 26,
+      "customer_age_days": null,
       "child_age": null,
-      "term": null,
+      "term": 30,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Life Cover"
@@ -23,8 +27,12 @@
     "raw_query": "I am a 28 year old software engineer and want high returns with equity market investment.",
     "intent": {
       "customer_age": 28,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Wealth Creation"
@@ -42,8 +50,12 @@
     "raw_query": "Looking for pure term life insurance with low premium at age 25.",
     "intent": {
       "customer_age": 25,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Life Cover"
@@ -61,8 +73,12 @@
     "raw_query": "I am 35 with a 4 year old daughter, looking for a savings plan for her higher education.",
     "intent": {
       "customer_age": 35,
+      "customer_age_days": null,
       "child_age": 4,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Child Education",
@@ -81,8 +97,12 @@
     "raw_query": "Need a child money back education plan for my 3 year old son.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": 3,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Child Education",
@@ -101,8 +121,12 @@
     "raw_query": "I am 38 years old and want an endowment policy to secure my child's future education.",
     "intent": {
       "customer_age": 38,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Child Education",
@@ -121,8 +145,12 @@
     "raw_query": "I am 58 years old retiring soon and need regular guaranteed pension income.",
     "intent": {
       "customer_age": 58,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Retirement",
@@ -141,8 +169,12 @@
     "raw_query": "Senior citizen aged 62 looking for an immediate annuity policy for retirement.",
     "intent": {
       "customer_age": 62,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Retirement"
@@ -160,8 +192,12 @@
     "raw_query": "I am 60 and want single premium pension with lifelong return of purchase price.",
     "intent": {
       "customer_age": 60,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Retirement"
@@ -179,8 +215,12 @@
     "raw_query": "I need very cheap government insurance with low premium under 500 rupees.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": {
         "amount": "500",
         "unit": "rupees"
@@ -199,8 +239,12 @@
     "raw_query": "Looking for a micro savings insurance plan with small premium payment at age 32.",
     "intent": {
       "customer_age": 32,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Savings"
@@ -218,8 +262,12 @@
     "raw_query": "Low budget life cover for daily wage earner with return of premium.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Life Cover"
@@ -237,8 +285,12 @@
     "raw_query": "Looking for dedicated cancer insurance cover with hospital cash benefit.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Health Protection"
@@ -256,8 +308,12 @@
     "raw_query": "I am 42 and need comprehensive health insurance covering medical treatments and ICU.",
     "intent": {
       "customer_age": 42,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Health Protection"
@@ -275,8 +331,12 @@
     "raw_query": "I want high returns with zero risk and guaranteed profit.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [
         "Savings",
@@ -297,8 +357,12 @@
     "raw_query": "I am 95 years old and want to buy a new life insurance policy.",
     "intent": {
       "customer_age": 95,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [],
       "primary_goal": null,
@@ -314,8 +378,12 @@
     "raw_query": "Looking for some kind of insurance policy.",
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [],
       "primary_goal": null,
@@ -331,8 +399,12 @@
     "raw_query": NaN,
     "intent": {
       "customer_age": null,
+      "customer_age_days": null,
       "child_age": null,
       "term": null,
+      "premium_paying_term": null,
+      "sum_assured": null,
+      "gender": null,
       "budget": null,
       "all_goals": [],
       "primary_goal": null,

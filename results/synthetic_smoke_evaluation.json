@@ -449,5 +449,11 @@
     "ndcg_at_4": 0.0
   },
   "eligibility_violations": 0,
+  "eligibility_violation_scope": "Agreement with parsed intents only; corrected-intent checks are reported separately.",
+  "corrected_intent_audit": {
+    "status": "PASSED",
+    "case_count": 5,
+    "ineligible_returned_policy_count": 0
+  },
   "limitation": "A small synthetic label set is used only to exercise fine-tuning and evaluation code; no real-world relevance or KG benefit is claimed."
 }

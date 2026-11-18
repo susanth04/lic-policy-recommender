@@ -188,6 +188,24 @@ def test_all_eligible_policies_are_ranked_before_display_truncation(retrieval_st
     assert eligible_count > result["display_cap"]
 
 
+def test_corrected_intent_audit_rechecks_every_returned_policy():
+    audit = json.loads(
+        (ROOT / "results" / "eligibility_corrected_intent_audit.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    assert audit["status"] == "PASSED"
+    assert audit["case_count"] == 5
+    assert audit["ineligible_returned_policy_count"] == 0
+    assert len(audit["cases"]) == 5
+    assert all(
+        case["returned_policy_count"] > 0
+        and not case["ineligible_returned_policy_ids"]
+        for case in audit["cases"]
+    )
+
+
 def test_corrected_catalogue_hard_gates_apply_before_ranking(retrieval_state):
     gate = retrieval_state["eligibility_status"]
     policies = retrieval_state["policy_by_id"]

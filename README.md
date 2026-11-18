@@ -15,6 +15,8 @@ Notebooks exchange files through `artifacts/` and `results/`; they do not depend
 
 Retrieval filters on the eligibility gate, ranks every eligible policy (at most 16), then displays up to eight. The result JSON reports eligible candidate counts and the number omitted from display.
 
+`eligibility_violations: 0` reports agreement with the parsed intent only. A separate corrected-intent audit rechecks returned policies against the five hand-corrected parser cases and fails if any are ineligible.
+
 `data/policies.csv` is the input used for current exports. Superseded catalogue snapshots and unused additions are preserved under `archive/`. Withdrawn products are ineligible, unresolved or unverified limits stay `unknown`. Brochure eligibility is merged from the root CSV; keep its verification flags and source notes current.
 
 Descriptions for verified policies are sourced from their linked LIC brochures, with page/section citations in `description_source_page_section`. Unsupported financial-goal, risk, and premium categories remain empty and do not contribute a KG score.

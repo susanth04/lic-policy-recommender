@@ -10,6 +10,12 @@
     "eligible_candidates_omitted_from_display": 45
   },
   "eligibility_violations": 0,
+  "eligibility_violation_scope": "Agreement with the parsed intent; see corrected-intent audit for hand-corrected intents.",
+  "corrected_intent_audit": {
+    "status": "PASSED",
+    "case_count": 5,
+    "ineligible_returned_policy_count": 0
+  },
   "eligibility_violation_rate": 0.0,
   "returned_recommendations_are_eligible": true,
   "tied_rank_fraction": 0.0,

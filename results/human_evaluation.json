@@ -37,6 +37,12 @@
     "HQ_059"
   ],
   "eligibility_violations": 0,
+  "eligibility_violation_scope": "Agreement with parsed intents only; corrected-intent checks are reported separately.",
+  "corrected_intent_audit": {
+    "status": "PASSED",
+    "case_count": 5,
+    "ineligible_returned_policy_count": 0
+  },
   "tied_rank_fraction": 0.0,
   "candidate_cap_effect": {
     "display_cap": 8,

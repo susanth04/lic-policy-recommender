@@ -143,6 +143,25 @@ def test_ranker_baselines_are_label_free(retrieval_state):
     assert all(left >= right for left, right in zip(bm25_scores, bm25_scores[1:]))
 
 
+def test_all_eligible_policies_are_ranked_before_display_truncation(retrieval_state):
+    intent = {"customer_age": 40, "term": None, "all_goals": []}
+    result = retrieval_state["rank_query"]("life cover", intent)
+    eligible_count = sum(
+        status == "eligible" for status in result["eligibility"].values()
+    )
+
+    assert result["eligible_candidate_count"] == eligible_count
+    assert len(result["ranked_policy_ids"]) == eligible_count
+    assert eligible_count <= 16
+    assert len(result["recommendations"]) == min(
+        eligible_count, result["display_cap"]
+    )
+    assert result["display_omitted_count"] == max(
+        0, eligible_count - result["display_cap"]
+    )
+    assert eligible_count > result["display_cap"]
+
+
 def test_corrected_catalogue_hard_gates_apply_before_ranking(retrieval_state):
     gate = retrieval_state["eligibility_status"]
     policies = retrieval_state["policy_by_id"]

@@ -38,6 +38,11 @@
   ],
   "eligibility_violations": 0,
   "tied_rank_fraction": 0.0,
+  "candidate_cap_effect": {
+    "display_cap": 8,
+    "eligible_candidates_ranked": 553,
+    "eligible_candidates_omitted_from_display": 160
+  },
   "ranker_results": {
     "pipeline": {
       "n_queries": 60,
@@ -45,17 +50,17 @@
       "mean_metrics": {
         "Child Marriage and Gift Planning": {
           "p_at_1": 0.8,
-          "p_at_3": 0.4666666666666666,
-          "recall_at_5": 0.35333333333333333,
-          "mrr": 0.8666666666666668,
-          "ndcg_at_4": 0.36117508242848856
+          "p_at_3": 0.4666666666666667,
+          "recall_at_5": 0.3666666666666667,
+          "mrr": 0.8400000000000001,
+          "ndcg_at_4": 0.4248937631033538
         },
         "Conservative Guaranteed Savings": {
           "p_at_1": 0.8,
           "p_at_3": 0.6666666666666666,
-          "recall_at_5": 0.6333333333333334,
+          "recall_at_5": 0.5533333333333333,
           "mrr": 0.9,
-          "ndcg_at_4": 0.5866485116026138
+          "ndcg_at_4": 0.5494491551158215
         },
         "Edge Cases and Ambiguous Queries": {
           "p_at_1": 1.0,
@@ -66,10 +71,10 @@
         },
         "Family Breadwinner High Cover": {
           "p_at_1": 0.8,
-          "p_at_3": 0.7333333333333333,
-          "recall_at_5": 0.7833333333333333,
+          "p_at_3": 0.7999999999999999,
+          "recall_at_5": 0.8833333333333332,
           "mrr": 0.9,
-          "ndcg_at_4": 0.7580970699696084
+          "ndcg_at_4": 0.7627363537510256
         },
         "Low Budget First-Time Buyer": {
           "p_at_1": 0.6,
@@ -80,10 +85,10 @@
         },
         "Parent Saving for Child Education": {
           "p_at_1": 0.8,
-          "p_at_3": 0.4666666666666667,
-          "recall_at_5": 0.3390476190476191,
-          "mrr": 0.9,
-          "ndcg_at_4": 0.38328975414766
+          "p_at_3": 0.39999999999999997,
+          "recall_at_5": 0.34380952380952373,
+          "mrr": 0.8666666666666668,
+          "ndcg_at_4": 0.4146110263345696
         },
         "Pre-Retiree and Senior": {
           "p_at_1": 0.6,
@@ -95,9 +100,9 @@
         "Women Focused Plans": {
           "p_at_1": 0.6,
           "p_at_3": 0.4666666666666666,
-          "recall_at_5": 0.3466666666666667,
-          "mrr": 0.6785714285714286,
-          "ndcg_at_4": 0.3237789488206258
+          "recall_at_5": 0.27999999999999997,
+          "mrr": 0.6685714285714285,
+          "ndcg_at_4": 0.2901534415664023
         },
         "Young Salaried Term Cover": {
           "p_at_1": 0.2,
@@ -106,6 +111,11 @@
           "mrr": 0.5666666666666667,
           "ndcg_at_4": 0.5544285187107161
         }
+      },
+      "candidate_cap_effect": {
+        "display_cap": 8,
+        "eligible_candidates_ranked": 553,
+        "eligible_candidates_omitted_from_display": 160
       },
       "tied_rank_fraction": 0.0,
       "all_equal_score_list_count": 0,
@@ -122,6 +132,11 @@
         "mrr": 0.6322222222222222,
         "ndcg_at_4": 0.5474312025455483
       },
+      "candidate_cap_effect": {
+        "display_cap": 8,
+        "eligible_candidates_ranked": 553,
+        "eligible_candidates_omitted_from_display": 160
+      },
       "tied_rank_fraction": 0.0,
       "all_equal_score_list_count": 0,
       "scored_list_count": 54,
@@ -136,6 +151,11 @@
         "recall_at_5": 0.6167989417989418,
         "mrr": 0.6892592592592591,
         "ndcg_at_4": 0.5411514345016837
+      },
+      "candidate_cap_effect": {
+        "display_cap": 8,
+        "eligible_candidates_ranked": 553,
+        "eligible_candidates_omitted_from_display": 160
       },
       "tied_rank_fraction": 0.8490945674044266,
       "all_equal_score_list_count": 19,
@@ -154,6 +174,11 @@
         "mrr": 0.6322222222222222,
         "ndcg_at_4": 0.5474312025455483
       },
+      "candidate_cap_effect": {
+        "display_cap": 8,
+        "eligible_candidates_ranked": 553,
+        "eligible_candidates_omitted_from_display": 160
+      },
       "tied_rank_fraction": 0.0,
       "all_equal_score_list_count": 0,
       "scored_list_count": 54,
@@ -169,6 +194,11 @@
         "mrr": 0.6892592592592591,
         "ndcg_at_4": 0.5411514345016837
       },
+      "candidate_cap_effect": {
+        "display_cap": 8,
+        "eligible_candidates_ranked": 553,
+        "eligible_candidates_omitted_from_display": 160
+      },
       "tied_rank_fraction": 0.8490945674044266,
       "all_equal_score_list_count": 19,
       "scored_list_count": 54,
@@ -183,17 +213,17 @@
   "group_macro_metrics": {
     "Child Marriage and Gift Planning": {
       "p_at_1": 0.8,
-      "p_at_3": 0.4666666666666666,
-      "recall_at_5": 0.35333333333333333,
-      "mrr": 0.8666666666666668,
-      "ndcg_at_4": 0.36117508242848856
+      "p_at_3": 0.4666666666666667,
+      "recall_at_5": 0.3666666666666667,
+      "mrr": 0.8400000000000001,
+      "ndcg_at_4": 0.4248937631033538
     },
     "Conservative Guaranteed Savings": {
       "p_at_1": 0.8,
       "p_at_3": 0.6666666666666666,
-      "recall_at_5": 0.6333333333333334,
+      "recall_at_5": 0.5533333333333333,
       "mrr": 0.9,
-      "ndcg_at_4": 0.5866485116026138
+      "ndcg_at_4": 0.5494491551158215
     },
     "Edge Cases and Ambiguous Queries": {
       "p_at_1": 1.0,
@@ -204,10 +234,10 @@
     },
     "Family Breadwinner High Cover": {
       "p_at_1": 0.8,
-      "p_at_3": 0.7333333333333333,
-      "recall_at_5": 0.7833333333333333,
+      "p_at_3": 0.7999999999999999,
+      "recall_at_5": 0.8833333333333332,
       "mrr": 0.9,
-      "ndcg_at_4": 0.7580970699696084
+      "ndcg_at_4": 0.7627363537510256
     },
     "Low Budget First-Time Buyer": {
       "p_at_1": 0.6,
@@ -218,10 +248,10 @@
     },
     "Parent Saving for Child Education": {
       "p_at_1": 0.8,
-      "p_at_3": 0.4666666666666667,
-      "recall_at_5": 0.3390476190476191,
-      "mrr": 0.9,
-      "ndcg_at_4": 0.38328975414766
+      "p_at_3": 0.39999999999999997,
+      "recall_at_5": 0.34380952380952373,
+      "mrr": 0.8666666666666668,
+      "ndcg_at_4": 0.4146110263345696
     },
     "Pre-Retiree and Senior": {
       "p_at_1": 0.6,
@@ -233,9 +263,9 @@
     "Women Focused Plans": {
       "p_at_1": 0.6,
       "p_at_3": 0.4666666666666666,
-      "recall_at_5": 0.3466666666666667,
-      "mrr": 0.6785714285714286,
-      "ndcg_at_4": 0.3237789488206258
+      "recall_at_5": 0.27999999999999997,
+      "mrr": 0.6685714285714285,
+      "ndcg_at_4": 0.2901534415664023
     },
     "Young Salaried Term Cover": {
       "p_at_1": 0.2,
@@ -300,7 +330,7 @@
       "judged_policy_count": 9,
       "eligible_judged_policy_count": 9,
       "eligible_relevant_judgment_count": 2,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 9,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.3333333333333333,
@@ -332,7 +362,7 @@
       "judged_policy_count": 11,
       "eligible_judged_policy_count": 11,
       "eligible_relevant_judgment_count": 4,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 11,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.6666666666666666,
@@ -348,13 +378,13 @@
       "judged_policy_count": 12,
       "eligible_judged_policy_count": 12,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 12,
       "metrics": {
         "p_at_1": 1.0,
-        "p_at_3": 0.6666666666666666,
+        "p_at_3": 1.0,
         "recall_at_5": 0.6666666666666666,
         "mrr": 1.0,
-        "ndcg_at_4": 0.8326942642890993,
+        "ndcg_at_4": 0.8558906831961851,
         "tied_rank_fraction": 0.0
       }
     },
@@ -364,11 +394,11 @@
       "judged_policy_count": 11,
       "eligible_judged_policy_count": 11,
       "eligible_relevant_judgment_count": 4,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 11,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.6666666666666666,
-        "recall_at_5": 0.75,
+        "recall_at_5": 1.0,
         "mrr": 1.0,
         "ndcg_at_4": 0.8326942642890993,
         "tied_rank_fraction": 0.0
@@ -380,11 +410,11 @@
       "judged_policy_count": 12,
       "eligible_judged_policy_count": 12,
       "eligible_relevant_judgment_count": 4,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 12,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 1.0,
-        "recall_at_5": 0.75,
+        "recall_at_5": 1.0,
         "mrr": 1.0,
         "ndcg_at_4": 0.8318724637288826,
         "tied_rank_fraction": 0.0
@@ -396,7 +426,7 @@
       "judged_policy_count": 12,
       "eligible_judged_policy_count": 11,
       "eligible_relevant_judgment_count": 3,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 11,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.6666666666666666,
@@ -412,13 +442,13 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
-        "recall_at_5": 0.16666666666666666,
+        "recall_at_5": 0.3333333333333333,
         "mrr": 1.0,
-        "ndcg_at_4": 0.2567433878697756,
+        "ndcg_at_4": 0.5147478912601088,
         "tied_rank_fraction": 0.0
       }
     },
@@ -428,7 +458,7 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
@@ -460,13 +490,13 @@
       "judged_policy_count": 15,
       "eligible_judged_policy_count": 15,
       "eligible_relevant_judgment_count": 7,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 15,
       "metrics": {
         "p_at_1": 0.0,
-        "p_at_3": 0.6666666666666666,
-        "recall_at_5": 0.42857142857142855,
-        "mrr": 0.5,
-        "ndcg_at_4": 0.2903587363746664,
+        "p_at_3": 0.3333333333333333,
+        "recall_at_5": 0.2857142857142857,
+        "mrr": 0.3333333333333333,
+        "ndcg_at_4": 0.2995339525147382,
         "tied_rank_fraction": 0.0
       }
     },
@@ -476,13 +506,13 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
         "recall_at_5": 0.4,
         "mrr": 1.0,
-        "ndcg_at_4": 0.3673167464656327,
+        "ndcg_at_4": 0.2567433878697756,
         "tied_rank_fraction": 0.0
       }
     },
@@ -492,11 +522,11 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
-        "recall_at_5": 0.3333333333333333,
+        "recall_at_5": 0.16666666666666666,
         "mrr": 1.0,
         "ndcg_at_4": 0.2567433878697756,
         "tied_rank_fraction": 0.0
@@ -508,13 +538,13 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
-        "p_at_3": 0.6666666666666666,
-        "recall_at_5": 0.4,
+        "p_at_3": 1.0,
+        "recall_at_5": 0.6,
         "mrr": 1.0,
-        "ndcg_at_4": 0.4187304303095542,
+        "ndcg_at_4": 0.7182643828242925,
         "tied_rank_fraction": 0.0
       }
     },
@@ -540,13 +570,13 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 0.0,
-        "p_at_3": 0.3333333333333333,
-        "recall_at_5": 0.3333333333333333,
-        "mrr": 0.3333333333333333,
-        "ndcg_at_4": 0.2389450525307449,
+        "p_at_3": 0.0,
+        "recall_at_5": 0.16666666666666666,
+        "mrr": 0.2,
+        "ndcg_at_4": 0.0,
         "tied_rank_fraction": 0.0
       }
     },
@@ -556,13 +586,13 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
-        "recall_at_5": 0.2,
+        "recall_at_5": 0.4,
         "mrr": 1.0,
-        "ndcg_at_4": 0.2567433878697756,
+        "ndcg_at_4": 0.5147478912601088,
         "tied_rank_fraction": 0.0
       }
     },
@@ -604,13 +634,13 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
-        "recall_at_5": 0.6,
+        "recall_at_5": 0.2,
         "mrr": 1.0,
-        "ndcg_at_4": 0.6178679371260288,
+        "ndcg_at_4": 0.4318711546920674,
         "tied_rank_fraction": 0.0
       }
     },
@@ -620,7 +650,7 @@
       "judged_policy_count": 11,
       "eligible_judged_policy_count": 11,
       "eligible_relevant_judgment_count": 2,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 11,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
@@ -652,11 +682,11 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.6666666666666666,
-        "recall_at_5": 0.5,
+        "recall_at_5": 0.3333333333333333,
         "mrr": 1.0,
         "ndcg_at_4": 0.4136081244516307,
         "tied_rank_fraction": 0.0
@@ -668,13 +698,13 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
-        "recall_at_5": 0.3333333333333333,
-        "mrr": 0.25,
-        "ndcg_at_4": 0.16812753627111748,
+        "recall_at_5": 0.16666666666666666,
+        "mrr": 0.2,
+        "ndcg_at_4": 0.0,
         "tied_rank_fraction": 0.0
       }
     },
@@ -684,7 +714,7 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 6,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -700,7 +730,7 @@
       "judged_policy_count": 10,
       "eligible_judged_policy_count": 10,
       "eligible_relevant_judgment_count": 8,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 10,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 1.0,
@@ -716,7 +746,7 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 5,
-      "returned_judged_policy_count": 7,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.6666666666666666,
@@ -732,7 +762,7 @@
       "judged_policy_count": 9,
       "eligible_judged_policy_count": 9,
       "eligible_relevant_judgment_count": 2,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 9,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 0.3333333333333333,
@@ -892,7 +922,7 @@
       "judged_policy_count": 15,
       "eligible_judged_policy_count": 15,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 15,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -924,7 +954,7 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -940,7 +970,7 @@
       "judged_policy_count": 10,
       "eligible_judged_policy_count": 10,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 10,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -972,7 +1002,7 @@
       "judged_policy_count": 15,
       "eligible_judged_policy_count": 15,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 15,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -988,7 +1018,7 @@
       "judged_policy_count": 15,
       "eligible_judged_policy_count": 15,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 15,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -1004,7 +1034,7 @@
       "judged_policy_count": 15,
       "eligible_judged_policy_count": 15,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 7,
+      "returned_judged_policy_count": 15,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -1052,13 +1082,13 @@
       "judged_policy_count": 14,
       "eligible_judged_policy_count": 14,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 14,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
         "recall_at_5": 0.0,
         "mrr": 0.0,
-        "ndcg_at_4": 0.16812753627111746,
+        "ndcg_at_4": 0.19519002499605084,
         "tied_rank_fraction": 0.0
       }
     },
@@ -1068,7 +1098,7 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -1100,7 +1130,7 @@
       "judged_policy_count": 13,
       "eligible_judged_policy_count": 13,
       "eligible_relevant_judgment_count": 0,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 13,
       "metrics": {
         "p_at_1": 0.0,
         "p_at_3": 0.0,
@@ -1196,7 +1226,7 @@
       "judged_policy_count": 11,
       "eligible_judged_policy_count": 11,
       "eligible_relevant_judgment_count": 3,
-      "returned_judged_policy_count": 8,
+      "returned_judged_policy_count": 11,
       "metrics": {
         "p_at_1": 1.0,
         "p_at_3": 1.0,

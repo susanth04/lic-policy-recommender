@@ -4,6 +4,11 @@
   "status": "COMPLETED_SYNTHETIC_SMOKE_TEST",
   "query_count": 18,
   "recommendation_count": 70,
+  "candidate_cap_effect": {
+    "display_cap": 8,
+    "eligible_candidates_ranked": 115,
+    "eligible_candidates_omitted_from_display": 45
+  },
   "eligibility_violations": 0,
   "eligibility_violation_rate": 0.0,
   "returned_recommendations_are_eligible": true,
@@ -38,7 +43,7 @@
         {
           "rank": 2,
           "policy_id": "LIC_876",
-          "final_ranking_score": 0.7471721529496405,
+          "final_ranking_score": 0.7473310753365165,
           "cross_encoder_ranking_score": -10.323572158813477,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -47,7 +52,7 @@
         {
           "rank": 3,
           "policy_id": "LIC_878",
-          "final_ranking_score": 0.5381068519598331,
+          "final_ranking_score": 0.5500150507589718,
           "cross_encoder_ranking_score": -10.651143074035645,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -56,7 +61,7 @@
         {
           "rank": 4,
           "policy_id": "LIC_877",
-          "final_ranking_score": 0.5102940084458041,
+          "final_ranking_score": 0.5237652633078581,
           "cross_encoder_ranking_score": -10.694721221923828,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -65,7 +70,7 @@
         {
           "rank": 5,
           "policy_id": "LIC_954",
-          "final_ranking_score": 0.49927112637907756,
+          "final_ranking_score": 0.5133618570108963,
           "cross_encoder_ranking_score": -10.711992263793945,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -73,32 +78,35 @@
         },
         {
           "rank": 6,
-          "policy_id": "LIC_859",
-          "final_ranking_score": 0.3364410637963755,
-          "cross_encoder_ranking_score": -10.967120170593262,
+          "policy_id": "LIC_894",
+          "final_ranking_score": 0.42703598854763625,
+          "cross_encoder_ranking_score": -10.855304718017578,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_770",
-          "final_ranking_score": 0.32895268621123275,
-          "cross_encoder_ranking_score": -10.978853225708008,
+          "policy_id": "LIC_887",
+          "final_ranking_score": 0.4208399012854037,
+          "cross_encoder_ranking_score": -10.865591049194336,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_714",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -11.102559089660645,
+          "policy_id": "LIC_859",
+          "final_ranking_score": 0.35968269323566043,
+          "cross_encoder_ranking_score": -10.967120170593262,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 11,
+      "display_cap": 8,
+      "display_omitted_count": 3,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -118,6 +126,24 @@
         },
         {
           "rank": 2,
+          "policy_id": "LIC_733",
+          "final_ranking_score": 0.7309357404029156,
+          "cross_encoder_ranking_score": -9.671244621276855,
+          "cross_encoder_fallback_ranking_score": null,
+          "score_kind": "ranking_score_not_probability",
+          "eligibility": "eligible"
+        },
+        {
+          "rank": 3,
+          "policy_id": "LIC_887",
+          "final_ranking_score": 0.7254112472063621,
+          "cross_encoder_ranking_score": -9.684587478637695,
+          "cross_encoder_fallback_ranking_score": null,
+          "score_kind": "ranking_score_not_probability",
+          "eligibility": "eligible"
+        },
+        {
+          "rank": 4,
           "policy_id": "LIC_954",
           "final_ranking_score": 0.6885450970172238,
           "cross_encoder_ranking_score": -9.773627281188965,
@@ -126,60 +152,45 @@
           "eligibility": "eligible"
         },
         {
-          "rank": 3,
-          "policy_id": "LIC_715",
-          "final_ranking_score": 0.5465410220569074,
-          "cross_encoder_ranking_score": -10.116598129272461,
-          "cross_encoder_fallback_ranking_score": null,
-          "score_kind": "ranking_score_not_probability",
-          "eligibility": "eligible"
-        },
-        {
-          "rank": 4,
-          "policy_id": "LIC_859",
-          "final_ranking_score": 0.509938243818459,
-          "cross_encoder_ranking_score": -10.205001831054688,
-          "cross_encoder_fallback_ranking_score": null,
-          "score_kind": "ranking_score_not_probability",
-          "eligibility": "eligible"
-        },
-        {
           "rank": 5,
-          "policy_id": "LIC_770",
-          "final_ranking_score": 0.46376997006957443,
-          "cross_encoder_ranking_score": -10.316508293151855,
+          "policy_id": "LIC_890",
+          "final_ranking_score": 0.6352128692932787,
+          "cross_encoder_ranking_score": -9.902436256408691,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 6,
-          "policy_id": "LIC_714",
-          "final_ranking_score": 0.34172135484533317,
-          "cross_encoder_ranking_score": -10.611282348632812,
+          "policy_id": "LIC_876",
+          "final_ranking_score": 0.5947953438050337,
+          "cross_encoder_ranking_score": -10.000053405761719,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_878",
-          "final_ranking_score": 0.300618746396898,
-          "cross_encoder_ranking_score": -10.710554122924805,
+          "policy_id": "LIC_912",
+          "final_ranking_score": 0.547191752153964,
+          "cross_encoder_ranking_score": -10.115026473999023,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_877",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -10.832809448242188,
+          "policy_id": "LIC_715",
+          "final_ranking_score": 0.5465410220569074,
+          "cross_encoder_ranking_score": -10.116598129272461,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -235,32 +246,35 @@
         },
         {
           "rank": 6,
-          "policy_id": "LIC_887",
-          "final_ranking_score": 0.45044350011769463,
-          "cross_encoder_ranking_score": -9.908855438232422,
+          "policy_id": "LIC_736",
+          "final_ranking_score": 0.4737530244636985,
+          "cross_encoder_ranking_score": -9.816117286682129,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_890",
-          "final_ranking_score": 0.29538840897508856,
-          "cross_encoder_ranking_score": -10.525750160217285,
+          "policy_id": "LIC_733",
+          "final_ranking_score": 0.45358457975355565,
+          "cross_encoder_ranking_score": -9.896358489990234,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_714",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -10.706330299377441,
+          "policy_id": "LIC_887",
+          "final_ranking_score": 0.45044350011769463,
+          "cross_encoder_ranking_score": -9.908855438232422,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -281,7 +295,7 @@
         {
           "rank": 2,
           "policy_id": "LIC_714",
-          "final_ranking_score": 0.74252932977172,
+          "final_ranking_score": 0.7434972331898446,
           "cross_encoder_ranking_score": -9.641692161560059,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -289,59 +303,62 @@
         },
         {
           "rank": 3,
-          "policy_id": "LIC_887",
-          "final_ranking_score": 0.5343554651780917,
-          "cross_encoder_ranking_score": -10.060720443725586,
+          "policy_id": "LIC_876",
+          "final_ranking_score": 0.5804269935755897,
+          "cross_encoder_ranking_score": -10.018789291381836,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 4,
-          "policy_id": "LIC_894",
-          "final_ranking_score": 0.5086477935275038,
-          "cross_encoder_ranking_score": -10.112466812133789,
+          "policy_id": "LIC_887",
+          "final_ranking_score": 0.5622944687716254,
+          "cross_encoder_ranking_score": -10.060720443725586,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 5,
-          "policy_id": "LIC_878",
-          "final_ranking_score": 0.4526604076272094,
-          "cross_encoder_ranking_score": -10.225162506103516,
+          "policy_id": "LIC_894",
+          "final_ranking_score": 0.5399174947026865,
+          "cross_encoder_ranking_score": -10.112466812133789,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 6,
-          "policy_id": "LIC_770",
-          "final_ranking_score": 0.40186667260479453,
-          "cross_encoder_ranking_score": -10.327404022216797,
+          "policy_id": "LIC_733",
+          "final_ranking_score": 0.512015148378391,
+          "cross_encoder_ranking_score": -10.176990509033203,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_877",
-          "final_ranking_score": 0.38605735473459885,
-          "cross_encoder_ranking_score": -10.35922622680664,
+          "policy_id": "LIC_878",
+          "final_ranking_score": 0.4911838598754379,
+          "cross_encoder_ranking_score": -10.225162506103516,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_890",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -10.633092880249023,
+          "policy_id": "LIC_859",
+          "final_ranking_score": 0.44719615607630114,
+          "cross_encoder_ranking_score": -10.326883316040039,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -350,6 +367,9 @@
       "customer_profile": "Parent Saving for Child",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -369,6 +389,15 @@
         },
         {
           "rank": 2,
+          "policy_id": "LIC_887",
+          "final_ranking_score": 0.3515311430929974,
+          "cross_encoder_ranking_score": -9.195923805236816,
+          "cross_encoder_fallback_ranking_score": null,
+          "score_kind": "ranking_score_not_probability",
+          "eligibility": "eligible"
+        },
+        {
+          "rank": 3,
           "policy_id": "LIC_733",
           "final_ranking_score": 0.33821927825122966,
           "cross_encoder_ranking_score": -9.349467277526855,
@@ -377,7 +406,7 @@
           "eligibility": "eligible"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "policy_id": "LIC_894",
           "final_ranking_score": 0.332169896310956,
           "cross_encoder_ranking_score": -9.419242858886719,
@@ -386,51 +415,45 @@
           "eligibility": "eligible"
         },
         {
-          "rank": 4,
-          "policy_id": "LIC_736",
-          "final_ranking_score": 0.29229284019081536,
-          "cross_encoder_ranking_score": -9.87919807434082,
-          "cross_encoder_fallback_ranking_score": null,
-          "score_kind": "ranking_score_not_probability",
-          "eligibility": "eligible"
-        },
-        {
           "rank": 5,
-          "policy_id": "LIC_878",
-          "final_ranking_score": 0.2692234996309104,
-          "cross_encoder_ranking_score": -10.14528751373291,
+          "policy_id": "LIC_876",
+          "final_ranking_score": 0.3311107480480584,
+          "cross_encoder_ranking_score": -9.431459426879883,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 6,
-          "policy_id": "LIC_877",
-          "final_ranking_score": 0.259936150144064,
-          "cross_encoder_ranking_score": -10.252410888671875,
+          "policy_id": "LIC_859",
+          "final_ranking_score": 0.3153423372235466,
+          "cross_encoder_ranking_score": -9.613337516784668,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_715",
-          "final_ranking_score": 0.2555953785748114,
-          "cross_encoder_ranking_score": -10.302478790283203,
+          "policy_id": "LIC_912",
+          "final_ranking_score": 0.2992299719280236,
+          "cross_encoder_ranking_score": -9.799182891845703,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_954",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -10.36701774597168,
+          "policy_id": "LIC_875",
+          "final_ranking_score": 0.2966489078122644,
+          "cross_encoder_ranking_score": -9.828953742980957,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -494,6 +517,9 @@
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 6,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -530,6 +556,9 @@
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 3,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -584,6 +613,9 @@
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 5,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -592,6 +624,9 @@
       "customer_profile": "Low Budget Micro Insurance Seeker",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -612,7 +647,7 @@
         {
           "rank": 2,
           "policy_id": "LIC_887",
-          "final_ranking_score": 0.49712971421467145,
+          "final_ranking_score": 0.5714372960283985,
           "cross_encoder_ranking_score": -10.467153549194336,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
@@ -620,59 +655,62 @@
         },
         {
           "rank": 3,
-          "policy_id": "LIC_714",
-          "final_ranking_score": 0.34918567127389877,
-          "cross_encoder_ranking_score": -10.675966262817383,
+          "policy_id": "LIC_733",
+          "final_ranking_score": 0.5278994980628662,
+          "cross_encoder_ranking_score": -10.554176330566406,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 4,
-          "policy_id": "LIC_878",
-          "final_ranking_score": 0.3217341715360624,
-          "cross_encoder_ranking_score": -10.714712142944336,
+          "policy_id": "LIC_894",
+          "final_ranking_score": 0.5103693913773689,
+          "cross_encoder_ranking_score": -10.589215278625488,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 5,
-          "policy_id": "LIC_770",
-          "final_ranking_score": 0.3070334163968454,
-          "cross_encoder_ranking_score": -10.735461235046387,
+          "policy_id": "LIC_714",
+          "final_ranking_score": 0.4669675744794549,
+          "cross_encoder_ranking_score": -10.675966262817383,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 6,
-          "policy_id": "LIC_859",
-          "final_ranking_score": 0.29158400856220845,
-          "cross_encoder_ranking_score": -10.757266998291016,
+          "policy_id": "LIC_876",
+          "final_ranking_score": 0.4663601923774262,
+          "cross_encoder_ranking_score": -10.677180290222168,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_877",
-          "final_ranking_score": 0.2626676360412759,
-          "cross_encoder_ranking_score": -10.798080444335938,
+          "policy_id": "LIC_878",
+          "final_ranking_score": 0.4475828768822643,
+          "cross_encoder_ranking_score": -10.714712142944336,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_890",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -10.815959930419922,
+          "policy_id": "LIC_770",
+          "final_ranking_score": 0.4372020344676222,
+          "cross_encoder_ranking_score": -10.735461235046387,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -681,6 +719,9 @@
       "customer_profile": "Low Budget Micro Insurance Seeker",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -689,6 +730,9 @@
       "customer_profile": "Health Conscious Individual",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -708,68 +752,71 @@
         },
         {
           "rank": 2,
-          "policy_id": "LIC_736",
-          "final_ranking_score": 0.5803005140018631,
-          "cross_encoder_ranking_score": -10.99984073638916,
+          "policy_id": "LIC_733",
+          "final_ranking_score": 0.6735672812905193,
+          "cross_encoder_ranking_score": -10.952252388000488,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 3,
-          "policy_id": "LIC_876",
-          "final_ranking_score": 0.46176311270242354,
-          "cross_encoder_ranking_score": -11.0758056640625,
+          "policy_id": "LIC_736",
+          "final_ranking_score": 0.6140990866448021,
+          "cross_encoder_ranking_score": -10.99984073638916,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 4,
-          "policy_id": "LIC_878",
-          "final_ranking_score": 0.4136323592000976,
-          "cross_encoder_ranking_score": -11.106650352478027,
+          "policy_id": "LIC_894",
+          "final_ranking_score": 0.5774206772938754,
+          "cross_encoder_ranking_score": -11.029191970825195,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 5,
-          "policy_id": "LIC_770",
-          "final_ranking_score": 0.3714169427157275,
-          "cross_encoder_ranking_score": -11.13370418548584,
+          "policy_id": "LIC_876",
+          "final_ranking_score": 0.519170448478377,
+          "cross_encoder_ranking_score": -11.0758056640625,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 6,
-          "policy_id": "LIC_877",
-          "final_ranking_score": 0.3381913503635514,
-          "cross_encoder_ranking_score": -11.154996871948242,
+          "policy_id": "LIC_878",
+          "final_ranking_score": 0.48062576271832813,
+          "cross_encoder_ranking_score": -11.106650352478027,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 7,
-          "policy_id": "LIC_714",
-          "final_ranking_score": 0.3256314901291999,
-          "cross_encoder_ranking_score": -11.163045883178711,
+          "policy_id": "LIC_954",
+          "final_ranking_score": 0.47244799214400124,
+          "cross_encoder_ranking_score": -11.113194465637207,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         },
         {
           "rank": 8,
-          "policy_id": "LIC_890",
-          "final_ranking_score": 0.25,
-          "cross_encoder_ranking_score": -11.211514472961426,
+          "policy_id": "LIC_859",
+          "final_ranking_score": 0.4473986538021508,
+          "cross_encoder_ranking_score": -11.13323974609375,
           "cross_encoder_fallback_ranking_score": null,
           "score_kind": "ranking_score_not_probability",
           "eligibility": "eligible"
         }
       ],
+      "eligible_candidate_count": 15,
+      "display_cap": 8,
+      "display_omitted_count": 7,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -778,6 +825,9 @@
       "customer_profile": "Edge Cases & Contradictory Queries",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -786,6 +836,9 @@
       "customer_profile": "Edge Cases & Contradictory Queries",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -794,6 +847,9 @@
       "customer_profile": "Edge Cases & Contradictory Queries",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     },
@@ -802,6 +858,9 @@
       "customer_profile": "Edge Cases & Contradictory Queries",
       "status": "NO_ELIGIBLE_POLICIES",
       "recommendations": [],
+      "eligible_candidate_count": 0,
+      "display_cap": 8,
+      "display_omitted_count": 0,
       "tied_rank_fraction": 0.0,
       "all_equal_final_scores": false
     }

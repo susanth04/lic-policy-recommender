@@ -56,7 +56,7 @@ Alternatively, use `make reproduce` and `make test` where `make` is installed.
 | `LIC_Policy_Recommendation_System_New_v3.ipynb` | Source of synthetic query personas/templates referenced by notebook 01. |
 | `archive/legacy_notebooks/` | Older standalone implementations retained for reference. |
 | `data/policies.csv` | Current exported policy catalogue consumed by the pipeline. Notebook 01 rewrites it from its current contents plus the root eligibility source. |
-| `data/source/eligibility_from_brochures.csv` | Brochure eligibility input merged by notebook 01. It includes official LIC product and brochure URLs. |
+| `data/source/eligibility_from_brochures.csv` | Brochure eligibility and sourced-description input merged by notebook 01. It includes official LIC product/brochure URLs and page/section citations for descriptions. |
 | `labels/relevance_labels.csv` | Synthetic-only training and smoke-test labels. |
 | `data/source/human_eval_queries.csv`, `data/source/human_labels.csv` | Separate evaluation-only queries and user-confirmed human-reviewed grades. |
 | `data/source/policies.csv` | Original catalogue CSV from the source upload; retained for reference, not used as the current exported catalogue. |
@@ -99,15 +99,15 @@ Important fields:
 - Identity and lifecycle: `policy_id`, `policy_name`, `plan_number`, `uin`, `status`, `supersedes`, `withdrawn_versions`, `statutory_status`.
 - Eligibility: `min_age`, `max_age`, `min_age_days`, `min_entry_age_days`, `min_maturity_age`, `max_maturity_age`, `min_term`, `max_term`, `premium_paying_term`, `min_sum_assured`, `max_sum_assured`, `max_sum_assured_unlimited`, `rules_json`, `eligible_gender`.
 - Verification/provenance: `verified`, `identity_verified`, `age_verified`, `term_verified`, `sum_assured_verified`, `category_verified`, `verified_scope`, `verification_status`, `source_url`, `policy_url`, `brochure_url`, source notes.
-- Retrieval hints: `category`, `financial_goal`, `risk_tolerance_inferred`, `premium_level_inferred`, `coverage_type`, and `description`.
+- Retrieval hints: `category`, `financial_goal`, `risk_tolerance_inferred`, `premium_level_inferred`, `coverage_type`, `description`, and `description_source_page_section`.
 
 The explicit old-to-current mappings are applied by notebook 01. For example, 936 maps to current 736; 854 maps to current 954. The current plan number is the recommendation ID; historical numbers remain in `supersedes` and `withdrawn_versions`.
 
 ### 5.2 Brochure eligibility input
 
-`data/source/eligibility_from_brochures.csv` has 16 plan rows, all currently marked `eligibility_verified=True`. Notebook 01 merges by `plan_no` and rejects UIN mismatches. It copies eligibility fields from the matched row; `verified` and `verified_scope` are set only when `eligibility_verified=True`. The source was updated on 19 November 2026 to include brochure-based limits for plans 954, 875, 876, 877, and 878. The merge trusts those flags; it does not independently inspect or validate the underlying brochure text.
+`data/source/eligibility_from_brochures.csv` has 16 plan rows, all currently marked `eligibility_verified=True`. Notebook 01 merges by `plan_no` and rejects UIN mismatches. It copies eligibility fields and brochure-sourced descriptions/citations from the matched row; `verified` and `verified_scope` are set only when `eligibility_verified=True`. Every verified catalogue entry must have a nonempty description and page/section citation.
 
-The file includes official LIC product-page and brochure URLs, but the latest pipeline did not independently re-extract every value from those documents. “Verified” reflects the supplied source flag and scope; it is not an independent audit performed by the notebook.
+Descriptions were checked against the linked official LIC brochures; their source page/section is stored in `description_source_page_section`. The brochures did not support the catalogue's financial-goal, risk-tolerance, or premium-level categories, so those fields remain blank. “Verified” eligibility still reflects the supplied source flag and scope; notebook 01 does not independently re-derive eligibility limits.
 
 ### 5.3 Queries, labels, and splits
 
@@ -145,15 +145,15 @@ Notebook 04 builds policy text, filters every catalogue policy through the share
 - KG preference features for goal, risk, and premium.
 - Cross-encoder pair scores when available; otherwise dense ranking fallback.
 
-Signals are min-max normalized; when a vector is constant, tied values receive neutral `0.5`. Ties are ordered deterministically by policy ID. The final score is a ranking score, **not** a probability.
+Signals are min-max normalized; when a vector is constant, tied values receive neutral `0.5`. Final-score ties are broken by dense similarity, then BM25, then cross-encoder score, and only then by policy ID for determinism. The pipeline logs `tied_rank_fraction` and fails if more than 20% of returned pipeline lists have all-equal final scores. Evaluation JSON includes pipeline, ID-order, and BM25-only results. The final score is a ranking score, **not** a probability.
 
-The smoke output is a wiring check, not a relevance finding. When normalized signals tie, they receive neutral `0.5`; deterministic policy-ID ordering resolves remaining ties. The selected synthetic validation weights should not be treated as evidence of ranking quality.
+All eligible policies (at most 16) are ranked before the display is truncated to eight; output JSON reports the eligible and omitted candidate counts. Missing brochure-backed KG attributes return no preference and are excluded from fusion. No KG preference fields are currently supported by the checked brochures, so the KG signal is inactive and its default weights are untuned.
 
 ## 8. Training and evaluation
 
 Notebook 03 creates `(query, positive policy, negative policy)` triplets from synthetic grades and trains a small MNRL fine-tuning run. It asserts synthetic provenance, rejects nonzero human-label counts, and caches checkpoints under `artifacts/model/`. The fine-tuning run is functional smoke evidence only.
 
-Notebook 04 sweeps alpha/beta combinations on validation profiles and evaluates on held-out profiles. The current result file marks held-out ranking evaluation `NOT_EVALUABLE_NO_ELIGIBLE_RELEVANT_JUDGMENTS`. Its zeros must not be described as measured ranking performance. Current labels and query goals are synthetic and partly constructed from policy categories; they are not user or advisor judgments.
+Notebook 04 sweeps alpha/beta combinations on synthetic validation profiles and evaluates on held-out profiles. Beta-zero sweep rows whose candidate scores all tie are marked non-informative; if no informative sweep row remains, the documented 0.5/0.5 default is used and marked untuned. The current result file marks held-out ranking evaluation `NOT_EVALUABLE_NO_ELIGIBLE_RELEVANT_JUDGMENTS`. Its zeros must not be described as measured ranking performance. Current labels and query goals are synthetic and partly constructed from policy categories; they are not user or advisor judgments.
 
 ### Human-reviewed evaluation is separate from training
 

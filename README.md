@@ -17,6 +17,8 @@ Retrieval filters on the eligibility gate, ranks every eligible policy (at most 
 
 `data/policies.csv` is the input used for current exports. Superseded catalogue snapshots and unused additions are preserved under `archive/`. Withdrawn products are ineligible, unresolved or unverified limits stay `unknown`. Brochure eligibility is merged from the root CSV; keep its verification flags and source notes current.
 
+Descriptions for verified policies are sourced from their linked LIC brochures, with page/section citations in `description_source_page_section`. Unsupported financial-goal, risk, and premium categories remain empty and do not contribute a KG score.
+
 ## Reproduce and test
 
 Run `make reproduce` to execute notebooks 01–04 in order, or run each notebook in Colab. Use `make test` for the smoke tests. On Windows, set the Python launcher explicitly if needed, for example `make reproduce PYTHON="py -3.11"`.

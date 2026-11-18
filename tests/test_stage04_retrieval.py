@@ -143,6 +143,32 @@ def test_ranker_baselines_are_label_free(retrieval_state):
     assert all(left >= right for left, right in zip(bm25_scores, bm25_scores[1:]))
 
 
+def test_missing_brochure_kg_fields_are_excluded_from_fusion(retrieval_state):
+    policy = retrieval_state["policy_by_id"]["LIC_714"]
+    intent = {
+        "all_goals": ["Life Cover"],
+        "risk_tolerance": "Low",
+        "premium_level": "Low",
+    }
+
+    assert retrieval_state["kg_features"](policy, intent) == {}
+    assert retrieval_state["kg_preference"](
+        policy, intent, {"goal": 1 / 3, "risk": 1 / 3, "premium": 1 / 3}
+    ) is None
+
+    query = retrieval_state["queries_df"].iloc[0]
+    query_intent = retrieval_state["intents"][query.query_id]["intent"]
+    without_kg = retrieval_state["rank_query"](
+        query.raw_query, query_intent, beta=0, query_id=query.query_id
+    )
+    with_kg_weight = retrieval_state["rank_query"](
+        query.raw_query, query_intent, beta=1, query_id=query.query_id
+    )
+    assert [r["policy_id"] for r in without_kg["recommendations"]] == [
+        r["policy_id"] for r in with_kg_weight["recommendations"]
+    ]
+
+
 def test_all_eligible_policies_are_ranked_before_display_truncation(retrieval_state):
     intent = {"customer_age": 40, "term": None, "all_goals": []}
     result = retrieval_state["rank_query"]("life cover", intent)

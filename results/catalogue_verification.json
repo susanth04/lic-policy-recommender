@@ -1,0 +1,59 @@
+{
+  "catalogue_source": "data/policies.csv",
+  "last_verified_date": "2026-11-17",
+  "row_count": 47,
+  "status_counts": {
+    "active": 40,
+    "withdrawn": 5,
+    "unresolved": 2
+  },
+  "verified_field_counts": {
+    "identity_verified": 47,
+    "age_verified": 16,
+    "term_verified": 16,
+    "category_verified": 0
+  },
+  "unresolved_policy_ids": [
+    "LIC_867",
+    "LIC_873"
+  ],
+  "recommendation_pool_size": 40,
+  "source_pages": [
+    {
+      "source_url": "https://licindia.in/endowment-plans",
+      "source_page_updated": "2026-09-02"
+    },
+    {
+      "source_url": "https://licindia.in/whole-life-plans",
+      "source_page_updated": "2026-01-06"
+    },
+    {
+      "source_url": "https://licindia.in/money-back-plans",
+      "source_page_updated": "2026-01-12"
+    },
+    {
+      "source_url": "https://licindia.in/term-assurance-plans",
+      "source_page_updated": "2026-09-29"
+    },
+    {
+      "source_url": "https://licindia.in/pension-plan",
+      "source_page_updated": "2026-10-14"
+    },
+    {
+      "source_url": "https://licindia.in/health-insurance-plans",
+      "source_page_updated": "2026-10-14"
+    },
+    {
+      "source_url": "https://licindia.in/micro-insurance-plans",
+      "source_page_updated": "2026-09-17"
+    },
+    {
+      "source_url": "https://licindia.in/unit-linked-plans",
+      "source_page_updated": "2026-01-12"
+    },
+    {
+      "source_url": "https://licindia.in/withdrawn-plans",
+      "source_page_updated": ""
+    }
+  ]
+}

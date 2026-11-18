@@ -1,910 +1,1642 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d15" for="edge" attr.name="relation" attr.type="string"/>
-<key id="d14" for="node" attr.name="max_term" attr.type="string"/>
-<key id="d13" for="node" attr.name="min_term" attr.type="string"/>
-<key id="d12" for="node" attr.name="max_age" attr.type="string"/>
-<key id="d11" for="node" attr.name="min_age" attr.type="string"/>
-<key id="d10" for="node" attr.name="value" attr.type="string"/>
-<key id="d9" for="node" attr.name="source_note" attr.type="string"/>
-<key id="d8" for="node" attr.name="source_url" attr.type="string"/>
-<key id="d7" for="node" attr.name="claimed_verification" attr.type="string"/>
-<key id="d6" for="node" attr.name="verified" attr.type="boolean"/>
-<key id="d5" for="node" attr.name="max_term" attr.type="long"/>
-<key id="d4" for="node" attr.name="min_term" attr.type="long"/>
-<key id="d3" for="node" attr.name="max_age" attr.type="long"/>
-<key id="d2" for="node" attr.name="min_age" attr.type="long"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d41" for="node" attr.name="max_sum_assured" attr.type="double"/>
+<key id="d40" for="node" attr.name="min_entry_age_days" attr.type="long"/>
+<key id="d39" for="node" attr.name="min_age_days" attr.type="long"/>
+<key id="d38" for="node" attr.name="min_sum_assured" attr.type="double"/>
+<key id="d37" for="node" attr.name="max_term" attr.type="long"/>
+<key id="d36" for="node" attr.name="min_term" attr.type="long"/>
+<key id="d35" for="node" attr.name="max_maturity_age" attr.type="long"/>
+<key id="d34" for="node" attr.name="min_maturity_age" attr.type="long"/>
+<key id="d33" for="node" attr.name="max_age" attr.type="long"/>
+<key id="d32" for="node" attr.name="min_age" attr.type="long"/>
+<key id="d31" for="node" attr.name="source_note" attr.type="string"/>
+<key id="d30" for="node" attr.name="source_url" attr.type="string"/>
+<key id="d29" for="node" attr.name="claimed_verification" attr.type="string"/>
+<key id="d28" for="node" attr.name="brochure_source_note" attr.type="string"/>
+<key id="d27" for="node" attr.name="verified_scope" attr.type="string"/>
+<key id="d26" for="node" attr.name="withdrawn_versions" attr.type="string"/>
+<key id="d25" for="node" attr.name="supersedes" attr.type="string"/>
+<key id="d24" for="node" attr.name="recommendation_pool" attr.type="boolean"/>
+<key id="d23" for="node" attr.name="category_verified" attr.type="boolean"/>
+<key id="d22" for="node" attr.name="term_verified" attr.type="boolean"/>
+<key id="d21" for="node" attr.name="age_verified" attr.type="boolean"/>
+<key id="d20" for="node" attr.name="identity_verified" attr.type="boolean"/>
+<key id="d19" for="node" attr.name="verified" attr.type="boolean"/>
+<key id="d18" for="node" attr.name="status" attr.type="string"/>
+<key id="d17" for="node" attr.name="statutory_status" attr.type="string"/>
+<key id="d16" for="node" attr.name="brochure_url" attr.type="string"/>
+<key id="d15" for="node" attr.name="policy_url" attr.type="string"/>
+<key id="d14" for="node" attr.name="rules_json" attr.type="string"/>
+<key id="d13" for="node" attr.name="sum_assured_verified" attr.type="boolean"/>
+<key id="d12" for="node" attr.name="max_sum_assured_unlimited" attr.type="boolean"/>
+<key id="d11" for="node" attr.name="max_sum_assured" attr.type="string"/>
+<key id="d10" for="node" attr.name="min_sum_assured" attr.type="string"/>
+<key id="d9" for="node" attr.name="max_term" attr.type="string"/>
+<key id="d8" for="node" attr.name="min_term" attr.type="string"/>
+<key id="d7" for="node" attr.name="max_maturity_age" attr.type="string"/>
+<key id="d6" for="node" attr.name="min_maturity_age" attr.type="string"/>
+<key id="d5" for="node" attr.name="min_entry_age_days" attr.type="string"/>
+<key id="d4" for="node" attr.name="min_age_days" attr.type="string"/>
+<key id="d3" for="node" attr.name="max_age" attr.type="string"/>
+<key id="d2" for="node" attr.name="min_age" attr.type="string"/>
 <key id="d1" for="node" attr.name="policy_name" attr.type="string"/>
 <key id="d0" for="node" attr.name="type" attr.type="string"/>
-<graph edgedefault="directed"><node id="LIC_936">
+<graph edgedefault="directed"><node id="LIC_717">
   <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Labh</data>
-  <data key="d2">8</data>
-  <data key="d3">59</data>
-  <data key="d4">16</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-labh-plan-no.-936-uin-512n304v02</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Savings">
-  <data key="d0">Goal</data>
-  <data key="d10">Savings</data>
-</node>
-<node id="Category:Endowment">
-  <data key="d0">Category</data>
-  <data key="d10">Endowment</data>
-</node>
-<node id="Risk:Low">
-  <data key="d0">Risk</data>
-  <data key="d10">Low</data>
-</node>
-<node id="Premium:Moderate">
-  <data key="d0">Premium</data>
-  <data key="d10">Moderate</data>
-</node>
-<node id="LIC_945">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Umang</data>
-  <data key="d2">0</data>
-  <data key="d3">55</data>
-  <data key="d4">15</data>
-  <data key="d5">30</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-umang-plan-no.-945-uin-512n312v02</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Retirement">
-  <data key="d0">Goal</data>
-  <data key="d10">Retirement</data>
-</node>
-<node id="Category:Whole Life">
-  <data key="d0">Category</data>
-  <data key="d10">Whole Life</data>
-</node>
-<node id="LIC_871">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Utsav</data>
-  <data key="d2">0</data>
-  <data key="d3">65</data>
-  <data key="d4">5</data>
-  <data key="d5">16</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-utsav-plan-no-871-uin-512n363v01</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Income">
-  <data key="d0">Goal</data>
-  <data key="d10">Income</data>
-</node>
-<node id="Premium:High">
-  <data key="d0">Premium</data>
-  <data key="d10">High</data>
-</node>
-<node id="LIC_854">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Tech Term</data>
-  <data key="d2">18</data>
-  <data key="d3">65</data>
-  <data key="d4">10</data>
-  <data key="d5">40</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-tech-term-plan-no.-854-uin-512n333v01</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Life Cover">
-  <data key="d0">Goal</data>
-  <data key="d10">Life Cover</data>
-</node>
-<node id="Category:Term Assurance">
-  <data key="d0">Category</data>
-  <data key="d10">Term Assurance</data>
-</node>
-<node id="Premium:Low">
-  <data key="d0">Premium</data>
-  <data key="d10">Low</data>
-</node>
-<node id="LIC_859">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Saral Jeevan Bima</data>
-  <data key="d2">18</data>
-  <data key="d3">65</data>
-  <data key="d4">5</data>
-  <data key="d5">40</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-saral-jeevan-bima-plan-no.-859-uin-512n341v01</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_858">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC New Jeevan Shanti</data>
-  <data key="d2">30</data>
-  <data key="d3">79</data>
-  <data key="d4">1</data>
-  <data key="d5">12</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-new-jeevan-shanti-plan-no.-858-uin-512n338v04</data>
-  <data key="d9"></data>
-</node>
-<node id="Category:Pension">
-  <data key="d0">Category</data>
-  <data key="d10">Pension</data>
-</node>
-<node id="LIC_857">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Akshay VII</data>
-  <data key="d2">30</data>
-  <data key="d3">85</data>
-  <data key="d4">1</data>
-  <data key="d5">1</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-akshay-vii-plan-no.-857-uin-512n337v04</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_934">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Tarun</data>
-  <data key="d2">0</data>
-  <data key="d3">12</data>
-  <data key="d4">13</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-tarun-plan-no.-934-uin-512n299v02</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Child Education">
-  <data key="d0">Goal</data>
-  <data key="d10">Child Education</data>
-</node>
-<node id="Category:Child Plan">
-  <data key="d0">Category</data>
-  <data key="d10">Child Plan</data>
-</node>
-<node id="LIC_933">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Jeevan Lakshya</data>
-  <data key="d2">18</data>
-  <data key="d3">50</data>
-  <data key="d4">13</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-jeevan-lakshya-plan-no.-933-uin-512n297v02</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_948">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Bima Shree</data>
-  <data key="d2">18</data>
-  <data key="d3">55</data>
-  <data key="d4">14</data>
-  <data key="d5">20</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-bima-shree-plan-no.-948-uin-512n316v02</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Wealth Creation">
-  <data key="d0">Goal</data>
-  <data key="d10">Wealth Creation</data>
-</node>
-<node id="Category:Money Back">
-  <data key="d0">Category</data>
-  <data key="d10">Money Back</data>
-</node>
-<node id="Risk:Moderate">
-  <data key="d0">Risk</data>
-  <data key="d10">Moderate</data>
-</node>
-<node id="LIC_863">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Dhan Rekha</data>
-  <data key="d2">3</data>
-  <data key="d3">55</data>
-  <data key="d4">20</data>
-  <data key="d5">40</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-dhan-rekha-plan-no-863-uin-512n343v01</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_916">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC New Bima Bachat</data>
-  <data key="d2">15</data>
-  <data key="d3">50</data>
-  <data key="d4">9</data>
-  <data key="d5">15</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-new-bima-bachat-plan-no.-916-uin-512n284v02</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_932">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Children's Money Back Plan</data>
-  <data key="d2">0</data>
-  <data key="d3">12</data>
-  <data key="d4">13</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-new-children-s-money-back-plan-plan-no.-932-uin-512n296v02</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_852">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC SIIP</data>
-  <data key="d2">18</data>
-  <data key="d3">65</data>
-  <data key="d4">10</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-siip-plan-no.-852-uin-512l334v01</data>
-  <data key="d9"></data>
-</node>
-<node id="Category:ULIP">
-  <data key="d0">Category</data>
-  <data key="d10">ULIP</data>
-</node>
-<node id="Risk:High">
-  <data key="d0">Risk</data>
-  <data key="d10">High</data>
-</node>
-<node id="LIC_849">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Nivesh Plus</data>
-  <data key="d2">18</data>
-  <data key="d3">65</data>
-  <data key="d4">10</data>
-  <data key="d5">25</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-nivesh-plus-plan-no.-849-uin-512l335v01</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_905">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Cancer Cover</data>
-  <data key="d2">20</data>
-  <data key="d3">65</data>
-  <data key="d4">10</data>
-  <data key="d5">30</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-cancer-cover-plan-no.-905-uin-512n314v01</data>
-  <data key="d9"></data>
-</node>
-<node id="Goal:Health Protection">
-  <data key="d0">Goal</data>
-  <data key="d10">Health Protection</data>
-</node>
-<node id="Category:Health">
-  <data key="d0">Category</data>
-  <data key="d10">Health</data>
-</node>
-<node id="LIC_906">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Arogya Sanjeevani</data>
-  <data key="d2">18</data>
-  <data key="d3">65</data>
-  <data key="d4">1</data>
-  <data key="d5">1</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-arogya-sanjeevani-policy-plan-no.-906-uin-512n339v01</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_PMJJBY">
-  <data key="d0">Policy</data>
-  <data key="d1">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</data>
-  <data key="d2">18</data>
-  <data key="d3">50</data>
-  <data key="d4">1</data>
-  <data key="d5">1</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official Government Scheme Rules</data>
-  <data key="d8">https://licindia.in/pradhan-mantri-jeevan-jyoti-bima-yojana</data>
-  <data key="d9"></data>
-</node>
-<node id="Category:Micro Insurance">
-  <data key="d0">Category</data>
-  <data key="d10">Micro Insurance</data>
-</node>
-<node id="LIC_951">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Micro Bachat</data>
-  <data key="d2">18</data>
-  <data key="d3">55</data>
-  <data key="d4">10</data>
-  <data key="d5">15</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-micro-bachat-plan-no.-951-uin-512n329v02</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_939">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC Bhagya Lakshmi</data>
-  <data key="d2">18</data>
-  <data key="d3">55</data>
-  <data key="d4">5</data>
-  <data key="d5">13</data>
-  <data key="d6">False</data>
-  <data key="d7">Verified against Official LIC Public Disclosure</data>
-  <data key="d8">https://licindia.in/lic-s-bhagya-lakshmi-plan-no.-939-uin-512n292v02</data>
-  <data key="d9"></data>
-</node>
-<node id="LIC_770">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Bima Platinum</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Single Premium Endowment Plan</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release; on sale from 7 Sep 2026</data>
-</node>
-<node id="LIC_894">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Jeevan Raksha</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
   <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
   <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">917</data>
+  <data key="d26">817/512N283V01;917/512N283V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_714">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Endowment Plan</data>
+  <data key="d32">8</data>
+  <data key="d33">50</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">20</data>
+  <data key="d35">75</data>
+  <data key="d36">12</data>
+  <data key="d37">35</data>
+  <data key="d38">200000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14"></data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-new-endowment-plan-714-512n277v03</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC%27s+NEW+ENDOWMENT+PLAN+714.pdf/77f3167c-ae64-a1ea-d348-1c66f4455aed</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">914</data>
+  <data key="d26">814/512N277V01;914/512N277V02</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_715">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Anand</data>
+  <data key="d32">18</data>
+  <data key="d33">50</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d35">75</data>
+  <data key="d36">15</data>
+  <data key="d37">35</data>
+  <data key="d38">200000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14"></data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-new-jeevan-anand-715%09512n279v03</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC%27s+New+Jeevan+Anand+Sales+Brochure+Eng_141025.pdf/43b60cd9-f6f1-c889-734c-47c565a47ada</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">915</data>
+  <data key="d26">815/512N279V01;915/512N279V02</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_733">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Lakshya</data>
+  <data key="d32">18</data>
+  <data key="d33">50</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">31</data>
+  <data key="d35">65</data>
+  <data key="d36">13</data>
+  <data key="d37">25</data>
+  <data key="d38">200000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14"></data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-jeevan-lakshya-733-512n297v03</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC+Jeevan+Lakshya+Sales+Brochure_Eng_06112025.pdf/fcc745f6-e73e-c825-d3a6-9831221c5cc9</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">933</data>
+  <data key="d26">833/512N297V01;933/512N297V02</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_736">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Labh Plan</data>
+  <data key="d32">8</data>
+  <data key="d33">59</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d35">75</data>
+  <data key="d36">16</data>
+  <data key="d37">25</data>
+  <data key="d38">200000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14">{"allowed_terms":[16,21,25],"by_term":{"16":{"max_entry_age":59,"ppt":10},"21":{"max_entry_age":54,"ppt":15},"25":{"max_entry_age":50,"ppt":16}}}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-jeevan-labh-plan-736-512n304v03</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC_Jeevan+labh_Sales+Brochure_Eng.pdf/cafcd0b7-8f9d-6b65-f5e9-b2aad0788c98</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">936</data>
+  <data key="d26">836/512N304V01;936/512N304V02</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_774">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Amritbaal</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release; on sale from 7 Sep 2026</data>
-</node>
-<node id="LIC_892">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's New Jeevan Dhara-II</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
   <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
   <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">On sale from 19 Oct 2026</data>
-</node>
-<node id="LIC_907">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Health Shield</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">On sale from 19 Oct 2026</data>
-</node>
-<node id="LIC_908">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's New Cancer Cover</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">On sale from 19 Oct 2026</data>
-</node>
-<node id="LIC_888">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's New Jeevan Sathi, Single Premium</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">On sale from 1 Jun 2026</data>
-</node>
-<node id="LIC_889">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's New Jeevan Sathi, Limited Premium</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">On sale from 1 Jun 2026</data>
-</node>
-<node id="LIC_883">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Jeevan Utsav Single Premium</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Jan 2026</data>
-</node>
-<node id="LIC_886">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Protection Plus</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Dec 2025</data>
-</node>
-<node id="LIC_887">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Bima Kavach</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Dec 2025</data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
 <node id="LIC_912">
   <data key="d0">Policy</data>
   <data key="d1">LIC's Nav Jeevan Shree</data>
+  <data key="d32">0</data>
+  <data key="d33">60</data>
+  <data key="d39">30</data>
+  <data key="d40">30</data>
+  <data key="d34">18</data>
+  <data key="d35">75</data>
+  <data key="d36">10</data>
+  <data key="d37">20</data>
+  <data key="d38">500000.0</data>
   <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Jul 2025</data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14">{"by_ppt":{"6":{"max_entry_age":60,"min_term":10},"8":{"max_entry_age":60,"min_term":15},"10":{"max_entry_age":60,"min_term":15},"12":{"max_entry_age":59,"min_term":16},"15":{"max_entry_age":57,"min_term":18}},"max_term":20}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-nav-jeevan-shree-plan-no.912-1</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC_Nav+Jeevan+Shree_Sales+Brochure_Eng_912_151025.pdf/f6661e4c-3dac-aa25-7349-ae6bdbb70f16</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
-<node id="LIC_911">
+<node id="LIC_881">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Nav Jeevan Shree Single Premium</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Bima Lakshmi</data>
+  <data key="d32">18</data>
+  <data key="d33">50</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Jul 2025</data>
+  <data key="d36">25</data>
+  <data key="d37">25</data>
+  <data key="d38">200000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14"></data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-bima-lakshmi-881-512n389v01</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC_Bima+Lakshmi_Sales+Brochure_Eng.pdf/cee11780-e0d1-764e-2995-4a1f324a2744</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, term and sum assured per brochure page (maturity age not seen)</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
-<node id="LIC_875">
+<node id="LIC_888">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Yuva Term</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's New Jeevan Sathi - Single Premium</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release, Aug 2024</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_889">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Sathi - Limited Premium</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_890">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Bima Jyoti</data>
+  <data key="d32">0</data>
+  <data key="d33">60</data>
+  <data key="d39">30</data>
+  <data key="d40">30</data>
+  <data key="d34">18</data>
+  <data key="d35">75</data>
+  <data key="d36">15</data>
+  <data key="d37">20</data>
+  <data key="d38">125000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14"></data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-new-bima-jyoti</data>
+  <data key="d16">https://licindia.in/documents/20121/1850013/New+Bima+Jyoti+Sales+Brochure_English.pdf/05d091ee-bcb3-281d-999f-4027f78cd07a</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_770">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Platinum</data>
+  <data key="d32">0</data>
+  <data key="d33">55</data>
+  <data key="d39">30</data>
+  <data key="d40">30</data>
+  <data key="d34">28</data>
+  <data key="d35">75</data>
+  <data key="d36">17</data>
+  <data key="d37">40</data>
+  <data key="d38">300000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14">{"by_ppt":{"7":{"min_entry_age":11,"max_entry_age":55,"min_term":17},"10":{"min_entry_age":8,"max_entry_age":55,"min_term":20},"12":{"min_entry_age":6,"max_entry_age":53,"min_term":22},"15":{"min_entry_age":3,"max_entry_age":50,"min_term":25},"18":{"min_entry_age_days":30,"max_entry_age":47,"min_term":28}},"max_term":40}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-bima-platinum2</data>
+  <data key="d16">https://licindia.in/documents/20121/1860176/LIC+Bima+platinum+Sales+brochure.pdf/ae9590c9-2c2d-6dca-c180-5bbb3f956dab</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/endowment-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-02. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_745">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Umang</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">945</data>
+  <data key="d26">845/512N312V01;945/512N312V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/whole-life-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-06. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_771">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Utsav</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">871</data>
+  <data key="d26">871/512N363V01</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/whole-life-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-06. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_883">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Utsav Single Premium</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/whole-life-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-06. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_748">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Shree</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">948</data>
+  <data key="d26">848/512N316V01;948/512N316V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/money-back-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_720">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Money Back Plan - 20 Years</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">920</data>
+  <data key="d26">820/512N280V01;920/512N280V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/money-back-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_721">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Money Back Plan - 25 Years</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">921</data>
+  <data key="d26">821/512N278V01;921/512N278V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/money-back-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_732">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Children's Money Back Plan</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">932</data>
+  <data key="d26">832/512N296V01;932/512N296V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/money-back-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_734">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Tarun</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">934</data>
+  <data key="d26">834/512N299V01;934/512N299V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/money-back-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
 <node id="LIC_876">
   <data key="d0">Policy</data>
   <data key="d1">LIC's Digi Term</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Aug 2024</data>
-</node>
-<node id="LIC_877">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Yuva Credit Life</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Press release, Aug 2024</data>
+  <data key="d32">18</data>
+  <data key="d33">45</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">33</data>
+  <data key="d35">75</data>
+  <data key="d36">15</data>
+  <data key="d37">40</data>
+  <data key="d38">5000000.0</data>
+  <data key="d41">50000000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
+  <data key="d14">{"min_term_by_option":{"regular":15,"single":15,"limited_10":15,"limited_15":20},"max_term_cap":"max_maturity_age 75","above_max_sum_assured":"over Rs 5 crore only case by case with reinsurer approval","increasing_sa_option":"max term depends on age and SA band; not enforced"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-digi-term-876-512n356v01</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/Digi+Term+-+Sales+Brochure_April+25.pdf/31117c26-5e06-2f66-3c21-d92610e51051</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">876</data>
+  <data key="d26">876/512N356V01</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure section 2 (level sum assured option; increasing-SA max-term bands and limited-pay minimum terms are documented in rules_json but not enforced by the gate)</data>
+  <data key="d28">Eligibility transcribed from brochure section 2 'Eligibility Conditions and Other Restrictions' and reviewed 2026-11-19; UIN matches brochure.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
 <node id="LIC_878">
   <data key="d0">Policy</data>
   <data key="d1">LIC's Digi Credit Life</data>
+  <data key="d32">18</data>
+  <data key="d33">45</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">23</data>
+  <data key="d35">75</data>
+  <data key="d36">5</data>
+  <data key="d37">30</data>
+  <data key="d38">5000000.0</data>
+  <data key="d41">50000000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
+  <data key="d14">{"term_by_ppt":{"single":"5-30","5":"10-30","10":"15-30","15":"25-30"},"above_max_sum_assured":"over Rs 5 crore only case by case"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-digi-credit-life-878-512n358v01</data>
+  <data key="d16">https://licindia.in/documents/20121/1243736/LIC_Digi+Credit_Sales+Brochure_4+inch+x+9+inch_Eng.pdf/57715740-ba0f-8e2d-6188-0b5bfee6d873</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure section 2 (level sum assured option; increasing-SA max-term bands and limited-pay minimum terms are documented in rules_json but not enforced by the gate)</data>
+  <data key="d28">Eligibility transcribed from brochure section 2 'Eligibility Conditions and Other Restrictions' and reviewed 2026-11-19; UIN matches brochure.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_877">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Credit Life</data>
+  <data key="d32">18</data>
+  <data key="d33">45</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">23</data>
+  <data key="d35">75</data>
+  <data key="d36">5</data>
+  <data key="d37">30</data>
+  <data key="d38">5000000.0</data>
+  <data key="d41">50000000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
+  <data key="d14">{"term_by_ppt":{"single":"5-30","5":"10-30","10":"15-30","15":"25-30"},"min_sum_assured_exception":{"amount":2000000,"condition":"entry age 21-45 and loan-linked cover from approved FI/NBFC (housing loan etc.); NOT enforced, gate uses Rs 50 lakh"},"above_max_sum_assured":"over Rs 5 crore only case by case"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-yuva-credit-life-877-512n357v01</data>
+  <data key="d16">https://licindia.in/documents/20121/1240315/Lic+leaflet+Yuva+Credit+4x9+inches+wxh.pdf/45e68d86-f84d-6eba-9b17-07f07b44f7fc</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure section 2 (level sum assured option; increasing-SA max-term bands and limited-pay minimum terms are documented in rules_json but not enforced by the gate)</data>
+  <data key="d28">Eligibility transcribed from brochure section 2 'Eligibility Conditions and Other Restrictions' and reviewed 2026-11-19; UIN matches brochure.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_875">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Term</data>
+  <data key="d32">18</data>
+  <data key="d33">45</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">33</data>
+  <data key="d35">75</data>
+  <data key="d36">15</data>
+  <data key="d37">40</data>
+  <data key="d38">5000000.0</data>
+  <data key="d41">50000000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
+  <data key="d14">{"min_term_by_option":{"regular":15,"single":15,"limited_10":15,"limited_15":20},"max_term_cap":"max_maturity_age 75","above_max_sum_assured":"over Rs 5 crore only case by case with reinsurer approval","increasing_sa_option":"max term depends on age and SA band; not enforced"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-yuva-term-875-512n355v01</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/Lic+leaflet+Yuva+Term+4x9+inches+wxh+single+pages.pdf/3e537a91-d30b-8e99-0725-a74394037652</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">875</data>
+  <data key="d26">875/512N355V01</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure section 2 (level sum assured option; increasing-SA max-term bands and limited-pay minimum terms are documented in rules_json but not enforced by the gate)</data>
+  <data key="d28">Eligibility transcribed from brochure section 2 'Eligibility Conditions and Other Restrictions' and reviewed 2026-11-19; UIN matches brochure.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_954">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Tech-Term</data>
+  <data key="d32">18</data>
+  <data key="d33">65</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d35">80</data>
+  <data key="d36">10</data>
+  <data key="d37">40</data>
+  <data key="d38">5000000.0</data>
   <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14">{"max_term_cap":"max_maturity_age 80","limited_ppt":{"term_minus_5":"policy term 10-40","term_minus_10":"policy term 15-40"},"single_premium":"not available","increasing_sa_option":"max term depends on age and SA band; not enforced"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-new-tech-term-954-512n351v01</data>
+  <data key="d16">https://licindia.in/documents/20121/290753/LIC_New+Tech+Term_Sales+Brochure_4+inch+x+9+inch_Eng+%282%29.pdf/d75b9948-b9e3-2ba1-9886-066a1bee6909</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">854</data>
+  <data key="d26">954/512N351V01;854/512N333V01</data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure section 2 (level sum assured option; increasing-SA max-term bands and limited-pay minimum terms are documented in rules_json but not enforced by the gate)</data>
+  <data key="d28">Eligibility transcribed from brochure section 2 'Eligibility Conditions and Other Restrictions' and reviewed 2026-11-19; UIN matches brochure.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_859">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Saral Jeevan Bima</data>
+  <data key="d32">18</data>
+  <data key="d33">65</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d35">70</data>
+  <data key="d36">5</data>
+  <data key="d37">40</data>
+  <data key="d38">500000.0</data>
+  <data key="d41">2500000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
   <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-saral-jeevan-bima</data>
+  <data key="d16">https://licindia.in/documents/20121/1639835/LIC+Saral+Jeevan+Bima_Sales+Brochure_30032026-ENG.pdf/a712554e-36b0-8059-d311-dcfeba3edb3d</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_887">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Kavach</data>
+  <data key="d32">18</data>
+  <data key="d33">65</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">28</data>
+  <data key="d35">100</data>
+  <data key="d36">10</data>
+  <data key="d37">82</data>
+  <data key="d38">20000000.0</data>
+  <data key="d11"></data>
+  <data key="d12">True</data>
+  <data key="d13">True</data>
+  <data key="d14">{"min_term_by_option":{"single":10,"limited_5":10,"limited_10":15,"limited_15":20,"regular":10},"max_term_cap":"max_maturity_age 100","entry_above_60":"case by case"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-bima-kavach</data>
+  <data key="d16">https://licindia.in/documents/20121/1319704/LIC+Bima+Kavach+Sales+Brochure+Eng_03122025.pdf/a0ae7d5a-b525-a092-e144-4d126cea600f</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_894">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Raksha</data>
+  <data key="d32">18</data>
+  <data key="d33">45</data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d34">33</data>
+  <data key="d35">60</data>
+  <data key="d36">15</data>
+  <data key="d37">42</data>
+  <data key="d38">500000.0</data>
+  <data key="d41">2400000.0</data>
+  <data key="d12">False</data>
+  <data key="d13">True</data>
+  <data key="d14">{"min_term_by_option":{"single":15,"limited_10":15,"limited_15":20,"regular":15},"max_term_cap":"max_maturity_age 60"}</data>
+  <data key="d15">https://licindia.in/web/guest/lic-s-jeevan-raksha</data>
+  <data key="d16">https://licindia.in/documents/20121/1860074/LIC_Jeevan+Raksha_Sales+Brochure_4+inch+x+9+inch_Eng_Single.pdf/2b6234bc-6589-1d57-edc8-ce089c3cdc93</data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">True</data>
+  <data key="d20">True</data>
+  <data key="d21">True</data>
+  <data key="d22">True</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27">entry age, maturity age, term and sum assured per brochure page</data>
+  <data key="d28">Team-verified brochure extraction; official LIC policy and brochure URLs added. Values were not re-extracted in this change.</data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/term-assurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-29. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_867">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Pension Plus</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release, Aug 2024</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Unresolved</data>
+  <data key="d18">unresolved</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table. User-directed unresolved status; excluded from recommendation pool.</data>
+</node>
+<node id="LIC_857">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Akshay-VII</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">857</data>
+  <data key="d26">857/512N337V01;857/512N337V02;857/512N337V03;857/512N337V04;857/512N337V05</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_758">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Shanti</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">858</data>
+  <data key="d26">858/512N338V01;858/512N338V02;858/512N338V03;858/512N338V04;858/512N338V05</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_862">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Saral Pension</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">862</data>
+  <data key="d26">862/512N342V01;862/512N342V02;862/512N342V03</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_879">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Smart Pension</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_892">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Dhara II</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/pension-plan</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_907">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Health Shield</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/health-insurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_908">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Cancer Cover</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/health-insurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-10-14. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_751">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Micro Bachat</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">951</data>
+  <data key="d26">851/512N329V01;951/512N329V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/micro-insurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-17. Name, plan number and UIN transcribed from the listing table.</data>
+</node>
+<node id="LIC_880">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jan Suraksha</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/micro-insurance-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-09-17. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
 <node id="LIC_873">
   <data key="d0">Policy</data>
   <data key="d1">LIC's Index Plus</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release, Feb 2024</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Unresolved</data>
+  <data key="d18">unresolved</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/unit-linked-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table. User-directed unresolved status; excluded from recommendation pool.</data>
 </node>
-<node id="LIC_872">
+<node id="LIC_749">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Jeevan Dhara II</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Nivesh Plus</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">Press release, Jan 2024</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">849</data>
+  <data key="d26">849/512L317V01</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/unit-linked-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
-<node id="LIC_860">
+<node id="LIC_752">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Bima Jyoti</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's SIIP</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25">852</data>
+  <data key="d26">852/512L334V01</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/unit-linked-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
-<node id="LIC_864">
+<node id="LIC_886">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Bima Ratna</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Protection Plus</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Active - Open for Sale</data>
+  <data key="d18">active</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">True</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/unit-linked-plans</data>
+  <data key="d31">LIC current category listing; page last update 2026-01-12. Name, plan number and UIN transcribed from the listing table.</data>
 </node>
-<node id="LIC_865">
+<node id="LIC_863">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Dhan Sanchay</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Dhan Rekha</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Withdrawn / no current matching listing</data>
+  <data key="d18">withdrawn</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/withdrawn-plans</data>
+  <data key="d31">LIC official withdrawn list confirms Plan 863 / UIN 512N343V01; no current version appears in checked category listings.</data>
 </node>
-<node id="LIC_866">
+<node id="LIC_905">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Dhan Varsha</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Cancer Cover</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Withdrawn / no current matching listing</data>
+  <data key="d18">withdrawn</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25">905</data>
+  <data key="d26">905/512N314V01;905/512N314V02</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/withdrawn-plans</data>
+  <data key="d31">LIC official withdrawn list confirms Plan 905 / UIN 512N314V03 and earlier versions; New Cancer Cover 908 is kept separate.</data>
 </node>
-<node id="LIC_914">
+<node id="LIC_911">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's New Endowment Plan</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Nav Jeevan Shree Single Premium</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Withdrawn / no current matching listing</data>
+  <data key="d18">withdrawn</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/withdrawn-plans</data>
+  <data key="d31">LIC official withdrawn list confirms Plan 911 / UIN 512N390V01; no exact matching current category entry is listed.</data>
 </node>
-<node id="LIC_915">
+<node id="LIC_916">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's New Jeevan Anand</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's New Bima Bachat</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Withdrawn / no current matching listing</data>
+  <data key="d18">withdrawn</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25">816</data>
+  <data key="d26">816/512N284V01</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/withdrawn-plans</data>
+  <data key="d31">LIC official withdrawn list confirms Plan 916 / UIN 512N284V02; no current version appears in checked category listings.</data>
 </node>
-<node id="LIC_868">
+<node id="LIC_939">
   <data key="d0">Policy</data>
-  <data key="d1">LIC's Jeevan Azad</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
+  <data key="d1">LIC's Bhagya Lakshmi</data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
   <data key="d7"></data>
   <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
-</node>
-<node id="LIC_870">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Jeevan Kiran</data>
+  <data key="d9"></data>
+  <data key="d10"></data>
   <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
+  <data key="d12">False</data>
+  <data key="d13">False</data>
   <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">LIC sitemap</data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17">Withdrawn / no current matching listing</data>
+  <data key="d18">withdrawn</data>
+  <data key="d19">False</data>
+  <data key="d20">True</data>
+  <data key="d21">False</data>
+  <data key="d22">False</data>
+  <data key="d23">False</data>
+  <data key="d24">False</data>
+  <data key="d25">839</data>
+  <data key="d26">829/512N292V01;839/512N292V02;939/512N292V03</data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29">LIC listing confirms identity/lifecycle only</data>
+  <data key="d30">https://licindia.in/withdrawn-plans</data>
+  <data key="d31">LIC official withdrawn list confirms Plan 939 / UIN 512N292V04 and earlier versions; no current version appears in checked category listings.</data>
 </node>
-<node id="LIC_SMART_PENSION">
-  <data key="d0">Policy</data>
-  <data key="d1">LIC's Smart Pension</data>
-  <data key="d11"></data>
-  <data key="d12"></data>
-  <data key="d13"></data>
-  <data key="d14"></data>
-  <data key="d6">False</data>
-  <data key="d7"></data>
-  <data key="d8"></data>
-  <data key="d9">Pension &amp; group schemes page</data>
-</node>
-<edge source="LIC_936" target="Goal:Savings">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_936" target="Category:Endowment">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_936" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_936" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_945" target="Goal:Retirement">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_945" target="Category:Whole Life">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_945" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_945" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_871" target="Goal:Income">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_871" target="Category:Whole Life">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_871" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_871" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_854" target="Goal:Life Cover">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_854" target="Category:Term Assurance">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_854" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_854" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_859" target="Goal:Life Cover">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_859" target="Category:Term Assurance">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_859" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_859" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_858" target="Goal:Retirement">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_858" target="Category:Pension">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_858" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_858" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_857" target="Goal:Retirement">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_857" target="Category:Pension">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_857" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_857" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_934" target="Goal:Child Education">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_934" target="Category:Child Plan">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_934" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_934" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_933" target="Goal:Child Education">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_933" target="Category:Endowment">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_933" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_933" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_948" target="Goal:Wealth Creation">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_948" target="Category:Money Back">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_948" target="Risk:Moderate">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_948" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_863" target="Goal:Savings">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_863" target="Category:Money Back">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_863" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_863" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_916" target="Goal:Savings">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_916" target="Category:Money Back">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_916" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_916" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_932" target="Goal:Child Education">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_932" target="Category:Child Plan">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_932" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_932" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_852" target="Goal:Wealth Creation">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_852" target="Category:ULIP">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_852" target="Risk:High">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_852" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_849" target="Goal:Wealth Creation">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_849" target="Category:ULIP">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_849" target="Risk:High">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_849" target="Premium:High">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_905" target="Goal:Health Protection">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_905" target="Category:Health">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_905" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_905" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_906" target="Goal:Health Protection">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_906" target="Category:Health">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_906" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_906" target="Premium:Moderate">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_PMJJBY" target="Goal:Life Cover">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_PMJJBY" target="Category:Micro Insurance">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_PMJJBY" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_PMJJBY" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_951" target="Goal:Savings">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_951" target="Category:Micro Insurance">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_951" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_951" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
-<edge source="LIC_939" target="Goal:Life Cover">
-  <data key="d15">HAS_GOAL</data>
-</edge>
-<edge source="LIC_939" target="Category:Micro Insurance">
-  <data key="d15">IN_CATEGORY</data>
-</edge>
-<edge source="LIC_939" target="Risk:Low">
-  <data key="d15">SUITS_RISK</data>
-</edge>
-<edge source="LIC_939" target="Premium:Low">
-  <data key="d15">HAS_PREMIUM</data>
-</edge>
 </graph></graphml>

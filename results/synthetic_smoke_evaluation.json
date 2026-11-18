@@ -271,11 +271,11 @@
         "mrr": 0.0,
         "ndcg_at_4": 0.0,
         "eligibility_violations": 0.0,
-        "tied_rank_fraction": 1.0
+        "tied_rank_fraction": 0.3833333333333333
       },
-      "tied_rank_fraction": 1.0,
-      "all_equal_score_list_count": 3,
-      "all_equal_list_fraction": 1.0,
+      "tied_rank_fraction": 0.36363636363636365,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
       "per_query": {
         "SYN_Q_007": {
           "p_at_1": 0.0,
@@ -287,8 +287,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 3,
           "recommendation_count": 6,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.4,
+          "all_equal_final_scores": false
         },
         "SYN_Q_008": {
           "p_at_1": 0.0,
@@ -300,8 +300,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 2,
           "recommendation_count": 3,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.5,
+          "all_equal_final_scores": false
         },
         "SYN_Q_009": {
           "p_at_1": 0.0,
@@ -313,8 +313,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 2,
           "recommendation_count": 5,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.25,
+          "all_equal_final_scores": false
         }
       }
     }
@@ -393,11 +393,11 @@
         "mrr": 0.0,
         "ndcg_at_4": 0.0,
         "eligibility_violations": 0.0,
-        "tied_rank_fraction": 1.0
+        "tied_rank_fraction": 0.3833333333333333
       },
-      "tied_rank_fraction": 1.0,
-      "all_equal_score_list_count": 3,
-      "all_equal_list_fraction": 1.0,
+      "tied_rank_fraction": 0.36363636363636365,
+      "all_equal_score_list_count": 0,
+      "all_equal_list_fraction": 0.0,
       "per_query": {
         "SYN_Q_007": {
           "p_at_1": 0.0,
@@ -409,8 +409,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 3,
           "recommendation_count": 6,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.4,
+          "all_equal_final_scores": false
         },
         "SYN_Q_008": {
           "p_at_1": 0.0,
@@ -422,8 +422,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 2,
           "recommendation_count": 3,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.5,
+          "all_equal_final_scores": false
         },
         "SYN_Q_009": {
           "p_at_1": 0.0,
@@ -435,8 +435,8 @@
           "eligibility_violations": 0,
           "judged_recommendations": 2,
           "recommendation_count": 5,
-          "tied_rank_fraction": 1.0,
-          "all_equal_final_scores": true
+          "tied_rank_fraction": 0.25,
+          "all_equal_final_scores": false
         }
       }
     }

@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 
 import pandas as pd
+import pytest
+
+from tools.human_labels import validate_human_annotator_type
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -169,6 +172,32 @@ def test_human_reviewed_labels_are_separate_from_synthetic_training():
     assert labels["grade"].between(0, 3).all()
     assert labels["annotator_type"].eq("human").all()
     assert labels["provenance"].eq("HUMAN_REVIEWED_BY_USER").all()
-    assert labels["annotator"].eq("HUMAN_UNSPECIFIED").all()
+    assert labels["annotator"].eq("human").all()
+    assert labels["reviewer_id"].eq("").all()
     assert status["graded_query_count"] == 55
     assert status["training_labels"] is False
+    assert status["annotator_type"] == "human"
+    assert status["reviewer_ids_provided"] == 0
+
+
+def test_human_label_source_has_explicit_provenance_fields():
+    labels = pd.read_csv(ROOT / "data" / "source" / "human_labels.csv", dtype=str).fillna("")
+
+    assert {"annotator_type", "reviewer_id"}.issubset(labels.columns)
+    assert labels["annotator_type"].eq("human").all()
+    assert labels["reviewer_id"].eq("").all()
+    validate_human_annotator_type(labels)
+
+
+@pytest.mark.parametrize(
+    "labels",
+    [
+        pd.DataFrame({"reviewer_id": [""]}),
+        pd.DataFrame({"annotator_type": [""]}),
+        pd.DataFrame({"annotator_type": ["ai"]}),
+        pd.DataFrame({"annotator_type": ["Human"]}),
+    ],
+)
+def test_human_label_loader_rejects_missing_or_mismatched_annotator_type(labels):
+    with pytest.raises(ValueError, match="annotator_type"):
+        validate_human_annotator_type(labels)

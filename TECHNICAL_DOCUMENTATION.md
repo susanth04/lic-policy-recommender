@@ -114,8 +114,8 @@ Descriptions were checked against the linked official LIC brochures; their sourc
 - `artifacts/queries.csv`: 18 synthetic queries with `query_id`, `group_id`, `raw_query`, `persona`, and `provenance`.
 - `labels/relevance_labels.csv`: 324 rows with `query_id`, `group_id`, `policy_id`, `grade`, and `annotator`. All current rows use `SYNTHETIC_SMOKE_TEST`; grades are 0–3.
 - `data/source/human_eval_queries.csv`: separate evaluation prompts. Their provenance is unspecified in the current source file. No human labels are used to train or tune the model.
-- `data/source/human_labels.csv`: user-confirmed, human-reviewed grades (0–3) for a subset of those prompts. The source does not identify individual reviewers; normalized artifacts record `HUMAN_UNSPECIFIED` rather than inventing an identity.
-- `artifacts/human_eval_labels.parquet`: validated human labels with `HUMAN_REVIEWED_BY_USER` provenance; kept separate from synthetic labels.
+- `data/source/human_labels.csv`: user-confirmed, human-reviewed grades (0–3) for a subset of those prompts. The source contains `annotator_type=human`; `reviewer_id` is blank because no individual reviewer identity was supplied.
+- `artifacts/human_eval_labels.parquet`: validated human labels with `annotator=human`, `annotator_type=human`, and separate `HUMAN_REVIEWED_BY_USER` provenance; kept separate from synthetic labels.
 - `relevance_labels_TEMPLATE.csv`: 324 ungraded query-policy rows.
 - `artifacts/splits.json`: group-disjoint synthetic train/validation/test query splits plus a policy-held-out split. Human evaluation queries are not included in training splits.
 
@@ -161,7 +161,7 @@ Notebook 04 sweeps alpha/beta combinations on synthetic validation profiles and 
 
 Notebook 01 validates `data/source/human_labels.csv` against `data/source/human_eval_queries.csv`, checks IDs/groups/grades, and writes a separate human-label artifact. Notebook 02 parses those queries. Notebook 04 applies fixed weights selected on synthetic validation data and evaluates only eligible judged policies; unjudged policies are excluded rather than presumed irrelevant. Human labels are not used for training or hyperparameter tuning. Results are saved to `results/human_evaluation.json` and ranked candidates to `results/human_evaluation_candidates.csv`.
 
-The current query file has no provenance column, so the pipeline records query provenance as `UNSPECIFIED`. Reviewer identity is not present in the source; artifacts say `HUMAN_UNSPECIFIED`. The judgments were treated as human-reviewed based on the user's confirmation. This is a separate evaluation path, not evidence that the recommender is production-ready or suitable for financial advice. Incomplete judgments limit what can be inferred from rankings.
+The current query file has no provenance column, so the pipeline records query provenance as `UNSPECIFIED`. Reviewer identity is not present in the source; `reviewer_id` remains blank and is never fabricated. The judgments were treated as human-reviewed based on the user's confirmation. This is a separate evaluation path, not evidence that the recommender is production-ready or suitable for financial advice. Incomplete judgments limit what can be inferred from rankings.
 
 ## 9. What has been done
 

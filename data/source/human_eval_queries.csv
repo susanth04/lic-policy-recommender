@@ -1,0 +1,61 @@
+query_id,group_id,raw_query
+HQ_001,Young Salaried Term Cover,I am 27 and want a pure term plan for a 30 year term with 25 lakh cover. Low premium please.
+HQ_002,Young Salaried Term Cover,"I'm 24, just started working in Pune. Need affordable life cover of 20 lakh, 25 year term."
+HQ_003,Young Salaried Term Cover,"Age 31, married, want term insurance with 25 lakh sum assured for 20 years term."
+HQ_004,Young Salaried Term Cover,"I am 29 years old and looking for cheap protection for my parents in case something happens to me, 15 lakh cover."
+HQ_005,Young Salaried Term Cover,"I am 33 and want simple life cover of 10 lakh for a 20 year term, no investment component."
+HQ_006,Family Breadwinner High Cover,"I am 38, the only earning member. I need 2 crore life cover for a 25 year term."
+HQ_007,Family Breadwinner High Cover,"Age 42 with home loan, want 3 crore term cover, 20 year term."
+HQ_008,Family Breadwinner High Cover,"I am 35 and want 2 crore sum assured, single premium is fine, 15 year term."
+HQ_009,Family Breadwinner High Cover,I'm 45 years old with two kids and need 5 crore protection for 20 year term.
+HQ_010,Family Breadwinner High Cover,"Looking for 50 lakh term cover at age 40 for 20 years, salaried, one child."
+HQ_011,Parent Saving for Child Education,"I am 34 with a 4 year old daughter, want a savings plan for her higher education, 20 year term."
+HQ_012,Parent Saving for Child Education,"Need an endowment plan for my 6 year old son's college fees. I am 36, 15 year term."
+HQ_013,Parent Saving for Child Education,"I am 31 and my 2 year old daughter needs an education fund, 5 lakh sum assured, 18 year term."
+HQ_014,Parent Saving for Child Education,"Parent aged 39, child aged 8, want guaranteed money at maturity for his engineering studies."
+HQ_015,Parent Saving for Child Education,"I'm 30 and just had a baby boy. Want to start a long term plan for his future, 25 year term."
+HQ_016,Child Marriage and Gift Planning,"I am 37 with a 5 year old daughter and want a plan that will pay a lump sum for her marriage, 20 year term."
+HQ_017,Child Marriage and Gift Planning,"Age 33, daughter is 1 year old, need a long term savings plan for her wedding, 25 year term."
+HQ_018,Child Marriage and Gift Planning,"I am 40 and want to build a corpus of 10 lakh for my 10 year old daughter's marriage, 16 year term."
+HQ_019,Child Marriage and Gift Planning,"Want something for my newborn, I am 28, guaranteed sum at maturity, 20 year term."
+HQ_020,Child Marriage and Gift Planning,"Plan for my niece's future, I am 44 and she is 7 years old, 15 year term."
+HQ_021,Conservative Guaranteed Savings,"I am 45 and want a safe guaranteed return plan, no market risk, 20 year term, 10 lakh sum assured."
+HQ_022,Conservative Guaranteed Savings,"Age 50, looking for secure savings with life cover for 15 years term."
+HQ_023,Conservative Guaranteed Savings,"I'm 36 and don't trust the stock market. Want an endowment policy with guaranteed maturity benefit, 21 year term."
+HQ_024,Conservative Guaranteed Savings,"I am 41 and want a limited premium plan, pay for a few years and get money later, 25 year term."
+HQ_025,Conservative Guaranteed Savings,"Need a low risk savings plan with bonus. I am 32, 5 lakh sum assured, 25 year term."
+HQ_026,Women Focused Plans,"I am a 32 year old woman looking for a savings plan designed for women, 25 year term."
+HQ_027,Women Focused Plans,"Woman aged 28, homemaker, want a policy in my own name with maturity benefit, 25 year term."
+HQ_028,Women Focused Plans,I am a 40 year old working woman and want savings plus life cover for 20 year term.
+HQ_029,Women Focused Plans,"I'm 35, female, want an insurance plan especially for women, 5 lakh sum assured."
+HQ_030,Women Focused Plans,"My wife is 30 years old and wants her own savings plan, 25 year term."
+HQ_031,Low Budget First-Time Buyer,"I am 23, earn very little, want the cheapest possible life insurance, 5 lakh cover."
+HQ_032,Low Budget First-Time Buyer,"Daily wage worker aged 35, want small premium policy with 5 lakh sum assured, 15 year term."
+HQ_033,Low Budget First-Time Buyer,"Age 26, first time buyer, need low premium cover of 10 lakh for 20 years term."
+HQ_034,Low Budget First-Time Buyer,"I'm 30 and have a small budget, want a basic policy with 5 lakh coverage for 10 year term."
+HQ_035,Low Budget First-Time Buyer,"Fresh graduate aged 22, looking for affordable insurance with 5 lakh cover, 25 year term."
+HQ_036,Pre-Retiree and Senior,"I am 58 and retiring in two years, want a safe plan with maturity benefit, 16 year term."
+HQ_037,Pre-Retiree and Senior,"Age 55, want life cover for my spouse for 15 year term with 10 lakh sum assured."
+HQ_038,Pre-Retiree and Senior,"I am 60 years old and want guaranteed savings for my grandchildren, 10 year term."
+HQ_039,Pre-Retiree and Senior,"I'm 52 and want an endowment plan to build a retirement corpus, 20 year term."
+HQ_040,Pre-Retiree and Senior,Senior citizen aged 65 looking for life insurance with 5 lakh cover.
+HQ_041,Pension and Retirement Income,I am 40 and want a pension plan that pays monthly income after I retire at 60.
+HQ_042,Pension and Retirement Income,"Age 58, want an immediate annuity with lifelong income."
+HQ_043,Pension and Retirement Income,"I am 35 looking for retirement planning with guaranteed pension, 25 year term."
+HQ_044,Pension and Retirement Income,"Need regular income after retirement, I am 50, would like a deferred annuity."
+HQ_045,Pension and Retirement Income,I'm 62 and want to invest a lump sum of 20 lakh to get a monthly pension.
+HQ_046,Health Insurance Seekers,I am 42 and need comprehensive health insurance covering hospitalisation and ICU.
+HQ_047,Health Insurance Seekers,"Looking for cancer cover with hospital cash benefit, I am 38."
+HQ_048,Health Insurance Seekers,I'm 30 and want a mediclaim policy for myself and my wife.
+HQ_049,Health Insurance Seekers,"Age 55, want health cover for critical illness and surgery."
+HQ_050,Health Insurance Seekers,Need a medical insurance plan for my parents aged 65 and 62.
+HQ_051,Market Linked Investors,"I am 29 and want high returns through equity market linked investment, 20 year term."
+HQ_052,Market Linked Investors,"Looking for a ULIP with fund switching, I'm 34, 15 year term."
+HQ_053,Market Linked Investors,"I am 40 and want wealth creation with moderate risk, balanced fund, 10 year term."
+HQ_054,Market Linked Investors,"Age 26, aggressive investor, want market linked plan with life cover, 25 year term."
+HQ_055,Market Linked Investors,"I'm 37, want to put 1 lakh yearly in an index linked plan for long term growth."
+HQ_056,Edge Cases and Ambiguous Queries,I want some kind of insurance.
+HQ_057,Edge Cases and Ambiguous Queries,I am 95 years old and want to buy a life insurance policy.
+HQ_058,Edge Cases and Ambiguous Queries,"I want zero risk and very high returns, guaranteed."
+HQ_059,Edge Cases and Ambiguous Queries,I am 70 and want a 20 year term plan with 10 lakh cover.
+HQ_060,Edge Cases and Ambiguous Queries,"I am 30 and want 1 crore cover for a 20 year term, cheapest option."

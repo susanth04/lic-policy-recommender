@@ -23,9 +23,9 @@ Descriptions for verified policies are sourced from their linked LIC brochures, 
 
 ## Reproduce and test
 
-Run `make reproduce` to execute notebooks 01–04 in order, or run each notebook in Colab. Use `make test` for the smoke tests. On Windows, set the Python launcher explicitly if needed, for example `make reproduce PYTHON="py -3.11"`.
+Use Python 3.11 and install the pinned dependencies with `python -m pip install -r requirements.txt`. Run `make reproduce` to execute notebooks 01–04 in order, or run each notebook in Colab. Use `make test` for the smoke tests. On Windows, set the Python launcher explicitly if needed, for example `make reproduce PYTHON="py -3.11"`.
 
-`labels/relevance_labels.csv` contains synthetic smoke-test grades marked `SYNTHETIC_SMOKE_TEST`; `grade` is the relevance column (0–3). Notebook 03 trains only on these synthetic labels. `data/source/human_labels.csv` and `data/source/human_eval_queries.csv` feed a separate evaluation-only path: labels are not used for training or tuning. Query provenance is unspecified in the current CSV. Outputs are `results/human_evaluation.json` and `results/human_evaluation_candidates.csv`; neither establishes real-world recommendation quality or KG benefit.
+`labels/relevance_labels.csv` contains synthetic smoke-test grades marked `SYNTHETIC_SMOKE_TEST`; `grade` is the relevance column (0–3). Notebook 03 trains only on these synthetic labels. `data/source/human_labels.csv` and `data/source/human_eval_queries.csv` feed a separate evaluation-only path: labels are not used for training or tuning. Human labels declare `annotator_type=human`; reviewer IDs remain blank because none were supplied. Query provenance is unspecified in the current CSV. Outputs are `results/human_evaluation.json` and `results/human_evaluation_candidates.csv`; neither establishes real-world recommendation quality or KG benefit.
 
 The current held-out profile has no grade-2/3 judgments for policies that pass the hard eligibility gate. Accordingly, `results/synthetic_smoke_evaluation.json` marks its ranking metrics `NOT_EVALUABLE_NO_ELIGIBLE_RELEVANT_JUDGMENTS`; the resulting zero scores must not be interpreted as measured ranking quality.
 

@@ -6,14 +6,14 @@ A transparent, brochure-verified LIC policy recommendation system combining natu
 
 ```mermaid
 flowchart TD
-    Q[User Query Text + Optional Overrides] --> IP[1. Intent Parser & Scope Check]
-    IP -->|Pension / Health / ULIP / Micro| OOS[Status: OUT_OF_SCOPE<br/>Plain explanation, 0 recs]
-    IP -->|In-Scope Categories| EG[2. Hard Eligibility Gate<br/>catalogue.csv brochure rules]
-    EG -->|Unknown / Missing Info| NI[Status: NEEDS_INFO<br/>Prompts for child_age, age, etc.]
-    EG -->|0 Policies Pass| NEP[Status: NO_ELIGIBLE_POLICIES<br/>Explain limits exceeded]
-    EG -->|Gate-Eligible Policies| GBR[3. GBR Ranker (gbr_only)<br/>Trained on verified plans]
-    GBR -->|Top Relevance < 1.20| WM[Flag: weak_match = True<br/>Abstention Warning]
-    GBR --> REP[4. Transparent Output<br/>Card, gate facts, brochure URL]
+    Q["User Query Text + Optional Overrides"] --> IP["1. Intent Parser & Scope Check"]
+    IP -->|"Pension / Health / ULIP / Micro"| OOS["Status: OUT_OF_SCOPE<br/>Plain explanation, 0 recs"]
+    IP -->|"In-Scope Categories"| EG["2. Hard Eligibility Gate<br/>catalogue.csv brochure rules"]
+    EG -->|"Unknown / Missing Info"| NI["Status: NEEDS_INFO<br/>Prompts for child_age, age, etc."]
+    EG -->|"0 Policies Pass"| NEP["Status: NO_ELIGIBLE_POLICIES<br/>Explain limits exceeded"]
+    EG -->|"Gate-Eligible Policies"| GBR["3. GBR Ranker (gbr_only)<br/>Trained on verified plans"]
+    GBR -->|"Top Relevance < 1.20"| WM["Flag: weak_match = True<br/>Abstention Warning"]
+    GBR --> REP["4. Transparent Output<br/>Card, gate facts, brochure URL"]
 ```
 
 ### Key Principles

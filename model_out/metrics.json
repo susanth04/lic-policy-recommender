@@ -1,0 +1,959 @@
+{
+  "trained_on": "2026-11-21",
+  "n_training_rows": 2191,
+  "n_labeled_queries": 155,
+  "n_persona_groups": 37,
+  "n_policies_ranked": 21,
+  "selected_config": {
+    "max_depth": 4,
+    "n_estimators": 200
+  },
+  "leave_one_group_out_cv": {
+    "random": {
+      "ndcg@3": 0.407,
+      "ndcg@5": 0.457,
+      "mrr": 0.645,
+      "queries_scored": 132
+    },
+    "TF-IDF char similarity": {
+      "ndcg@3": 0.497,
+      "ndcg@5": 0.524,
+      "mrr": 0.697,
+      "queries_scored": 132
+    },
+    "keyword goal overlap": {
+      "ndcg@3": 0.501,
+      "ndcg@5": 0.515,
+      "mrr": 0.609,
+      "queries_scored": 132
+    },
+    "policy average grade": {
+      "ndcg@3": 0.538,
+      "ndcg@5": 0.513,
+      "mrr": 0.574,
+      "queries_scored": 132
+    },
+    "ridge (alpha=100)": {
+      "ndcg@3": 0.532,
+      "ndcg@5": 0.569,
+      "mrr": 0.666,
+      "queries_scored": 132
+    },
+    "GBR depth=2 trees=100": {
+      "ndcg@3": 0.649,
+      "ndcg@5": 0.68,
+      "mrr": 0.798,
+      "queries_scored": 132
+    },
+    "GBR depth=2 trees=200": {
+      "ndcg@3": 0.661,
+      "ndcg@5": 0.701,
+      "mrr": 0.787,
+      "queries_scored": 132
+    },
+    "GBR depth=3 trees=100": {
+      "ndcg@3": 0.688,
+      "ndcg@5": 0.711,
+      "mrr": 0.823,
+      "queries_scored": 132
+    },
+    "GBR depth=3 trees=200": {
+      "ndcg@3": 0.723,
+      "ndcg@5": 0.737,
+      "mrr": 0.83,
+      "queries_scored": 132
+    },
+    "GBR depth=4 trees=100": {
+      "ndcg@3": 0.702,
+      "ndcg@5": 0.729,
+      "mrr": 0.84,
+      "queries_scored": 132
+    },
+    "GBR depth=4 trees=200": {
+      "ndcg@3": 0.744,
+      "ndcg@5": 0.745,
+      "mrr": 0.839,
+      "queries_scored": 132
+    }
+  },
+  "nested_cv_selected_procedure": {
+    "ndcg@3": 0.73,
+    "ndcg@5": 0.74,
+    "mrr": 0.825,
+    "queries_scored": 132
+  },
+  "caveat": "Labels have a single annotator and rubric-style notes; metrics measure agreement with that scheme on unseen persona groups, not real-world quality.",
+  "hybrid_stages_4_to_7": {
+    "run_date": "2026-11-21",
+    "selected_mode": "gbr_only",
+    "selection_note": "no candidate beat the current GBR with a CI above 0",
+    "decision_rule": "adopt a component only if its nested-CV NDCG@3 gain over the current GBR has a 95% paired-bootstrap CI above 0",
+    "ablation_nested_group_cv": {
+      "random": {
+        "ndcg@3": 0.407,
+        "ndcg@5": 0.457,
+        "mrr": 0.645,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.324,
+        "ci3_lo": -0.407,
+        "ci3_hi": -0.24,
+        "d_ndcg@5": -0.283,
+        "ci5_lo": -0.356,
+        "ci5_hi": -0.208,
+        "d_mrr": -0.179,
+        "cimrr_lo": -0.26,
+        "cimrr_hi": -0.094,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "1 current GBR only (nested)": {
+        "ndcg@3": 0.73,
+        "ndcg@5": 0.74,
+        "mrr": 0.825,
+        "queries_scored": 132,
+        "d_ndcg@3": null,
+        "ci3_lo": null,
+        "ci3_hi": null,
+        "d_ndcg@5": null,
+        "ci5_lo": null,
+        "ci5_hi": null,
+        "d_mrr": null,
+        "cimrr_lo": null,
+        "cimrr_hi": null,
+        "ndcg@3 vs GBR": null
+      },
+      "2 +KG features": {
+        "ndcg@3": 0.709,
+        "ndcg@5": 0.735,
+        "mrr": 0.81,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.021,
+        "ci3_lo": -0.067,
+        "ci3_hi": 0.022,
+        "d_ndcg@5": -0.006,
+        "ci5_lo": -0.044,
+        "ci5_hi": 0.033,
+        "d_mrr": -0.014,
+        "cimrr_lo": -0.054,
+        "cimrr_hi": 0.023,
+        "ndcg@3 vs GBR": "no clear difference (CI includes 0)"
+      },
+      "3 +semantic feature": {
+        "ndcg@3": 0.719,
+        "ndcg@5": 0.734,
+        "mrr": 0.831,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.012,
+        "ci3_lo": -0.039,
+        "ci3_hi": 0.014,
+        "d_ndcg@5": -0.006,
+        "ci5_lo": -0.025,
+        "ci5_hi": 0.012,
+        "d_mrr": 0.007,
+        "cimrr_lo": -0.022,
+        "cimrr_hi": 0.035,
+        "ndcg@3 vs GBR": "no clear difference (CI includes 0)"
+      },
+      "4 +KG +semantic features": {
+        "ndcg@3": 0.697,
+        "ndcg@5": 0.724,
+        "mrr": 0.807,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.033,
+        "ci3_lo": -0.078,
+        "ci3_hi": 0.011,
+        "d_ndcg@5": -0.017,
+        "ci5_lo": -0.055,
+        "ci5_hi": 0.022,
+        "d_mrr": -0.018,
+        "cimrr_lo": -0.062,
+        "cimrr_hi": 0.026,
+        "ndcg@3 vs GBR": "no clear difference (CI includes 0)"
+      },
+      "5 +fusion (score level: GBR+SEM+KG)": {
+        "ndcg@3": 0.707,
+        "ndcg@5": 0.721,
+        "mrr": 0.811,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.024,
+        "ci3_lo": -0.047,
+        "ci3_hi": -0.004,
+        "d_ndcg@5": -0.02,
+        "ci5_lo": -0.04,
+        "ci5_hi": -0.003,
+        "d_mrr": -0.014,
+        "cimrr_lo": -0.032,
+        "cimrr_hi": -0.001,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "6 +cross-encoder rerank of fused top-k": {
+        "ndcg@3": 0.705,
+        "ndcg@5": 0.72,
+        "mrr": 0.811,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.026,
+        "ci3_lo": -0.05,
+        "ci3_hi": -0.005,
+        "d_ndcg@5": -0.02,
+        "ci5_lo": -0.04,
+        "ci5_hi": -0.004,
+        "d_mrr": -0.014,
+        "cimrr_lo": -0.032,
+        "cimrr_hi": -0.001,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "7 +KG +semantic +cross-encoder as GBR features": {
+        "ndcg@3": 0.727,
+        "ndcg@5": 0.748,
+        "mrr": 0.828,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.003,
+        "ci3_lo": -0.051,
+        "ci3_hi": 0.046,
+        "d_ndcg@5": 0.008,
+        "ci5_lo": -0.034,
+        "ci5_hi": 0.049,
+        "d_mrr": 0.004,
+        "cimrr_lo": -0.046,
+        "cimrr_hi": 0.053,
+        "ndcg@3 vs GBR": "no clear difference (CI includes 0)"
+      },
+      "diag: KG score only": {
+        "ndcg@3": 0.582,
+        "ndcg@5": 0.589,
+        "mrr": 0.687,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.148,
+        "ci3_lo": -0.218,
+        "ci3_hi": -0.076,
+        "d_ndcg@5": -0.152,
+        "ci5_lo": -0.218,
+        "ci5_hi": -0.084,
+        "d_mrr": -0.138,
+        "cimrr_lo": -0.209,
+        "cimrr_hi": -0.065,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "diag: semantic zero-shot only": {
+        "ndcg@3": 0.477,
+        "ndcg@5": 0.518,
+        "mrr": 0.648,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.253,
+        "ci3_lo": -0.335,
+        "ci3_hi": -0.176,
+        "d_ndcg@5": -0.223,
+        "ci5_lo": -0.301,
+        "ci5_hi": -0.149,
+        "d_mrr": -0.176,
+        "cimrr_lo": -0.254,
+        "cimrr_hi": -0.093,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "diag: sem+KG fusion (no GBR)": {
+        "ndcg@3": 0.582,
+        "ndcg@5": 0.589,
+        "mrr": 0.687,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.148,
+        "ci3_lo": -0.218,
+        "ci3_hi": -0.076,
+        "d_ndcg@5": -0.152,
+        "ci5_lo": -0.218,
+        "ci5_hi": -0.084,
+        "d_mrr": -0.138,
+        "cimrr_lo": -0.209,
+        "cimrr_hi": -0.065,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      },
+      "diag: cross-encoder zero-shot only": {
+        "ndcg@3": 0.53,
+        "ndcg@5": 0.558,
+        "mrr": 0.694,
+        "queries_scored": 132,
+        "d_ndcg@3": -0.201,
+        "ci3_lo": -0.281,
+        "ci3_hi": -0.124,
+        "d_ndcg@5": -0.182,
+        "ci5_lo": -0.256,
+        "ci5_hi": -0.11,
+        "d_mrr": -0.13,
+        "cimrr_lo": -0.207,
+        "cimrr_hi": -0.05,
+        "ndcg@3 vs GBR": "worse (CI < 0)"
+      }
+    },
+    "per_fold_choices": {
+      "fusion": {
+        "Child Marriage and Gift Planning": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "Conservative Guaranteed Savings": {
+          "weights": {
+            "gbr": 0.8,
+            "sem": 0.0,
+            "kg": 0.2
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Edge Cases and Ambiguous Queries": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.5
+          }
+        },
+        "Family Breadwinner High Cover": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_HARD_HINGLISH_TYPOS": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 5,
+            "weight": 0.25
+          }
+        },
+        "G_SAVE_AGE_58": {
+          "weights": {
+            "gbr": 0.8,
+            "sem": 0.0,
+            "kg": 0.2
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_BONUS": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_CHILD_EDU": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_CHILD_MARRIAGE": {
+          "weights": {
+            "gbr": 0.8,
+            "sem": 0.0,
+            "kg": 0.2
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_GUARANTEED": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_HORIZON": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_LIMITED_PAY": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_SAVE_NEWBORN": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "G_SAVE_SMALL_SA": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "G_TERM_1CR": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_2CR": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_50L": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_AGE_55": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_HOMELOAN": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_LONG": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_SHORT": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_TERM_SINGLE_PREMIUM": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "G_TERM_YOUNG_SMALL": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_UNSUPPORTED_HEALTH": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_UNSUPPORTED_PENSION": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_UNSUPPORTED_ULIP_MICRO": {
+          "weights": {
+            "gbr": 0.7,
+            "sem": 0.0,
+            "kg": 0.3
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_WOMAN_HOMEMAKER": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_WOMAN_TERM": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "G_WOMAN_WORKING": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Health Insurance Seekers": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Low Budget First-Time Buyer": {
+          "weights": {
+            "gbr": 0.9,
+            "sem": 0.0,
+            "kg": 0.1
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Market Linked Investors": {
+          "weights": {
+            "gbr": 0.6,
+            "sem": 0.0,
+            "kg": 0.4
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Parent Saving for Child Education": {
+          "weights": {
+            "gbr": 0.5,
+            "sem": 0.0,
+            "kg": 0.5
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "Pension and Retirement Income": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.25
+          }
+        },
+        "Pre-Retiree and Senior": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Women Focused Plans": {
+          "weights": {
+            "gbr": 0.4,
+            "sem": 0.0,
+            "kg": 0.6
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        },
+        "Young Salaried Term Cover": {
+          "weights": {
+            "gbr": 1.0,
+            "sem": 0.0,
+            "kg": 0.0
+          },
+          "rerank": {
+            "k": 3,
+            "weight": 0.0
+          }
+        }
+      },
+      "sem_kg": {
+        "Child Marriage and Gift Planning": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Conservative Guaranteed Savings": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Edge Cases and Ambiguous Queries": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Family Breadwinner High Cover": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_HARD_HINGLISH_TYPOS": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_AGE_58": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_BONUS": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_CHILD_EDU": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_CHILD_MARRIAGE": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_GUARANTEED": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_HORIZON": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_LIMITED_PAY": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_NEWBORN": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_SAVE_SMALL_SA": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_1CR": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_2CR": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_50L": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_AGE_55": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_HOMELOAN": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_LONG": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_SHORT": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_SINGLE_PREMIUM": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_TERM_YOUNG_SMALL": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_UNSUPPORTED_HEALTH": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_UNSUPPORTED_PENSION": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_UNSUPPORTED_ULIP_MICRO": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_WOMAN_HOMEMAKER": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_WOMAN_TERM": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "G_WOMAN_WORKING": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Health Insurance Seekers": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Low Budget First-Time Buyer": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Market Linked Investors": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Parent Saving for Child Education": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Pension and Retirement Income": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Pre-Retiree and Senior": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Women Focused Plans": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        },
+        "Young Salaried Term Cover": {
+          "weights": {
+            "sem": 0.0,
+            "kg": 1.0
+          }
+        }
+      }
+    },
+    "final_params": {
+      "fusion_weights": {},
+      "rerank": {
+        "enabled": false,
+        "k": 0,
+        "weight": 0.0
+      },
+      "gbr_features_config": null
+    },
+    "stage_status": {
+      "Stages 1-10 (earlier pipeline)": "ran in this session",
+      "4b data audit": "ran | rankable queries: 132 of 168",
+      "4A KG matching": "ran",
+      "4B semantic retrieval": "ran",
+      "6a cross-encoder zero-shot": "ran",
+      "5 fusion code (mock-score tests)": "ran",
+      "5/6b nested CV + ablation": "ran",
+      "16a LambdaRank candidates": "ran",
+      "16a BM25 feature": "ran",
+      "16a KG-as-store retrieval (function only)": "ran (not evaluated)",
+      "6b cross-encoder fine-tune (optional)": "skipped (flag off or model unavailable)",
+      "17b final comparison": "ran",
+      "7 serving code, mock-score path": "ran",
+      "FastAPI contract": "ran"
+    },
+    "environment": {
+      "torch": "2.14.1+cu130",
+      "sentence_transformers": "5.7.0",
+      "device": "cuda",
+      "sklearn": "1.6.1",
+      "networkx": "3.7",
+      "semantic_ok": true,
+      "cross_encoder_ok": true,
+      "semantic_error": null,
+      "cross_encoder_error": null,
+      "baseline_rebuilt_in_notebook": false
+    },
+    "caveat": "Labels have a single annotator and rubric-style notes; metrics measure agreement with that scheme on unseen persona groups, not real-world quality. Only 16 brochure-verified plans (Endowment and Term Assurance) can be recommended. Final fusion weights / GBR config are tuned on all 55 labelled queries; use the nested rows as the honest estimate. predicted_relevance and the other scores are not probabilities."
+  }
+}

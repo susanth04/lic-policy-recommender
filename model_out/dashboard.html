@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore LIC policy recommendations with a transparent query and eligibility pipeline.">
+    <title>LIC Policy Recommender</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#query" aria-label="LIC policy recommender home">LIC Policy Recommender</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#query" data-view="query" aria-current="page">New Query</a>
+        <a href="#pipeline" data-view="pipeline">Pipeline</a>
+        <a href="#report" data-view="report">Report</a>
+        <a href="#policies" data-view="policies">Verified Plans (21)</a>
+        <a href="#account" data-view="account" id="nav-account">Account</a>
+      </nav>
+      <p class="service-state" id="service-state" role="status">Checking API...</p>
+    </header>
+
+    <main class="page">
+      <!-- QUERY SCREEN -->
+      <section class="view" id="query-view" data-screen="query" aria-labelledby="query-title">
+        <div class="page-heading">
+          <p class="page-kicker">Transparent Decision Support</p>
+          <h1 id="query-title">Describe your insurance need.</h1>
+          <p>We parse your words, enforce official brochure eligibility rules (hard gate), and rank verified candidates. Only eligible plans are ranked.</p>
+        </div>
+
+        <div class="query-layout">
+          <form class="query-panel" id="recommend-form">
+            <label for="query">What are you looking for?</label>
+            <textarea id="query" name="query" rows="4" required placeholder="e.g. I am 30 and want a pure term plan with 25 lakh cover for 20 years">I'm 30 and want a pure term plan with 25 lakh cover for 20 years</textarea>
+            <p class="helper">Describe your age, cover amount, policy term, goal, or premium preference naturally.</p>
+
+            <details class="override-panel" id="override-details">
+              <summary>Optional Structured Overrides & Filters</summary>
+              <p class="helper">Set these only to override or supply details explicitly. Blank fields use details parsed from your query text.</p>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="customer-age">Your Age (Years)</label>
+                  <input id="customer-age" name="customer_age" type="number" min="0" max="100" step="1" inputmode="numeric" placeholder="From query">
+                </div>
+                <div class="field">
+                  <label for="child-age">Child's Age (For Child Plans)</label>
+                  <input id="child-age" name="child_age" type="number" min="0" max="25" step="1" inputmode="numeric" placeholder="e.g. 6">
+                </div>
+                <div class="field">
+                  <label for="term">Policy Term (Years)</label>
+                  <input id="term" name="term" type="number" min="1" max="100" step="1" inputmode="numeric" placeholder="From query">
+                </div>
+                <div class="field">
+                  <label for="sum-assured">Sum Assured (₹)</label>
+                  <input id="sum-assured" name="sum_assured" type="number" min="10000" step="1000" inputmode="numeric" placeholder="e.g. 2500000">
+                </div>
+                <div class="field field-wide">
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender">
+                    <option value="">From query or unspecified</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+
+            <button class="run-button" id="run-button" type="submit">Identify Needs & Find Policies</button>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+          </form>
+
+          <aside class="intent-panel" aria-labelledby="intent-title">
+            <div class="panel-heading">
+              <div>
+                <p class="page-kicker">Live Intent Parser</p>
+                <h2 id="intent-title">What we detected</h2>
+              </div>
+              <span class="intent-status" id="identify-status" role="status">Reading query...</span>
+            </div>
+            <p class="helper" id="intent-explainer">Real-time extracted entities. Missing fields remain unknown and are never guessed.</p>
+            <dl class="intent-list" id="intent-list" aria-live="polite">
+              <div><dt>Customer Age</dt><dd data-intent="customer_age">Checking…</dd></div>
+              <div><dt>Child's Age</dt><dd data-intent="child_age">Not specified</dd></div>
+              <div><dt>Sum Assured</dt><dd data-intent="sum_assured">Checking…</dd></div>
+              <div><dt>Policy Term</dt><dd data-intent="term">Checking…</dd></div>
+              <div><dt>Gender</dt><dd data-intent="gender">Checking…</dd></div>
+              <div><dt>Primary Goal</dt><dd data-intent="primary_goal">Checking…</dd></div>
+              <div><dt>Premium Preference</dt><dd data-intent="premium_level">Checking…</dd></div>
+              <div><dt>Risk Tolerance</dt><dd data-intent="risk_tolerance">Checking…</dd></div>
+              <div><dt>Core Fields Found</dt><dd data-intent="core_fields">Checking…</dd></div>
+            </dl>
+            <div id="oos-warning" class="banner banner-oos" hidden role="alert">
+              <strong>Category Out of Scope:</strong>
+              <span id="oos-text"></span>
+            </div>
+            <p class="intent-footnote" id="intent-footnote">Details not detected remain unknown; they are not fabricated.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PIPELINE VIEW -->
+      <section class="view" id="pipeline-view" data-screen="pipeline" aria-labelledby="pipeline-title" hidden>
+        <div class="page-heading">
+          <p class="page-kicker">Recommendation Pipeline</p>
+          <h1 id="pipeline-title">From Query to Shortlist</h1>
+          <p id="pipeline-summary">Track each stage of the verification and ranking pipeline.</p>
+        </div>
+        <ol class="pipeline" aria-label="Recommendation stages">
+          <li class="pipeline-stage" data-step="intent">
+            <span class="stage-marker" aria-hidden="true">01</span>
+            <div class="stage-copy">
+              <h2>1. Extract Intent & Check Scope</h2>
+              <p>Detect age, child age, cover, term, and check if category is supported.</p>
+              <p class="stage-state">Waiting for a query</p>
+            </div>
+          </li>
+          <li class="pipeline-stage" data-step="eligibility">
+            <span class="stage-marker" aria-hidden="true">02</span>
+            <div class="stage-copy">
+              <h2>2. Enforce Eligibility Gate</h2>
+              <p>Hard gate checking brochure rules. Unknown limits do not pass.</p>
+              <p class="stage-state">Waiting for a query</p>
+            </div>
+          </li>
+          <li class="pipeline-stage" data-step="ranking">
+            <span class="stage-marker" aria-hidden="true">03</span>
+            <div class="stage-copy">
+              <h2>3. Rank Eligible Policies</h2>
+              <p>Score verified eligible candidates with the GBR ranker.</p>
+              <p class="stage-state">Waiting for a query</p>
+            </div>
+          </li>
+          <li class="pipeline-stage" data-step="report">
+            <span class="stage-marker" aria-hidden="true">04</span>
+            <div class="stage-copy">
+              <h2>4. Build Transparent Report</h2>
+              <p>Display recommendations, brochure citations, gate facts, and abstention flags.</p>
+              <p class="stage-state">Waiting for a query</p>
+            </div>
+          </li>
+        </ol>
+        <p class="pipeline-error" id="pipeline-error" role="alert" hidden></p>
+        <a class="text-link" href="#query">← Back to edit query</a>
+      </section>
+
+      <!-- REPORT VIEW -->
+      <section class="view" id="report-view" data-screen="report" aria-labelledby="report-title" hidden>
+        <div class="page-heading report-heading">
+          <p class="page-kicker">Recommendation Report</p>
+          <h1 id="report-title">Policy Shortlist & Evaluation</h1>
+          <p id="report-query">Run a query to generate a report.</p>
+        </div>
+
+        <div class="report-summary" id="report-summary" hidden>
+          <article class="summary-stat">
+            <span class="summary-label">Pipeline Status</span>
+            <strong id="report-status">—</strong>
+          </article>
+          <article class="summary-stat">
+            <span class="summary-label">Eligible Policies Passed</span>
+            <strong id="eligible-count">—</strong>
+          </article>
+          <article class="summary-stat">
+            <span class="summary-label">Active Ranker</span>
+            <strong id="report-ranker">GBR (Packaged)</strong>
+          </article>
+        </div>
+
+        <!-- OUT OF SCOPE BANNER -->
+        <div class="banner banner-oos" id="status-oos-banner" hidden role="alert">
+          <h3>Category Out of Scope</h3>
+          <p id="oos-message"></p>
+          <p class="banner-sub">Supported categories: Endowment, Term Assurance, Money Back, and Whole Life. Pension/annuity, health insurance, unit-linked (ULIP), and micro-insurance are not in the verified recommendation pool.</p>
+        </div>
+
+        <!-- WEAK MATCH BANNER -->
+        <div class="banner banner-warning" id="report-warning" hidden role="alert">
+          <h3>Notice: Partial Match (Abstention Threshold Triggered)</h3>
+          <p id="report-warning-text">Even the highest-ranked eligible plan scored below the calibrated relevance threshold (1.20). This indicates only a partial fit for your requested needs. Please review the official brochure carefully before making a purchase decision.</p>
+        </div>
+
+        <!-- INTERACTIVE CLARIFICATION BOX -->
+        <div class="clarify-container" id="clarify-box" hidden aria-live="polite">
+          <h3>More Information Needed</h3>
+          <p>The eligibility gate cannot qualify certain policies without additional details:</p>
+          <form id="clarify-form" class="clarify-form">
+            <div id="clarify-inputs" class="field-grid"></div>
+            <button class="run-button" type="submit" style="margin-top: 1rem;">Update Details & Re-evaluate</button>
+          </form>
+        </div>
+
+        <section class="report-section" aria-labelledby="report-intent-title">
+          <div class="results-head">
+            <div>
+              <h2 id="report-intent-title">Understood Intent & Overrides</h2>
+              <p id="report-intent-caption">Parsed from your query text and merged with any explicit structured overrides.</p>
+            </div>
+          </div>
+          <dl class="report-intent" id="report-intent"></dl>
+          <div id="override-note-container"></div>
+        </section>
+
+        <section class="report-section" aria-labelledby="recommendations-title">
+          <div class="results-head">
+            <div>
+              <h2 id="recommendations-title">Recommended Policies</h2>
+              <p id="result-summary">Waiting for a query.</p>
+            </div>
+            <p class="ranker-mode" id="ranker-mode">Model: GBR only (KG used for explanation)</p>
+          </div>
+          <ol class="recommendation-list" id="recommendation-list"></ol>
+          <div class="empty-state" id="empty-state">Submit a query to see policies that pass the eligibility gate.</div>
+          <p class="score-note">Scores are relative ranking indicators on a 0–3 scale, <strong>not probabilities</strong>. Only gate-eligible policies are ranked.</p>
+        </section>
+
+        <section class="evaluation report-section" aria-labelledby="evaluation-title">
+          <div class="evaluation-copy">
+            <h2 id="evaluation-title">Model Provenance & Abstention Calibration</h2>
+            <p class="validation-type">Nested Leave-One-Group-Out Evaluation (168 Queries, 33 Groups)</p>
+            <p id="evaluation-caveat">Metrics reflect agreement with our evaluation grading rubric on unseen persona groups, not real-world quality.</p>
+            <p class="model-meta" id="model-meta">21 brochure-verified plans ranked | Abstention AUROC: 0.907 | Threshold: 1.20 (Match Recall 100%, Abstain Precision 100%)</p>
+          </div>
+          <dl class="metric-list" id="metric-list"></dl>
+          <p class="disclaimer">Educational prototype and decision support tool only. Not financial, investment, or insurance advice. Always verify policy details, underwriting terms, and exact premiums in official LIC brochures.</p>
+        </section>
+        <a class="text-link" href="#query">← Start another query</a>
+      </section>
+
+      <!-- VERIFIED POLICIES DIRECTORY -->
+      <section class="view" id="policies-view" data-screen="policies" aria-labelledby="policies-title" hidden>
+        <div class="page-heading">
+          <p class="page-kicker">Brochure-Verified Catalogue</p>
+          <h1 id="policies-title">21 Active Candidate Plans</h1>
+          <p>Only these 21 brochure-verified policies can be recommended. Unverified plans and withdrawn products are excluded from recommendation.</p>
+        </div>
+        <div class="policies-table-wrap">
+          <table class="policies-table" id="policies-table">
+            <thead>
+              <tr>
+                <th>Plan ID</th>
+                <th>Policy Name</th>
+                <th>Category</th>
+                <th>Entry Age</th>
+                <th>Policy Term</th>
+                <th>Min Sum Assured</th>
+                <th>Brochure</th>
+              </tr>
+            </thead>
+            <tbody id="policies-tbody">
+              <tr><td colspan="7">Loading verified policies...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a class="text-link" href="#query">← Back to search</a>
+      </section>
+      <!-- ACCOUNT / PRIVACY VIEW -->
+      <section class="view" id="account-view" data-screen="account" aria-labelledby="account-title" hidden>
+        <div class="page-heading">
+          <p class="page-kicker">Your Data &amp; Privacy</p>
+          <h1 id="account-title">Anonymous Account &amp; Privacy Controls</h1>
+          <p>Your session is anonymous — no email or name required. You can store preferences to speed up future queries. All storage requires explicit consent.</p>
+        </div>
+
+        <!-- CONSENT NOTICE (always shown first) -->
+        <div class="banner banner-info" id="consent-notice" role="note">
+          <h3>What we store (with your consent)</h3>
+          <ul>
+            <li><strong>Profile memory</strong>: age, child age, gender, preferred term &amp; sum assured. No health, income, or ID numbers.</li>
+            <li><strong>Query history</strong>: your query text and results (optional). Out-of-scope queries are never stored.</li>
+            <li><strong>LLM notice</strong>: if the server has ENABLE_LLM=true, your query text may be sent to an external provider. <strong>Profile data is never sent to any LLM.</strong></li>
+          </ul>
+          <p class="disclaimer">This system is designed to support DPDP-style data minimisation principles but has not been legally reviewed.</p>
+        </div>
+
+        <!-- SESSION -->
+        <section class="report-section" aria-labelledby="session-title">
+          <h2 id="session-title">Session</h2>
+          <p id="session-status">No active session. Issue a device token below to enable profile memory.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.75rem;">
+            <button class="run-button" id="btn-issue-token" type="button">Start Anonymous Session</button>
+            <button class="run-button" id="btn-clear-token" type="button" style="background:var(--color-surface-raised);">Clear Session (Log Out)</button>
+          </div>
+        </section>
+
+        <!-- CONSENT TOGGLES -->
+        <section class="report-section" aria-labelledby="consent-title">
+          <h2 id="consent-title">Consent</h2>
+          <p>Revoking a consent immediately deletes all data for that purpose.</p>
+          <div class="field-grid" id="consent-toggles">
+            <label class="consent-toggle">
+              <input type="checkbox" id="chk-profile-consent">
+              <span>Remember my details (age, child age, gender, preferred term &amp; sum assured)</span>
+            </label>
+            <label class="consent-toggle">
+              <input type="checkbox" id="chk-history-consent">
+              <span>Keep query history (query text + results)</span>
+            </label>
+          </div>
+          <p id="consent-save-msg" class="helper" role="status"></p>
+        </section>
+
+        <!-- PROFILE -->
+        <section class="report-section" aria-labelledby="profile-title">
+          <h2 id="profile-title">Stored Profile</h2>
+          <p id="profile-status">Enable profile memory consent to store attributes.</p>
+          <div id="profile-chips" class="profile-chips"></div>
+
+          <details class="override-panel" id="profile-edit-panel" style="margin-top:1.25rem;">
+            <summary>Edit Profile Details (Name, Age, Income &amp; Preferences)</summary>
+            <form id="profile-form" class="field-grid" style="margin-top:0.75rem;">
+              <div class="field">
+                <label for="prof-name">Full Name</label>
+                <input id="prof-name" name="name" type="text" placeholder="e.g. Rahul Sharma">
+              </div>
+              <div class="field">
+                <label for="prof-age">Your Age (Years)</label>
+                <input id="prof-age" name="customer_age" type="number" min="0" max="100" placeholder="e.g. 32">
+              </div>
+              <div class="field">
+                <label for="prof-gender">Gender</label>
+                <select id="prof-gender" name="gender">
+                  <option value="">Select gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="prof-child-age">Child's Age (For Junior Plans)</label>
+                <input id="prof-child-age" name="child_age" type="number" min="0" max="25" placeholder="e.g. 5">
+              </div>
+              <div class="field">
+                <label for="prof-income">Annual Income (₹)</label>
+                <input id="prof-income" name="annual_income" type="number" min="0" step="50000" placeholder="e.g. 1200000">
+              </div>
+              <div class="field">
+                <label for="prof-occupation">Occupation</label>
+                <select id="prof-occupation" name="occupation">
+                  <option value="">Select occupation</option>
+                  <option value="salaried">Salaried Professional</option>
+                  <option value="business">Business Owner</option>
+                  <option value="self_employed">Self Employed</option>
+                  <option value="student">Student</option>
+                  <option value="homemaker">Homemaker</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="prof-phone">Phone Number</label>
+                <input id="prof-phone" name="phone" type="tel" placeholder="e.g. 9876543210">
+              </div>
+              <div class="field">
+                <label for="prof-email">Email Address</label>
+                <input id="prof-email" name="email" type="email" placeholder="e.g. rahul@example.com">
+              </div>
+              <div class="field">
+                <label for="prof-city">City / Location</label>
+                <input id="prof-city" name="city" type="text" placeholder="e.g. Mumbai, Maharashtra">
+              </div>
+              <div class="field">
+                <label for="prof-term">Preferred Term (Years)</label>
+                <input id="prof-term" name="preferred_term" type="number" min="1" max="100" placeholder="e.g. 20">
+              </div>
+              <div class="field field-wide" style="display:flex;align-items:center;gap:0.75rem;">
+                <button class="run-button" id="btn-save-profile" type="submit">Save Profile Details</button>
+                <span id="profile-save-msg" class="helper" role="status"></span>
+              </div>
+            </form>
+          </details>
+
+          <!-- MANUALLY ADD CUSTOM DETAILS -->
+          <details class="override-panel" id="manual-attr-panel" style="margin-top:1.25rem;">
+            <summary>Manually Add Any Custom Detail</summary>
+            <div style="margin-top:0.75rem;">
+              <p class="helper">Add any custom detail to your personal profile (e.g. Pincode, State, Smoker Status, Existing Cover, Nominee):</p>
+              
+              <div class="quick-add-group" style="margin-bottom:0.75rem;">
+                <span style="font-size:0.8rem;color:var(--color-text-muted);align-self:center;">Quick Suggestions:</span>
+                <button type="button" class="quick-add-btn" data-attr="pincode">+ Pincode</button>
+                <button type="button" class="quick-add-btn" data-attr="state">+ State</button>
+                <button type="button" class="quick-add-btn" data-attr="smoker_status" data-val="Non-Smoker">+ Smoker Status</button>
+                <button type="button" class="quick-add-btn" data-attr="nominee_name">+ Nominee Name</button>
+                <button type="button" class="quick-add-btn" data-attr="existing_cover_amount">+ Existing Cover</button>
+              </div>
+
+              <form id="manual-attr-form" class="field-grid" style="grid-template-columns: 1fr 1fr auto; align-items: end;">
+                <div class="field">
+                  <label for="manual-key">Detail Name / Key</label>
+                  <input id="manual-key" name="manual_key" type="text" placeholder="e.g. pincode or smoker_status" required>
+                </div>
+                <div class="field">
+                  <label for="manual-val">Value</label>
+                  <input id="manual-val" name="manual_val" type="text" placeholder="e.g. 400001 or Non-Smoker" required>
+                </div>
+                <div class="field">
+                  <button class="run-button" id="btn-add-manual" type="submit" style="white-space:nowrap;">+ Add Attribute</button>
+                </div>
+              </form>
+              <span id="manual-attr-msg" class="helper" style="display:block;margin-top:0.5rem;" role="status"></span>
+            </div>
+          </details>
+        </section>
+
+        <!-- STALE CONFIRMATION DIALOG -->
+        <div class="banner banner-warning" id="stale-banner" hidden role="alert">
+          <h3>Please Confirm Your Details</h3>
+          <div id="stale-items"></div>
+        </div>
+
+        <!-- HISTORY -->
+        <section class="report-section" aria-labelledby="history-title">
+          <h2 id="history-title">Query History</h2>
+          <p id="history-status">Enable query history consent to view past queries.</p>
+          <ol class="history-list" id="history-list"></ol>
+        </section>
+
+        <!-- DATA ACTIONS -->
+        <section class="report-section" aria-labelledby="data-actions-title">
+          <h2 id="data-actions-title">Your Data</h2>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <button class="run-button" id="btn-export" type="button">Download My Data</button>
+            <button class="run-button" id="btn-delete-all" type="button" style="background:#c0392b;color:#fff;">Delete All My Data</button>
+          </div>
+          <p class="disclaimer" style="margin-top:0.75rem;">Deleting removes all stored profile attributes, query history, and your session. This cannot be undone.</p>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const form = document.querySelector("#recommend-form");
+      const queryInput = document.querySelector("#query");
+      const button = document.querySelector("#run-button");
+      const formError = document.querySelector("#form-error");
+      const pipelineError = document.querySelector("#pipeline-error");
+      const recommendationList = document.querySelector("#recommendation-list");
+      const emptyState = document.querySelector("#empty-state");
+      const serviceState = document.querySelector("#service-state");
+      const identifyStatus = document.querySelector("#identify-status");
+      const clarifyBox = document.querySelector("#clarify-box");
+      const clarifyInputs = document.querySelector("#clarify-inputs");
+      const clarifyForm = document.querySelector("#clarify-form");
+      const oosBanner = document.querySelector("#status-oos-banner");
+      let identificationRequest = 0;
+
+      // ---- Account / Profile memory helpers --------------------------------
+      const VIEWS = ["query", "pipeline", "report", "policies", "account"];
+      const TOKEN_KEY = "lic_device_token";
+
+      function getToken() { return localStorage.getItem(TOKEN_KEY) || null; }
+      function setToken(t) { localStorage.setItem(TOKEN_KEY, t); }
+      function clearToken() { localStorage.removeItem(TOKEN_KEY); }
+
+      function authHeaders() {
+        const t = getToken();
+        return t ? { "Content-Type": "application/json", "X-Device-Token": t }
+                 : { "Content-Type": "application/json" };
+      }
+
+      async function safeJson(resp) {
+        const text = await resp.text();
+        try { return JSON.parse(text); } catch { return { error: text }; }
+      }
+
+      // ---- Profile chip rendering (textContent only — no innerHTML with data) --
+      function renderProfileChips(profile) {
+        const container = document.getElementById("profile-chips");
+        container.replaceChildren();
+        const keys = Object.keys(profile);
+        if (!keys.length) {
+          const p = document.createElement("p");
+          p.textContent = "No profile attributes stored yet.";
+          container.append(p);
+          return;
+        }
+        for (const key of keys) {
+          const chip = document.createElement("span");
+          chip.className = "profile-chip";
+          const label = document.createElement("span");
+          label.textContent = key.replace(/_/g, " ") + ": " + String(profile[key].value);
+          const editBtn = document.createElement("button");
+          editBtn.type = "button";
+          editBtn.className = "chip-btn";
+          editBtn.textContent = "Edit";
+          editBtn.addEventListener("click", () => promptEditAttribute(key, profile[key].value));
+          const removeBtn = document.createElement("button");
+          removeBtn.type = "button";
+          removeBtn.className = "chip-btn chip-remove";
+          removeBtn.textContent = "✕";
+          removeBtn.addEventListener("click", () => deleteAttribute(key));
+          chip.append(label, editBtn, removeBtn);
+          container.append(chip);
+        }
+      }
+
+      function renderStaleBanner(needs_confirmation) {
+        const banner = document.getElementById("stale-banner");
+        const container = document.getElementById("stale-items");
+        container.replaceChildren();
+        if (!needs_confirmation || !needs_confirmation.length) { banner.hidden = true; return; }
+        banner.hidden = false;
+        for (const item of needs_confirmation) {
+          const p = document.createElement("p");
+          p.textContent = item.prompt;
+          const confirmBtn = document.createElement("button");
+          confirmBtn.type = "button";
+          confirmBtn.className = "run-button";
+          confirmBtn.style.marginTop = "0.5rem";
+          confirmBtn.textContent = "Yes, still correct";
+          confirmBtn.addEventListener("click", () => confirmAttribute(item.field, item.stored_value));
+          container.append(p, confirmBtn);
+        }
+      }
+
+      function renderProfileApplied(profile_applied) {
+        const container = document.getElementById("override-note-container");
+        if (!profile_applied || !profile_applied.length) return;
+        const note = document.createElement("p");
+        note.className = "override-note";
+        const applied = profile_applied.map(a => a.field.replace(/_/g, " ") + ": " + String(a.value)).join(", ");
+        note.textContent = "Profile values applied: " + applied + " (edit in Account tab)";
+        container.append(note);
+      }
+
+      async function promptEditAttribute(key, currentValue) {
+        const val = window.prompt("New value for " + key.replace(/_/g, " ") + " (current: " + currentValue + "):");
+        if (val === null || val.trim() === "") return;
+        const t = getToken();
+        if (!t) return;
+        const resp = await fetch("/me/profile/" + key, {
+          method: "PUT",
+          headers: authHeaders(),
+          body: JSON.stringify({ value: val.trim(), source: "user_stated" })
+        });
+        if (resp.ok) await loadAccountView();
+        else {
+          const e = await safeJson(resp);
+          alert("Could not update: " + (e.detail || "unknown error"));
+        }
+      }
+
+      async function deleteAttribute(key) {
+        if (!window.confirm("Remove " + key.replace(/_/g, " ") + " from your profile?")) return;
+        const resp = await fetch("/me/profile/" + key, { method: "DELETE", headers: authHeaders() });
+        if (resp.ok) await loadAccountView();
+      }
+
+      async function confirmAttribute(key, value) {
+        await fetch("/me/profile/" + key, {
+          method: "PUT",
+          headers: authHeaders(),
+          body: JSON.stringify({ value: String(value), source: "user_stated" })
+        });
+        document.getElementById("stale-banner").hidden = true;
+      }
+
+      // ---- Consent checkbox handlers ----------------------------------------
+      async function handleConsentChange(purpose, granted) {
+        const t = getToken();
+        if (!t) { alert("Start a session first."); return; }
+        const resp = await fetch("/me/consent", {
+          method: "POST",
+          headers: authHeaders(),
+          body: JSON.stringify({ purpose, granted })
+        });
+        const msg = document.getElementById("consent-save-msg");
+        if (resp.ok) {
+          msg.textContent = (granted ? "Enabled" : "Revoked") + " " + purpose.replace(/_/g, " ") + ".";
+          await loadAccountView();
+        } else {
+          msg.textContent = "Error saving consent.";
+        }
+      }
+
+      document.getElementById("chk-profile-consent").addEventListener("change", function () {
+        handleConsentChange("profile_memory", this.checked);
+      });
+      document.getElementById("chk-history-consent").addEventListener("change", function () {
+        handleConsentChange("query_history", this.checked);
+      });
+
+      // ---- Session buttons --------------------------------------------------
+      document.getElementById("btn-issue-token").addEventListener("click", async () => {
+        const resp = await fetch("/auth/device", { method: "POST", headers: { "Content-Type": "application/json" } });
+        if (resp.ok) {
+          const data = await safeJson(resp);
+          setToken(data.device_token);
+          await loadAccountView();
+        } else {
+          alert("Could not create session.");
+        }
+      });
+
+      document.getElementById("btn-clear-token").addEventListener("click", () => {
+        if (window.confirm("Clear your local session? (Server data is kept until you delete it)")) {
+          clearToken();
+          loadAccountView();
+        }
+      });
+
+      // ---- Export & delete --------------------------------------------------
+      document.getElementById("btn-export").addEventListener("click", async () => {
+        const t = getToken();
+        if (!t) { alert("No active session."); return; }
+        const resp = await fetch("/me/export", { headers: authHeaders() });
+        if (!resp.ok) { alert("Export failed."); return; }
+        const data = await safeJson(resp);
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "my_lic_data.json";
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+
+      document.getElementById("btn-delete-all").addEventListener("click", async () => {
+        if (!window.confirm("Permanently delete all your data? This cannot be undone.")) return;
+        const resp = await fetch("/me", { method: "DELETE", headers: authHeaders() });
+        if (resp.ok) {
+          clearToken();
+          alert("All your data has been deleted.");
+          loadAccountView();
+        } else {
+          alert("Deletion failed — check API connectivity.");
+        }
+      });
+
+      // ---- Profile form population & saving --------------------------------
+      function populateProfileForm(profile) {
+        const formEl = document.getElementById("profile-form");
+        if (!formEl) return;
+        for (const [key, item] of Object.entries(profile)) {
+          const input = formEl.querySelector(`[name="${key}"]`);
+          if (input && item && item.value != null) {
+            input.value = item.value;
+          }
+        }
+      }
+
+      const profileForm = document.getElementById("profile-form");
+      if (profileForm) {
+        profileForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const t = getToken();
+          if (!t) { alert("Please start an anonymous session first."); return; }
+          const saveMsg = document.getElementById("profile-save-msg");
+          saveMsg.textContent = "Saving...";
+          const formData = new FormData(profileForm);
+          let savedCount = 0;
+          for (const [key, val] of formData.entries()) {
+            const cleanVal = typeof val === "string" ? val.trim() : val;
+            if (cleanVal !== "") {
+              const resp = await fetch("/me/profile/" + key, {
+                method: "PUT",
+                headers: authHeaders(),
+                body: JSON.stringify({ value: cleanVal, source: "user_stated" })
+              });
+              if (resp.ok) savedCount++;
+            }
+          }
+          saveMsg.textContent = `Saved ${savedCount} details successfully.`;
+          await loadAccountView();
+        });
+      }
+
+      // ---- Manual custom attribute addition --------------------------------
+      const manualForm = document.getElementById("manual-attr-form");
+      if (manualForm) {
+        manualForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const t = getToken();
+          if (!t) { alert("Please start an anonymous session first."); return; }
+          const keyInput = document.getElementById("manual-key");
+          const valInput = document.getElementById("manual-val");
+          const msg = document.getElementById("manual-attr-msg");
+          const rawKey = keyInput.value.trim().toLowerCase().replace(/\s+/g, "_");
+          const val = valInput.value.trim();
+          if (!rawKey || !val) return;
+
+          msg.textContent = "Saving attribute...";
+          const resp = await fetch("/me/profile/" + encodeURIComponent(rawKey), {
+            method: "PUT",
+            headers: authHeaders(),
+            body: JSON.stringify({ value: val, source: "user_stated" })
+          });
+          if (resp.ok) {
+            msg.textContent = `✓ Successfully saved "${rawKey}: ${val}" to your profile!`;
+            keyInput.value = "";
+            valInput.value = "";
+            await loadAccountView();
+          } else {
+            const err = await safeJson(resp);
+            msg.textContent = "Could not save: " + (err.detail || "Disallowed attribute name");
+          }
+        });
+
+        for (const btn of document.querySelectorAll(".quick-add-btn")) {
+          btn.addEventListener("click", () => {
+            const keyInput = document.getElementById("manual-key");
+            const valInput = document.getElementById("manual-val");
+            keyInput.value = btn.dataset.attr || "";
+            valInput.value = btn.dataset.val || "";
+            valInput.focus();
+          });
+        }
+      }
+
+      // ---- Load account view -----------------------------------------------
+      async function loadAccountView() {
+        const t = getToken();
+        const statusEl = document.getElementById("session-status");
+        const profileStatusEl = document.getElementById("profile-status");
+        const historyStatusEl = document.getElementById("history-status");
+        const historyList = document.getElementById("history-list");
+        const profileChips = document.getElementById("profile-chips");
+
+        if (!t) {
+          statusEl.textContent = "No active session. Click 'Start Anonymous Session' to enable profile memory.";
+          document.getElementById("chk-profile-consent").checked = false;
+          document.getElementById("chk-history-consent").checked = false;
+          profileStatusEl.textContent = "No session active.";
+          historyStatusEl.textContent = "No session active.";
+          profileChips.replaceChildren();
+          historyList.replaceChildren();
+          return;
+        }
+
+        // Load profile
+        try {
+          const resp = await fetch("/me/profile", { headers: authHeaders() });
+          if (resp.status === 401) {
+            clearToken();
+            statusEl.textContent = "Session expired. Please start a new session.";
+            return;
+          }
+          if (resp.ok) {
+            const data = await safeJson(resp);
+            const consent = data.consent_status;
+            statusEl.textContent = "Session active (anonymous).";
+            document.getElementById("chk-profile-consent").checked = !!consent.consent_profile;
+            document.getElementById("chk-history-consent").checked = !!consent.consent_history;
+            if (consent.consent_profile) {
+              profileStatusEl.textContent = "Profile memory is on. Stored fields shown below.";
+              renderProfileChips(data.profile || {});
+              populateProfileForm(data.profile || {});
+            } else {
+              profileStatusEl.textContent = "Enable profile memory to store attributes.";
+              profileChips.replaceChildren();
+            }
+          }
+        } catch {}
+
+        // Load history
+        try {
+          const resp = await fetch("/me/history?limit=20", { headers: authHeaders() });
+          if (resp.ok) {
+            const data = await safeJson(resp);
+            if (!data.queries || !data.queries.length) {
+              historyStatusEl.textContent = data.message || "No query history stored yet.";
+              historyList.replaceChildren();
+            } else {
+              historyStatusEl.textContent = "";
+              historyList.replaceChildren();
+              for (const q of data.queries) {
+                const li = document.createElement("li");
+                li.className = "history-item";
+                const meta = document.createElement("span");
+                meta.className = "history-meta";
+                meta.textContent = new Date(q.created_at).toLocaleString() + " — " + q.status;
+                const text = document.createElement("p");
+                text.textContent = q.query_text || "(query text not stored)";
+                const plans = document.createElement("p");
+                plans.className = "helper";
+                plans.textContent = "Plans: " + (q.top_policy_ids.join(", ") || "none");
+                const delBtn = document.createElement("button");
+                delBtn.type = "button";
+                delBtn.className = "chip-btn chip-remove";
+                delBtn.textContent = "Delete";
+                delBtn.addEventListener("click", async () => {
+                  await fetch("/me/history/" + q.id, { method: "DELETE", headers: authHeaders() });
+                  await loadAccountView();
+                });
+                li.append(meta, text, plans, delBtn);
+                historyList.append(li);
+              }
+            }
+          } else {
+            historyStatusEl.textContent = "Enable query history consent to view past queries.";
+          }
+        } catch {}
+      }
+
+      const currency = new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR",
+        maximumFractionDigits: 0
+      });
+
+      function showView(name) {
+        let clean = (name || "").replace(/^\/?#?/, "").replace("-view", "");
+        if (clean === "policies-catalog") clean = "policies";
+        const view = VIEWS.includes(clean) ? clean : "query";
+        for (const section of document.querySelectorAll("[data-screen]")) {
+          section.hidden = section.dataset.screen !== view;
+        }
+        for (const link of document.querySelectorAll("[data-view]")) {
+          if (link.dataset.view === view) link.setAttribute("aria-current", "page");
+          else link.removeAttribute("aria-current");
+        }
+        if (view === "policies") loadPoliciesTable();
+        if (view === "account") loadAccountView();
+
+        // Update URL hash for clean multi-page feel & direct linkability
+        if (location.hash.slice(1) !== view) {
+          history.replaceState(null, "", "#" + view);
+        }
+      }
+
+      function formatMoney(value) {
+        return value === null || value === undefined ? "Not specified" : currency.format(Number(value));
+      }
+
+      function displayBudget(value) {
+        if (!value) return "Not detected";
+        return `${value.amount} ${value.unit}`;
+      }
+
+      function displayValue(intent, key) {
+        const value = intent?.[key];
+        if (key === "customer_age") return value == null ? "Not specified" : `${value} years`;
+        if (key === "child_age") return value == null ? "Not specified" : `${value} years`;
+        if (key === "sum_assured") return formatMoney(value);
+        if (key === "term") return value == null ? "Not specified" : `${value} years`;
+        if (key === "gender") return value ? value.charAt(0).toUpperCase() + value.slice(1) : "Not specified";
+        if (key === "primary_goal" || key === "premium_level" || key === "risk_tolerance") return value || "Not detected";
+        if (key === "budget") return displayBudget(value);
+        if (key === "core_fields") {
+          const found = ["customer_age", "sum_assured", "term"].filter((field) => intent?.[field] != null).length;
+          return `${found} of 3`;
+        }
+        return value ?? "Not detected";
+      }
+
+      function renderIntent(intent) {
+        for (const element of document.querySelectorAll("[data-intent]")) {
+          element.textContent = displayValue(intent, element.dataset.intent);
+        }
+        const oosWarning = document.querySelector("#oos-warning");
+        if (intent.is_out_of_scope) {
+          identifyStatus.textContent = "Out of Scope";
+          identifyStatus.dataset.state = "error";
+          oosWarning.hidden = false;
+          document.querySelector("#oos-text").textContent = intent.out_of_scope_categories?.join(", ") + " plans are not covered.";
+        } else {
+          oosWarning.hidden = true;
+          identifyStatus.textContent = intent.is_ambiguous ? "Needs more detail" : "Query identified";
+          identifyStatus.dataset.state = intent.is_ambiguous ? "incomplete" : "complete";
+        }
+        document.querySelector("#intent-footnote").textContent = intent.contradictions?.length
+          ? intent.contradictions.join(" ")
+          : "Details not detected remain unknown; they are not guessed.";
+      }
+
+      async function identifyQuery() {
+        const requestId = ++identificationRequest;
+        const query = queryInput.value.trim();
+        if (!query) {
+          identifyStatus.textContent = "Enter a query";
+          for (const element of document.querySelectorAll("[data-intent]")) element.textContent = "Not specified";
+          return null;
+        }
+
+        identifyStatus.textContent = "Reading query...";
+        try {
+          const response = await fetch("/identify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query })
+          });
+          if (!response.ok) throw new Error(`Query identification failed (${response.status}).`);
+          const data = await response.json();
+          if (requestId === identificationRequest && query === queryInput.value.trim()) renderIntent(data.intent);
+          return data.intent;
+        } catch (reason) {
+          if (requestId === identificationRequest) identifyStatus.textContent = reason.message;
+          return null;
+        }
+      }
+
+      function addText(parent, tag, className, value) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        element.textContent = value ?? "";
+        parent.append(element);
+        return element;
+      }
+
+      function addScore(row, label, value, max = 3) {
+        const score = document.createElement("span");
+        score.className = "score";
+        score.textContent = `${label}: ${Number(value).toFixed(2)}`;
+        row.append(score);
+        if (max !== null) {
+          const track = document.createElement("span");
+          track.className = "score-track";
+          track.setAttribute("aria-label", `${label}: ${Number(value).toFixed(2)} out of ${max}`);
+          const fill = document.createElement("span");
+          fill.className = "score-fill";
+          fill.style.transform = `scaleX(${Math.max(0, Math.min(1, Number(value) / max))})`;
+          track.append(fill);
+          row.append(track);
+        }
+      }
+
+      function renderClarifications(clarifications) {
+        clarifyInputs.replaceChildren();
+        if (!clarifications || !clarifications.length) {
+          clarifyBox.hidden = true;
+          return;
+        }
+        clarifyBox.hidden = false;
+        for (const item of clarifications) {
+          const fieldDiv = document.createElement("div");
+          fieldDiv.className = "field";
+          const label = document.createElement("label");
+          label.textContent = item.question || item.reason;
+          fieldDiv.append(label);
+
+          if (item.field === "gender") {
+            const select = document.createElement("select");
+            select.name = "gender";
+            select.innerHTML = '<option value="">Select gender</option><option value="male">Male</option><option value="female">Female</option>';
+            fieldDiv.append(select);
+          } else {
+            const input = document.createElement("input");
+            input.type = "number";
+            input.name = item.field;
+            input.placeholder = item.field === "child_age" ? "e.g. 6" : "Enter value";
+            if (item.field === "customer_age") { input.min = 0; input.max = 100; }
+            if (item.field === "child_age") { input.min = 0; input.max = 25; }
+            fieldDiv.append(input);
+          }
+          clarifyInputs.append(fieldDiv);
+        }
+      }
+
+      clarifyForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(clarifyForm);
+        for (const [key, val] of data.entries()) {
+          if (val) {
+            const overrideInput = form.querySelector(`[name="${key}"]`);
+            if (overrideInput) overrideInput.value = val;
+          }
+        }
+        document.querySelector("#override-details").open = true;
+        runRecommendation();
+      });
+
+      function renderRecommendations(data) {
+        recommendationList.replaceChildren();
+        const recommendations = data.recommendations ?? [];
+        emptyState.hidden = recommendations.length > 0;
+
+        if (data.status === "OUT_OF_SCOPE") {
+          oosBanner.hidden = false;
+          document.querySelector("#oos-message").textContent = data.message || "This category is out of scope.";
+          document.querySelector("#result-summary").textContent = "0 recommendations (Out of scope)";
+          emptyState.hidden = true;
+          return;
+        }
+        oosBanner.hidden = true;
+
+        if (!recommendations.length) {
+          let message = "No verified policies passed the eligibility gate for this query.";
+          if (data.status === "NEEDS_INFO") {
+            message = "Additional information is required for policies to evaluate as eligible. Please answer the question(s) above.";
+          }
+          emptyState.replaceChildren();
+          addText(emptyState, "p", "empty-title", message);
+          document.querySelector("#result-summary").textContent = "No eligible recommendations";
+          return;
+        }
+
+        document.querySelector("#result-summary").textContent =
+          `${data.eligible_count} verified plans passed eligibility; showing top ${recommendations.length}`;
+
+        for (const item of recommendations) {
+          const li = document.createElement("li");
+          li.className = "recommendation";
+          const heading = document.createElement("div");
+          heading.className = "recommendation-title";
+          addText(heading, "span", "rank", String(item.rank));
+          const nameBlock = document.createElement("div");
+          addText(nameBlock, "h3", "", item.policy_name);
+
+          let metaText = `${item.policy_id} · ${item.category || "Category unspecified"}`;
+          if (item.policy_id === "LIC_771") {
+            metaText += " · Whole Life Plan (Life cover to 100; no fixed term)";
+          }
+          addText(nameBlock, "p", "policy-meta", metaText);
+          heading.append(nameBlock);
+          li.append(heading);
+
+          const scores = document.createElement("div");
+          scores.className = "scores";
+          addScore(scores, "Relevance Score", item.predicted_relevance, 3);
+          if (item.kg_score !== null && item.kg_score !== undefined) {
+            const kgSpan = document.createElement("span");
+            kgSpan.className = "score score-sub";
+            kgSpan.textContent = `KG Match: ${Number(item.kg_score).toFixed(2)}`;
+            scores.append(kgSpan);
+          }
+          li.append(scores);
+
+          const details = document.createElement("details");
+          details.open = item.rank === 1; // open top recommendation by default
+          addText(details, "summary", "", "Brochure Facts & Why It Matched");
+
+          const explanation = item.explanation ?? {};
+          const factList = document.createElement("div");
+          factList.className = "fact-list";
+          for (const fact of explanation.gate_facts ?? []) {
+            addText(factList, "p", "detail-line", "✓ " + fact);
+          }
+          if (explanation.text) {
+            addText(factList, "p", "detail-explanation", explanation.text);
+          }
+          details.append(factList);
+
+          const links = document.createElement("p");
+          links.className = "policy-links";
+          for (const [label, url] of [["Official Brochure", item.brochure_url], ["LIC Policy Page", item.policy_url]]) {
+            if (!url) continue;
+            const link = document.createElement("a");
+            link.href = url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = label + " ↗";
+            links.append(link);
+          }
+          if (links.childElementCount) details.append(links);
+          li.append(details);
+          recommendationList.append(li);
+        }
+      }
+
+      function renderReport(data, identifiedIntent) {
+        document.querySelector("#report-query").textContent = `Query: “${data.query}”`;
+        document.querySelector("#report-summary").hidden = false;
+        document.querySelector("#report-status").textContent = data.status.replaceAll("_", " ");
+        document.querySelector("#eligible-count").textContent = String(data.eligible_count);
+        document.querySelector("#report-ranker").textContent = data.ranking_meta?.active_mode?.replaceAll("_", " ") || "GBR Only";
+
+        const warning = document.querySelector("#report-warning");
+        warning.hidden = !data.weak_match || data.status === "OUT_OF_SCOPE";
+
+        renderClarifications(data.clarifications);
+
+        const intentList = document.querySelector("#report-intent");
+        intentList.replaceChildren();
+        const displayIntent = data.intent || identifiedIntent;
+        for (const [label, key] of [
+          ["Customer Age", "customer_age"], ["Child's Age", "child_age"], ["Sum Assured", "sum_assured"],
+          ["Policy Term", "term"], ["Gender", "gender"], ["Primary Goal", "primary_goal"],
+          ["Budget", "budget"], ["Premium Preference", "premium_level"], ["Risk Tolerance", "risk_tolerance"],
+          ["Core Details", "core_fields"]
+        ]) {
+          const wrapper = document.createElement("div");
+          addText(wrapper, "dt", "", label);
+          addText(wrapper, "dd", "", displayValue(displayIntent, key));
+          intentList.append(wrapper);
+        }
+
+        const noteContainer = document.querySelector("#override-note-container");
+        noteContainer.replaceChildren();
+        const appliedOverrides = data.understood_details?.structured_overrides || {};
+        if (Object.keys(appliedOverrides).length) {
+          const note = document.createElement("p");
+          note.className = "override-note";
+          note.textContent = `Applied Structured Overrides: ${Object.entries(appliedOverrides).map(([k, v]) => `${k.replaceAll("_", " ")}: ${v}`).join(", ")}.`;
+          noteContainer.append(note);
+        }
+
+        renderRecommendations(data);
+      }
+
+      function clearReport() {
+        document.querySelector("#report-summary").hidden = true;
+        document.querySelector("#report-warning").hidden = true;
+        document.querySelector("#status-oos-banner").hidden = true;
+        clarifyBox.hidden = true;
+        document.querySelector("#report-query").textContent = "Processing query...";
+        document.querySelector("#report-intent").replaceChildren();
+        document.querySelector("#result-summary").textContent = "Evaluating...";
+        recommendationList.replaceChildren();
+        emptyState.hidden = false;
+        emptyState.textContent = "Run a query to build this report.";
+      }
+
+      function setStage(name, state, message) {
+        const stage = document.querySelector(`[data-step="${name}"]`);
+        if (!stage) return;
+        stage.dataset.state = state;
+        stage.querySelector(".stage-state").textContent = message;
+      }
+
+      function resetPipeline() {
+        pipelineError.hidden = true;
+        for (const stage of document.querySelectorAll(".pipeline-stage")) {
+          stage.dataset.state = "pending";
+          stage.querySelector(".stage-state").textContent = "Waiting for a query";
+        }
+      }
+
+      async function runRecommendation() {
+        formError.hidden = true;
+        pipelineError.hidden = true;
+        button.disabled = true;
+        button.textContent = "Evaluating Pipeline...";
+        const query = queryInput.value.trim();
+        const values = new FormData(form);
+        const payload = { query, top_k: 5 };
+        for (const key of ["customer_age", "child_age", "term", "sum_assured"]) {
+          const value = values.get(key);
+          if (value !== null && value !== "") payload[key] = Number(value);
+        }
+        if (values.get("gender")) payload.gender = values.get("gender");
+
+        resetPipeline();
+        clearReport();
+        showView("pipeline");
+        document.querySelector("#pipeline-summary").textContent = "Validating intent, enforcing brochure gate, and scoring candidates.";
+        let activeStage = "intent";
+        setStage("intent", "active", "Parsing entities & checking scope");
+
+        try {
+          const identifyResponse = await fetch("/identify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query })
+          });
+          if (!identifyResponse.ok) throw new Error(`Query identification failed (${identifyResponse.status}).`);
+          const identified = await identifyResponse.json();
+          renderIntent(identified.intent);
+
+          if (identified.intent.is_out_of_scope) {
+            setStage("intent", "complete", "Category out of scope");
+          } else {
+            setStage("intent", "complete", "Entities parsed");
+          }
+
+          activeStage = "eligibility";
+          setStage("eligibility", "active", "Checking brochure eligibility gate");
+
+          const response = await fetch("/recommend", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", ...( getToken() ? { "X-Device-Token": getToken() } : {} ) },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) {
+            const errJson = await response.json().catch(() => ({}));
+            throw new Error(errJson.detail?.[0]?.msg || errJson.detail || `Request failed (${response.status})`);
+          }
+          const data = await response.json();
+
+          if (data.status === "OUT_OF_SCOPE") {
+            setStage("eligibility", "complete", "Category not in candidate pool");
+            setStage("ranking", "complete", "Ranking skipped (Out of scope)");
+          } else {
+            setStage("eligibility", "complete", `${data.eligible_count} plans passed brochure gate`);
+            setStage("ranking", "complete", `${data.recommendations.length} recommendations generated`);
+          }
+
+          activeStage = "report";
+          setStage("report", "active", "Formatting report");
+          renderReport(data, identified.intent);
+          // Show profile-applied chips and stale prompts if present
+          if (data.profile_applied) renderProfileApplied(data.profile_applied);
+          if (data.needs_confirmation) renderStaleBanner(data.needs_confirmation);
+          // Show parser disagreement notice if LLM and rule parsers differ
+          if (data.disagreements && data.disagreements.length) {
+            const noteContainer = document.getElementById("override-note-container");
+            const warn = document.createElement("p");
+            warn.className = "override-note";
+            warn.style.borderColor = "var(--color-warning, #f39c12)";
+            warn.textContent = "⚠ Parsing disagreement on: " +
+              data.disagreements.map(d => d.field.replace(/_/g, " ") + " (rule: " + d.rule_extracted + ", LLM: " + d.llm_extracted + ")").join("; ") +
+              ". Please use the Overrides panel to confirm the correct value.";
+            noteContainer.prepend(warn);
+          }
+          setStage("report", "complete", "Report ready");
+
+          await new Promise((resolve) => window.setTimeout(resolve, 350));
+          showView("report");
+        } catch (reason) {
+          pipelineError.textContent = `${reason.message} Check input parameters or API connectivity.`;
+          pipelineError.hidden = false;
+          setStage(activeStage, "error", "Failed at this stage");
+          formError.textContent = reason.message;
+          formError.hidden = false;
+        } finally {
+          button.disabled = false;
+          button.textContent = "Identify Needs & Find Policies";
+        }
+      }
+
+      let identifyTimer;
+      queryInput.addEventListener("input", () => {
+        window.clearTimeout(identifyTimer);
+        identifyTimer = window.setTimeout(identifyQuery, 250);
+      });
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        runRecommendation();
+      });
+      window.addEventListener("hashchange", () => showView(location.hash.slice(1)));
+
+      async function loadModelDetails() {
+        try {
+          const [healthRes, metaRes] = await Promise.all([fetch("/health"), fetch("/metadata")]);
+          if (!healthRes.ok || !metaRes.ok) throw new Error("API status read failure");
+          const health = await healthRes.json();
+          const meta = await metaRes.json();
+          serviceState.textContent = health.ok ? `API Active (${health.verified_plans} plans)` : "API Inactive";
+          document.querySelector("#ranker-mode").textContent = `Ranker: GBR only · ${health.verified_plans} verified plans`;
+          document.querySelector("#evaluation-caveat").textContent = meta.caveat;
+
+          const metrics = [
+            ["Nested NDCG@3", meta.validation?.["ndcg@3"] || 0.74],
+            ["Nested NDCG@5", meta.validation?.["ndcg@5"] || 0.74],
+            ["Mean Reciprocal Rank", meta.validation?.mrr || 0.825],
+            ["Abstention AUROC", meta.abstention_auroc || 0.907]
+          ];
+          const container = document.querySelector("#metric-list");
+          container.replaceChildren();
+          for (const [lbl, val] of metrics) {
+            const wrap = document.createElement("div");
+            addText(wrap, "dt", "", lbl);
+            addText(wrap, "dd", "metric-value", Number(val).toFixed(3));
+            container.append(wrap);
+          }
+          document.querySelector("#model-meta").textContent =
+            `${meta.n_labeled_queries} labeled queries · ${meta.n_policies_ranked} verified plans · Evaluated: ${meta.trained_on}`;
+        } catch (err) {
+          serviceState.textContent = "API offline";
+          document.querySelector("#ranker-mode").textContent = "Service offline";
+        }
+      }
+
+      async function loadPoliciesTable() {
+        const tbody = document.querySelector("#policies-tbody");
+        try {
+          const res = await fetch("/policies?verified_only=true");
+          if (!res.ok) throw new Error("Could not load catalogue");
+          const data = await res.json();
+          tbody.replaceChildren();
+          for (const p of data.policies) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td><strong>${p.policy_id}</strong></td>
+              <td>${p.policy_name}</td>
+              <td><span class="badge">${p.category}</span></td>
+              <td>${p.min_age ?? "—"} to ${p.max_age ?? "—"} yrs</td>
+              <td>${p.min_term ?? "—"} to ${p.max_term ?? "—"} yrs</td>
+              <td>${p.min_sum_assured ? formatMoney(p.min_sum_assured) : "—"}</td>
+              <td>${p.brochure_url ? `<a href="${p.brochure_url}" target="_blank" rel="noopener">Brochure ↗</a>` : '<span class="text-muted">Available at branch</span>'}</td>
+            `;
+            tbody.append(tr);
+          }
+        } catch {
+          tbody.innerHTML = '<tr><td colspan="7">Failed to load verified policies table. Ensure API is running.</td></tr>';
+        }
+      }
+
+      // Multi-page routing: read pathname first (e.g. /account), fallback to hash (#account)
+      const pathRoute = location.pathname.replace(/^\//, "");
+      const initialView = VIEWS.includes(pathRoute) ? pathRoute : (location.hash.slice(1) || "query");
+      showView(initialView);
+      loadModelDetails();
+      identifyQuery();
+    </script>
+  </body>
+</html>

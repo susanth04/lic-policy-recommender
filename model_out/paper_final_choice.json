@@ -1,0 +1,12 @@
+{
+  "rule": "planned architecture wins only if its group-level NDCG@3 CI vs the current GBR is above 0; otherwise the best other row",
+  "planned": "G PLANNED: semantic + KG + cross-encoder rerank",
+  "d_vs_gbr": -0.174,
+  "ci": [
+    -0.282,
+    -0.069
+  ],
+  "groups": 33,
+  "final": "H current GBR (nested)",
+  "reason": "planned architecture does not beat the current GBR with a CI above 0; use the best other row and report the planned one as a negative result"
+}

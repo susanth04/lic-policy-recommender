@@ -1,0 +1,1850 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d8" for="edge" attr.name="source" attr.type="string"/>
+<key id="d7" for="edge" attr.name="derived" attr.type="boolean"/>
+<key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d4" for="node" attr.name="verified" attr.type="boolean"/>
+<key id="d3" for="node" attr.name="category" attr.type="string"/>
+<key id="d2" for="node" attr.name="policy_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="label" attr.type="string"/>
+<key id="d0" for="node" attr.name="kind" attr.type="string"/>
+<graph edgedefault="directed"><node id="goal:Life Cover">
+  <data key="d0">Goal</data>
+  <data key="d1">Life Cover</data>
+</node>
+<node id="goal:Child Education">
+  <data key="d0">Goal</data>
+  <data key="d1">Child Education</data>
+</node>
+<node id="goal:Retirement">
+  <data key="d0">Goal</data>
+  <data key="d1">Retirement</data>
+</node>
+<node id="goal:Savings">
+  <data key="d0">Goal</data>
+  <data key="d1">Savings</data>
+</node>
+<node id="goal:Wealth Creation">
+  <data key="d0">Goal</data>
+  <data key="d1">Wealth Creation</data>
+</node>
+<node id="goal:Health Protection">
+  <data key="d0">Goal</data>
+  <data key="d1">Health Protection</data>
+</node>
+<node id="goal:Income">
+  <data key="d0">Goal</data>
+  <data key="d1">Income</data>
+</node>
+<node id="risk:Low">
+  <data key="d0">Risk</data>
+  <data key="d1">Low</data>
+</node>
+<node id="premium:Low">
+  <data key="d0">Premium</data>
+  <data key="d1">Low</data>
+</node>
+<node id="risk:Moderate">
+  <data key="d0">Risk</data>
+  <data key="d1">Moderate</data>
+</node>
+<node id="premium:Moderate">
+  <data key="d0">Premium</data>
+  <data key="d1">Moderate</data>
+</node>
+<node id="risk:High">
+  <data key="d0">Risk</data>
+  <data key="d1">High</data>
+</node>
+<node id="premium:High">
+  <data key="d0">Premium</data>
+  <data key="d1">High</data>
+</node>
+<node id="category:Term Assurance">
+  <data key="d0">Category</data>
+  <data key="d1">Term Assurance</data>
+</node>
+<node id="category:Endowment">
+  <data key="d0">Category</data>
+  <data key="d1">Endowment</data>
+</node>
+<node id="category:Money Back">
+  <data key="d0">Category</data>
+  <data key="d1">Money Back</data>
+</node>
+<node id="category:Whole Life">
+  <data key="d0">Category</data>
+  <data key="d1">Whole Life</data>
+</node>
+<node id="category:Pension">
+  <data key="d0">Category</data>
+  <data key="d1">Pension</data>
+</node>
+<node id="category:Unit Linked">
+  <data key="d0">Category</data>
+  <data key="d1">Unit Linked</data>
+</node>
+<node id="category:Health Insurance">
+  <data key="d0">Category</data>
+  <data key="d1">Health Insurance</data>
+</node>
+<node id="category:Micro Insurance">
+  <data key="d0">Category</data>
+  <data key="d1">Micro Insurance</data>
+</node>
+<node id="policy:LIC_717">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Single Premium Endowment Plan</data>
+  <data key="d2">LIC_717</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_714">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Endowment Plan</data>
+  <data key="d2">LIC_714</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_715">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Anand</data>
+  <data key="d2">LIC_715</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_733">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Lakshya</data>
+  <data key="d2">LIC_733</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_736">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Labh Plan</data>
+  <data key="d2">LIC_736</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_774">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Amritbaal</data>
+  <data key="d2">LIC_774</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_912">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Nav Jeevan Shree</data>
+  <data key="d2">LIC_912</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_881">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Lakshmi</data>
+  <data key="d2">LIC_881</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_888">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Sathi - Single Premium</data>
+  <data key="d2">LIC_888</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_889">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Sathi - Limited Premium</data>
+  <data key="d2">LIC_889</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_890">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Bima Jyoti</data>
+  <data key="d2">LIC_890</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_770">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Platinum</data>
+  <data key="d2">LIC_770</data>
+  <data key="d3">Endowment</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_745">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Umang</data>
+  <data key="d2">LIC_745</data>
+  <data key="d3">Whole Life</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_771">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Utsav</data>
+  <data key="d2">LIC_771</data>
+  <data key="d3">Whole Life</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_883">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Utsav Single Premium</data>
+  <data key="d2">LIC_883</data>
+  <data key="d3">Whole Life</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_748">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Shree</data>
+  <data key="d2">LIC_748</data>
+  <data key="d3">Money Back</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_720">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Money Back Plan - 20 Years</data>
+  <data key="d2">LIC_720</data>
+  <data key="d3">Money Back</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_721">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Money Back Plan - 25 Years</data>
+  <data key="d2">LIC_721</data>
+  <data key="d3">Money Back</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_732">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Children's Money Back Plan</data>
+  <data key="d2">LIC_732</data>
+  <data key="d3">Money Back</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_734">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Tarun</data>
+  <data key="d2">LIC_734</data>
+  <data key="d3">Money Back</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_876">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Digi Term</data>
+  <data key="d2">LIC_876</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_878">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Digi Credit Life</data>
+  <data key="d2">LIC_878</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_877">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Credit Life</data>
+  <data key="d2">LIC_877</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_875">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Yuva Term</data>
+  <data key="d2">LIC_875</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_954">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Tech-Term</data>
+  <data key="d2">LIC_954</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_859">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Saral Jeevan Bima</data>
+  <data key="d2">LIC_859</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_887">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bima Kavach</data>
+  <data key="d2">LIC_887</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_894">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Raksha</data>
+  <data key="d2">LIC_894</data>
+  <data key="d3">Term Assurance</data>
+  <data key="d4">True</data>
+</node>
+<node id="policy:LIC_867">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Pension Plus</data>
+  <data key="d2">LIC_867</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_857">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jeevan Akshay-VII</data>
+  <data key="d2">LIC_857</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_758">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Shanti</data>
+  <data key="d2">LIC_758</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_862">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Saral Pension</data>
+  <data key="d2">LIC_862</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_879">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Smart Pension</data>
+  <data key="d2">LIC_879</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_892">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Jeevan Dhara II</data>
+  <data key="d2">LIC_892</data>
+  <data key="d3">Pension</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_907">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Health Shield</data>
+  <data key="d2">LIC_907</data>
+  <data key="d3">Health Insurance</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_908">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Cancer Cover</data>
+  <data key="d2">LIC_908</data>
+  <data key="d3">Health Insurance</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_751">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Micro Bachat</data>
+  <data key="d2">LIC_751</data>
+  <data key="d3">Micro Insurance</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_880">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Jan Suraksha</data>
+  <data key="d2">LIC_880</data>
+  <data key="d3">Micro Insurance</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_873">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Index Plus</data>
+  <data key="d2">LIC_873</data>
+  <data key="d3">Unit Linked</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_749">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Nivesh Plus</data>
+  <data key="d2">LIC_749</data>
+  <data key="d3">Unit Linked</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_752">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's SIIP</data>
+  <data key="d2">LIC_752</data>
+  <data key="d3">Unit Linked</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_886">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Protection Plus</data>
+  <data key="d2">LIC_886</data>
+  <data key="d3">Unit Linked</data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_863">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Dhan Rekha</data>
+  <data key="d2">LIC_863</data>
+  <data key="d3"></data>
+  <data key="d4">False</data>
+</node>
+<node id="category:">
+  <data key="d0">Category</data>
+  <data key="d1"></data>
+</node>
+<node id="policy:LIC_905">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Cancer Cover</data>
+  <data key="d2">LIC_905</data>
+  <data key="d3"></data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_911">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Nav Jeevan Shree Single Premium</data>
+  <data key="d2">LIC_911</data>
+  <data key="d3"></data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_916">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's New Bima Bachat</data>
+  <data key="d2">LIC_916</data>
+  <data key="d3"></data>
+  <data key="d4">False</data>
+</node>
+<node id="policy:LIC_939">
+  <data key="d0">Policy</data>
+  <data key="d1">LIC's Bhagya Lakshmi</data>
+  <data key="d2">LIC_939</data>
+  <data key="d3"></data>
+  <data key="d4">False</data>
+</node>
+<edge source="category:Term Assurance" target="goal:Life Cover">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Endowment" target="goal:Savings">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Endowment" target="goal:Life Cover">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Money Back" target="goal:Savings">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Money Back" target="goal:Income">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Whole Life" target="goal:Life Cover">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Whole Life" target="goal:Savings">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Pension" target="goal:Retirement">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Pension" target="goal:Income">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Unit Linked" target="goal:Wealth Creation">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Unit Linked" target="goal:Life Cover">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Health Insurance" target="goal:Health Protection">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Micro Insurance" target="goal:Life Cover">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="category:Micro Insurance" target="goal:Savings">
+  <data key="d5">SERVES_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category prior</data>
+</edge>
+<edge source="policy:LIC_717" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_717" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_717" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_717" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_717" target="premium:High">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">text says single premium</data>
+</edge>
+<edge source="policy:LIC_714" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_714" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_714" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_714" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_714" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_715" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_715" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_715" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_715" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_715" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_733" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_733" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_733" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_733" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'annual income'</data>
+</edge>
+<edge source="policy:LIC_733" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_733" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_736" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_736" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_736" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_736" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_736" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_774" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_774" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_774" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_774" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_774" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_912" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_912" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_912" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_912" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_912" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_881" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_881" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_881" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_881" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_881" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_888" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_888" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_888" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_888" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_888" target="premium:High">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">text says single premium</data>
+</edge>
+<edge source="policy:LIC_889" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_889" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_889" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_889" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_889" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_890" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_890" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_890" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_890" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_890" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_770" target="category:Endowment">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_770" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_770" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Endowment</data>
+</edge>
+<edge source="policy:LIC_770" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'guaranteed income'</data>
+</edge>
+<edge source="policy:LIC_770" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_770" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_745" target="category:Whole Life">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_745" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_745" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_745" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_745" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_771" target="category:Whole Life">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_771" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_771" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_771" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_771" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_883" target="category:Whole Life">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_883" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_883" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Whole Life</data>
+</edge>
+<edge source="policy:LIC_883" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_883" target="premium:High">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">text says single premium</data>
+</edge>
+<edge source="policy:LIC_748" target="category:Money Back">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_748" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_748" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_748" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'term'</data>
+</edge>
+<edge source="policy:LIC_748" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_748" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_720" target="category:Money Back">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_720" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_720" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_720" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_720" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_721" target="category:Money Back">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_721" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_721" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_721" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'term'</data>
+</edge>
+<edge source="policy:LIC_721" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_721" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_732" target="category:Money Back">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_732" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_732" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_732" target="goal:Child Education">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'child'</data>
+</edge>
+<edge source="policy:LIC_732" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_732" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_734" target="category:Money Back">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_734" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_734" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Money Back</data>
+</edge>
+<edge source="policy:LIC_734" target="goal:Child Education">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'children'</data>
+</edge>
+<edge source="policy:LIC_734" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_734" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_876" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_876" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_876" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_876" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_878" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_878" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_878" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_878" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_877" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_877" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_877" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_877" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_875" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_875" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_875" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_875" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_954" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_954" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_954" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_954" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_859" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_859" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_859" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_859" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_887" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_887" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_887" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_887" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_894" target="category:Term Assurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_894" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_894" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_894" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Term Assurance</data>
+</edge>
+<edge source="policy:LIC_867" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_867" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_867" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_867" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_867" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_857" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_857" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_857" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_857" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_857" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_758" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_758" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_758" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_758" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_758" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_862" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_862" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_862" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_862" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_862" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_879" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_879" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_879" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_879" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_879" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_892" target="category:Pension">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_892" target="goal:Retirement">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_892" target="goal:Income">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Pension</data>
+</edge>
+<edge source="policy:LIC_892" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_892" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_907" target="category:Health Insurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_907" target="goal:Health Protection">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Health Insurance</data>
+</edge>
+<edge source="policy:LIC_907" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_907" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_908" target="category:Health Insurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_908" target="goal:Health Protection">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Health Insurance</data>
+</edge>
+<edge source="policy:LIC_908" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_908" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_751" target="category:Micro Insurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_751" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_751" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_751" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_751" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_880" target="category:Micro Insurance">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_880" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_880" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_880" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_880" target="premium:Low">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Micro Insurance</data>
+</edge>
+<edge source="policy:LIC_873" target="category:Unit Linked">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_873" target="goal:Wealth Creation">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_873" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_873" target="risk:High">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">unit/market-linked plan</data>
+</edge>
+<edge source="policy:LIC_873" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_749" target="category:Unit Linked">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_749" target="goal:Wealth Creation">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_749" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_749" target="risk:High">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">unit/market-linked plan</data>
+</edge>
+<edge source="policy:LIC_749" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_752" target="category:Unit Linked">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_752" target="goal:Wealth Creation">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_752" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_752" target="risk:High">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">unit/market-linked plan</data>
+</edge>
+<edge source="policy:LIC_752" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_886" target="category:Unit Linked">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_886" target="goal:Wealth Creation">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_886" target="goal:Life Cover">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.7</data>
+  <data key="d7">True</data>
+  <data key="d8">category Unit Linked</data>
+</edge>
+<edge source="policy:LIC_886" target="risk:High">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">unit/market-linked plan</data>
+</edge>
+<edge source="policy:LIC_886" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_863" target="category:">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_863" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_863" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_905" target="category:">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_905" target="goal:Health Protection">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'cancer'</data>
+</edge>
+<edge source="policy:LIC_905" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_905" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_911" target="category:">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_911" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_911" target="premium:High">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">text says single premium</data>
+</edge>
+<edge source="policy:LIC_916" target="category:">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_916" target="goal:Savings">
+  <data key="d5">HAS_GOAL</data>
+  <data key="d6">0.6</data>
+  <data key="d7">True</data>
+  <data key="d8">description keyword 'bachat'</data>
+</edge>
+<edge source="policy:LIC_916" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_916" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+<edge source="policy:LIC_939" target="category:">
+  <data key="d5">IN_CATEGORY</data>
+  <data key="d6">1.0</data>
+  <data key="d7">False</data>
+  <data key="d8">catalogue category (not brochure-verified)</data>
+</edge>
+<edge source="policy:LIC_939" target="risk:Low">
+  <data key="d5">HAS_RISK</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">non-linked plan (no market-linked investment risk)</data>
+</edge>
+<edge source="policy:LIC_939" target="premium:Moderate">
+  <data key="d5">HAS_PREMIUM_LEVEL</data>
+  <data key="d6">1.0</data>
+  <data key="d7">True</data>
+  <data key="d8">default for regular/limited-premium savings plans</data>
+</edge>
+</graph></graphml>

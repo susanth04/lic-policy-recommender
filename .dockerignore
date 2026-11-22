@@ -1,0 +1,13 @@
+.git
+.gitignore
+.hallmark
+.pytest_cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+redundant_files
+deploy
+tests
+*.db
+*.log

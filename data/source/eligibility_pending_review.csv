@@ -1,0 +1,7 @@
+plan_no,plan_name,uin_check,status,facts_from_supplied_text
+720,LIC's New Money Back Plan - 20 Years,brochure supplied: 512N280V02; catalogue: 512N280V03,NOT VERIFIED: UIN/version mismatch - need the V03 brochure,"age 13-50 (nearer), max maturity 70, term 20, PPT 15, SA min 1,00,000 no max"
+745,LIC's Jeevan Umang,brochure supplied: 512N312V02; catalogue: 512N312V03,NOT VERIFIED: UIN/version mismatch - need the V03 brochure,"age 90 days-55, PPT 15/20/25/30, term 100-age, SA min 2,00,000"
+774,LIC's Amritbaal,brochure supplied: 512N365V01; catalogue: 512N365V02,NOT VERIFIED: UIN/version mismatch - need the V02 brochure,"child entry 0-13, maturity age 18-25, SA min 2,00,000"
+862,LIC's Saral Pension,brochure supplied: 512N342V03; catalogue: 512N342V05,NOT VERIFIED: UIN/version mismatch - need the V05 brochure,"entry 40-80, immediate annuity, min annuity 1000/month"
+758,LIC's New Jeevan Shanti,512N338V08 matches,"NOT IN POOL: annuity plan, gate has no purchase-price / vesting-age rules","entry 30-79, vesting 31-80, deferment 1-5y, min purchase price 1,50,000"
+879,LIC's Smart Pension,512N386V01 matches,"NOT IN POOL: annuity plan, gate has no purchase-price / vesting-age rules","single premium, entry 18-100 depending on option, min purchase price 1,00,000"

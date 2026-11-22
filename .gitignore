@@ -4,3 +4,10 @@ __pycache__/
 artifacts/model/*
 !artifacts/model/manifest.json
 artifacts/embeddings/
+
+# Environment & Local DB
+.env
+*.db
+redundant_files/
+.hallmark/
+*.safetensors

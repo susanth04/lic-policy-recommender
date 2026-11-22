@@ -1,0 +1,13 @@
+query_id,group_id,split,query_text,gold_customer_age,gold_child_age,gold_term,gold_sum_assured,gold_gender,gold_is_out_of_scope
+Q_NAT_001,GRP_SALARIED_YOUNG,dev,"I am 26 years old male looking for a pure term insurance with 50 lakh cover for 25 years",26,,25,5000000,male,False
+Q_NAT_002,GRP_SALARIED_YOUNG,test,"30 year old guy wanting a 20 year endowment policy with 10 lakh sum assured",30,,20,1000000,male,False
+Q_NAT_003,GRP_PARENTS,dev,"Need a savings plan for my 4 year old daughter education, my age is 34",34,4,,,female,False
+Q_NAT_004,GRP_PARENTS,test,"I am 38, want money back policy for my 7 yr old son for 20 years with 500000 sum assured",38,7,20,500000,male,False
+Q_NAT_005,GRP_WOMEN,dev,"32 female looking for savings endowment with 15 year term and 3 lakh sum assured",32,,15,300000,female,False
+Q_NAT_006,GRP_WOMEN,test,"I am a 29 year old working woman seeking life protection of 25 lakhs for 30 years",29,,30,2500000,female,False
+Q_NAT_007,GRP_SENIOR,dev,"I am 58 and want a pension plan with guaranteed lifetime annuity",58,,,,,True
+Q_NAT_008,GRP_SENIOR,test,"Age 62 seeking whole life plan with 10 lakh cover",62,,,1000000,,False
+Q_NAT_009,GRP_HEALTH_OOS,dev,"Need a comprehensive medical insurance policy covering critical illness for my family",,,,,,True
+Q_NAT_010,GRP_MARKET_OOS,test,"Looking for market linked ULIP plan with high equity returns",,,,,,True
+Q_NAT_011,GRP_BUSINESS,dev,"45 year old businessman wanting 1 crore term cover for 15 years",45,,15,10000000,male,False
+Q_NAT_012,GRP_BUSINESS,test,"I am 42 years old looking for money back policy with 20 lakh sum assured for 20 years",42,,20,2000000,,False

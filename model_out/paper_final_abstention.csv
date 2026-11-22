@@ -1,0 +1,7 @@
+,"abstention AUROC (1.0 = perfect, 0.5 = chance)"
+A BM25 only,0.625
+B TF-IDF only,0.6
+C semantic only (zero-shot),0.6
+D KG only,0.863
+E cross-encoder only (zero-shot),0.685
+H current GBR (nested),0.907

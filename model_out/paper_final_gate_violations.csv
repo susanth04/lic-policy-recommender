@@ -1,0 +1,6 @@
+,top-1 ineligible,top-3 slots ineligible,queries
+BM25,0.336,0.391,128.0
+semantic,0.422,0.396,128.0
+KG,0.312,0.271,128.0
+semantic + KG,0.414,0.359,128.0
+gate first (this system),0.0,0.0,128.0

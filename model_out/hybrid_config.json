@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "mode": "gbr_only",
+  "selection_note": "no candidate beat the current GBR with a CI above 0",
+  "needs": {
+    "semantic": false,
+    "cross_encoder": false
+  },
+  "feature_extras": [],
+  "fusion": {
+    "components": [],
+    "weights": {}
+  },
+  "rerank": {
+    "enabled": false,
+    "k": 0,
+    "weight": 0.0
+  },
+  "semantic_model": {
+    "name": "sentence-transformers/all-MiniLM-L6-v2",
+    "local_dir": "models/all-MiniLM-L6-v2"
+  },
+  "cross_encoder_model": {
+    "name": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "local_dir": "models/ms-marco-MiniLM-L-6-v2"
+  },
+  "policy_embeddings": "policy_embeddings.npz",
+  "kg_graphml": "kg.graphml",
+  "fallback": "current GBR ranker (lic_ranker.joblib); reported in ranking_meta",
+  "trained_on": "2026-11-21"
+}

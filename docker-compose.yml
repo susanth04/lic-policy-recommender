@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  lic-recommender:
+    build: .
+    container_name: lic_recommender
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # Persist SQLite database across container upgrades/rebuilds
+      - db_data:/app/db_persist
+    environment:
+      - DATABASE_URL=sqlite:////app/db_persist/lic_recommender.db
+
+volumes:
+  db_data:

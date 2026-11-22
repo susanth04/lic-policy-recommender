@@ -6,11 +6,11 @@ import re
 MAX_QUERY_LENGTH = 500
 
 
-def sanitize_user_prompt(text: str) -> str:
+def sanitize_user_prompt(text: str, max_length: int = MAX_QUERY_LENGTH) -> str:
     """Sanitize raw user text:
     1. Strip ASCII control characters (< 32 except newline/tab).
     2. Escape closing delimiter tag `</user_query>` to prevent jailbreak escapes.
-    3. Truncate to MAX_QUERY_LENGTH characters.
+    3. Truncate to max_length characters.
     """
     if not text:
         return ""
@@ -22,8 +22,8 @@ def sanitize_user_prompt(text: str) -> str:
     sanitized = re.sub(r"</user_query>", "&lt;/user_query&gt;", sanitized, flags=re.IGNORECASE)
 
     # Length cap
-    if len(sanitized) > MAX_QUERY_LENGTH:
-        sanitized = sanitized[:MAX_QUERY_LENGTH]
+    if len(sanitized) > max_length:
+        sanitized = sanitized[:max_length]
 
     return sanitized.strip()
 

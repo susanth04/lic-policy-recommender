@@ -219,6 +219,140 @@ class LLMClient:
 
         raise LLMError(f"Unsupported LLM provider: {self.provider}")
 
+    def chat(
+        self,
+        messages: list,
+        system_prompt: Optional[str] = None,
+        timeout_budget: Optional[float] = None
+    ) -> str:
+        """Execute chat completion with a hard total deadline across all retries."""
+        if not self.enabled:
+            raise LLMError("LLM layer is disabled (ENABLE_LLM=false)")
+
+        budget = timeout_budget if timeout_budget is not None else max(self.total_timeout, 4.0)
+        start_time = time.monotonic()
+        self._check_and_increment_cap()
+
+        last_error = None
+        max_attempts = 2
+
+        for attempt in range(max_attempts):
+            elapsed = time.monotonic() - start_time
+            remaining = budget - elapsed
+            if remaining <= 0.1:
+                raise LLMTimeoutError(f"LLM total deadline of {budget}s exceeded")
+
+            try:
+                t0 = time.monotonic()
+                response_text = self._call_provider_chat(
+                    system_prompt=system_prompt or "",
+                    messages=messages,
+                    timeout_seconds=remaining
+                )
+                latency = time.monotonic() - t0
+                logger.info(
+                    "LLM chat completion successful (attempt=%d, latency=%.3fs, provider=%s)",
+                    attempt + 1, latency, self.provider
+                )
+                return response_text
+            except LLMTimeoutError:
+                raise
+            except Exception as exc:
+                last_error = exc
+                logger.warning("LLM provider chat error (attempt %d): %s", attempt + 1, exc)
+                elapsed = time.monotonic() - start_time
+                remaining = budget - elapsed
+                if attempt < max_attempts - 1 and remaining > 0.4:
+                    time.sleep(min(0.2, remaining / 2))
+                else:
+                    break
+
+        raise LLMError(f"LLM chat completion failed: {last_error}")
+
+    def _call_provider_chat(
+        self,
+        system_prompt: str,
+        messages: list,
+        timeout_seconds: float
+    ) -> str:
+        """Dispatch conversational chat call to provider backend."""
+        if self.provider == "fake":
+            last_msg = messages[-1].get("content", "") if messages else ""
+            return f"Thank you for asking about LIC policies. Based on verified brochures, {last_msg[:60]} is covered under our 21 verified plans."
+
+        if self.provider == "openai":
+            if not self.api_key:
+                raise LLMError("LLM_API_KEY is required for openai provider")
+            url = "https://api.openai.com/v1/chat/completions"
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}"
+            }
+            chat_messages = []
+            if system_prompt:
+                chat_messages.append({"role": "system", "content": system_prompt})
+            for m in messages:
+                chat_messages.append({
+                    "role": m.get("role", "user"),
+                    "content": m.get("content", "")
+                })
+            payload: Dict[str, Any] = {
+                "model": self.model,
+                "temperature": 0.2,
+                "max_tokens": min(self.max_tokens * 2, 1024),
+                "messages": chat_messages
+            }
+            req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    return data["choices"][0]["message"]["content"]
+            except urllib.error.URLError as e:
+                raise LLMError(f"OpenAI connection error: {e}")
+
+        if self.provider == "gemini":
+            if not self.api_key:
+                raise LLMError("LLM_API_KEY is required for gemini provider")
+            model_name = self.model.replace("models/", "")
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={self.api_key}"
+            headers = {"Content-Type": "application/json"}
+            gemini_contents = []
+            for m in messages:
+                role = "user" if m.get("role") == "user" else "model"
+                gemini_contents.append({
+                    "role": role,
+                    "parts": [{"text": m.get("content", "")}]
+                })
+            payload: Dict[str, Any] = {
+                "contents": gemini_contents,
+                "generationConfig": {
+                    "temperature": 0.2,
+                    "maxOutputTokens": min(self.max_tokens * 2, 1024),
+                }
+            }
+            if system_prompt:
+                payload["system_instruction"] = {
+                    "parts": [{"text": system_prompt}]
+                }
+            req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    candidates = data.get("candidates", [])
+                    if not candidates:
+                        raise LLMError("Gemini returned no candidates")
+                    parts = candidates[0].get("content", {}).get("parts", [])
+                    if not parts or "text" not in parts[0]:
+                        raise LLMError("Gemini response missing text part")
+                    return parts[0]["text"]
+            except urllib.error.HTTPError as e:
+                err_body = e.read().decode("utf-8", errors="ignore")
+                raise LLMError(f"Gemini API HTTP {e.code}: {err_body}")
+            except urllib.error.URLError as e:
+                raise LLMError(f"Gemini connection error: {e}")
+
+        raise LLMError(f"Unsupported LLM provider: {self.provider}")
+
 
 class FakeLLMClient(LLMClient):
     """Deterministic mock client for unit testing timeouts, injections, and edge cases."""
@@ -226,6 +360,7 @@ class FakeLLMClient(LLMClient):
     def __init__(
         self,
         custom_handler: Optional[Callable[[str, str], str]] = None,
+        custom_chat_handler: Optional[Callable[[str, list], str]] = None,
         force_timeout: bool = False,
         sleep_delay: float = 0.0,
         daily_cap: int = 100,
@@ -233,8 +368,27 @@ class FakeLLMClient(LLMClient):
     ):
         super().__init__(provider="fake", enabled=enabled, daily_cap=daily_cap, timeout=3.0)
         self.custom_handler = custom_handler
+        self.custom_chat_handler = custom_chat_handler
         self.force_timeout = force_timeout
         self.sleep_delay = sleep_delay
+
+    def _call_provider_chat(
+        self,
+        system_prompt: str,
+        messages: list,
+        timeout_seconds: float
+    ) -> str:
+        if self.sleep_delay > 0:
+            time.sleep(self.sleep_delay)
+
+        if self.force_timeout or self.sleep_delay > timeout_seconds:
+            raise LLMTimeoutError(f"Simulated timeout: delay {self.sleep_delay}s exceeded {timeout_seconds}s")
+
+        if self.custom_chat_handler:
+            return self.custom_chat_handler(system_prompt, messages)
+
+        last_msg = messages[-1].get("content", "") if messages else ""
+        return f"Brochure-verified info regarding: {last_msg[:80]}. For instance, LIC's Tech Term (Plan 954) offers pure-risk cover for ages 18-65."
 
     def _call_provider(
         self,

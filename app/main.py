@@ -184,6 +184,8 @@ def _clean(val):
 @app.get("/pipeline", include_in_schema=False)
 @app.get("/report", include_in_schema=False)
 @app.get("/account", include_in_schema=False)
+@app.get("/chat", include_in_schema=False)
+@app.get("/policy-chat", include_in_schema=False)
 @app.get("/policies-catalog", include_in_schema=False)
 def dashboard():
     # Serve from model_out for now (HTML references relative paths there)
@@ -258,6 +260,26 @@ def metadata():
             "Validation metrics reflect agreement with evaluation rubric on unseen groups, not real-world quality.",
         ),
     }
+
+
+class ChatRequest(BaseModel):
+    message: str = Field(..., min_length=1, max_length=1000)
+    history: list[dict] = Field(default_factory=list)
+    policy_id: Optional[str] = None
+
+
+@app.post("/chat")
+def chat(body: ChatRequest, request: Request):
+    """Interactive policy assistant chat grounded in the 21 verified LIC policies."""
+    _rate_limit(request, limit=60)
+    from app.policy_chat import chat_about_policies
+    logger.info("POST /chat: message_len=%d, history_turns=%d", len(body.message), len(body.history))
+    return chat_about_policies(
+        llm_client=llm_client,
+        message=body.message,
+        history=body.history,
+        policy_id_filter=body.policy_id
+    )
 
 
 @app.get("/policies")

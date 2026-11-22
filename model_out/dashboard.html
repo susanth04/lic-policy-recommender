@@ -17,6 +17,7 @@
         <a href="#pipeline" data-view="pipeline">Pipeline</a>
         <a href="#report" data-view="report">Report</a>
         <a href="#policies" data-view="policies">Verified Plans (21)</a>
+        <a href="#chat" data-view="chat" id="nav-chat">Policy Chat</a>
         <a href="#account" data-view="account" id="nav-account">Account</a>
       </nav>
       <p class="service-state" id="service-state" role="status">Checking API...</p>
@@ -425,6 +426,59 @@
           <p class="disclaimer" style="margin-top:0.75rem;">Deleting removes all stored profile attributes, query history, and your session. This cannot be undone.</p>
         </section>
       </section>
+
+      <!-- POLICY CHAT SCREEN -->
+      <section class="view" id="chat-view" data-screen="chat" aria-labelledby="chat-title" hidden>
+        <div class="page-heading">
+          <p class="page-kicker">Interactive Decision Support</p>
+          <h1 id="chat-title">Chat with LIC Policy Assistant</h1>
+          <p>Ask questions about any of the 21 verified LIC policies, compare plans, explore entry age and sum assured limits, or check suitability.</p>
+        </div>
+
+        <div class="chat-container">
+          <!-- Suggestion pills -->
+          <div class="chat-suggestions">
+            <span class="chat-suggestions-label">Try Asking:</span>
+            <button type="button" class="chat-prompt-pill" data-prompt="Can a 25-year-old buy Jeevan Umang?">Can a 25-yr-old buy Jeevan Umang?</button>
+            <button type="button" class="chat-prompt-pill" data-prompt="Compare Tech Term (Plan 954) vs Yuva Term (Plan 875)">Tech Term vs Yuva Term</button>
+            <button type="button" class="chat-prompt-pill" data-prompt="What are the key benefits of Jeevan Labh Plan 736?">Benefits of Jeevan Labh (736)</button>
+            <button type="button" class="chat-prompt-pill" data-prompt="Which policy has the lowest minimum entry age?">Lowest entry age plan?</button>
+            <button type="button" class="chat-prompt-pill" data-prompt="Are returns in LIC New Bima Jyoti guaranteed?">Are Bima Jyoti returns guaranteed?</button>
+          </div>
+
+          <!-- Chat messages stream -->
+          <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+            <div class="chat-bubble chat-bubble-assistant">
+              <div class="chat-avatar">AI</div>
+              <div class="chat-content">
+                <p>Hello! I am your <strong>LIC Policy Decision Assistant</strong>. I am grounded directly in the official brochures of our 21 verified policies.</p>
+                <p>Feel free to ask about eligibility conditions, compare coverage options, or click any suggestion above.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cited policies preview drawer -->
+          <div class="chat-cited-container" id="chat-cited-container" hidden>
+            <div class="chat-cited-header">Mentioned Verified Plans:</div>
+            <div class="chat-cited-list" id="chat-cited-list"></div>
+          </div>
+
+          <!-- Input form -->
+          <form class="chat-input-form" id="chat-form">
+            <textarea
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask anything about LIC policies, rules, and benefits (e.g. minimum sum assured for Digi Term)..."
+              rows="2"
+              required
+            ></textarea>
+            <button type="submit" class="run-button chat-send-button" id="chat-send-btn">
+              <span>Send</span>
+            </button>
+          </form>
+          <p class="helper chat-disclaimer">Academic prototype for transparent exploration. Not financial or insurance advice. Always verify with official brochures.</p>
+        </div>
+      </section>
     </main>
 
     <script>
@@ -444,7 +498,7 @@
       let identificationRequest = 0;
 
       // ---- Account / Profile memory helpers --------------------------------
-      const VIEWS = ["query", "pipeline", "report", "policies", "account"];
+      const VIEWS = ["query", "pipeline", "report", "policies", "chat", "account"];
       const TOKEN_KEY = "lic_device_token";
 
       function getToken() { return localStorage.getItem(TOKEN_KEY) || null; }
@@ -1273,6 +1327,178 @@
           tbody.innerHTML = '<tr><td colspan="7">Failed to load verified policies table. Ensure API is running.</td></tr>';
         }
       }
+
+      // ---- AI Policy Chat Controller --------------------------------------
+      let chatHistory = [];
+      const chatMessagesContainer = document.getElementById("chat-messages");
+      const chatForm = document.getElementById("chat-form");
+      const chatInput = document.getElementById("chat-input");
+      const chatSendBtn = document.getElementById("chat-send-btn");
+      const chatCitedContainer = document.getElementById("chat-cited-container");
+      const chatCitedList = document.getElementById("chat-cited-list");
+
+      // Auto-resize textarea as user types
+      chatInput.addEventListener("input", () => {
+        chatInput.style.height = "auto";
+        chatInput.style.height = Math.min(chatInput.scrollHeight, 140) + "px";
+      });
+
+      // Submit on Enter (unless Shift is pressed)
+      chatInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          chatForm.requestSubmit();
+        }
+      });
+
+      // Quick prompt pills
+      for (const btn of document.querySelectorAll(".chat-prompt-pill")) {
+        btn.addEventListener("click", () => {
+          const prompt = btn.getAttribute("data-prompt");
+          if (prompt) {
+            chatInput.value = prompt;
+            chatForm.requestSubmit();
+          }
+        });
+      }
+
+      function appendChatMessage(role, text) {
+        const bubble = document.createElement("div");
+        bubble.className = `chat-bubble chat-bubble-${role}`;
+
+        const avatar = document.createElement("div");
+        avatar.className = "chat-avatar";
+        avatar.textContent = role === "user" ? "You" : "AI";
+
+        const content = document.createElement("div");
+        content.className = "chat-content";
+
+        // Format paragraphs and bullets safely
+        const lines = text.split("\n");
+        let currentUl = null;
+
+        for (const rawLine of lines) {
+          const line = rawLine.trim();
+          if (!line) {
+            currentUl = null;
+            continue;
+          }
+
+          if (line.startsWith("• ") || line.startsWith("- ") || line.startsWith("* ")) {
+            if (!currentUl) {
+              currentUl = document.createElement("ul");
+              content.appendChild(currentUl);
+            }
+            const li = document.createElement("li");
+            li.textContent = line.replace(/^[•\-\*]\s*/, "");
+            currentUl.appendChild(li);
+          } else {
+            currentUl = null;
+            const p = document.createElement("p");
+            p.textContent = line;
+            content.appendChild(p);
+          }
+        }
+
+        bubble.appendChild(avatar);
+        bubble.appendChild(content);
+        chatMessagesContainer.appendChild(bubble);
+        chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+        return bubble;
+      }
+
+      function showTypingIndicator() {
+        const bubble = document.createElement("div");
+        bubble.className = "chat-bubble chat-bubble-assistant";
+        bubble.id = "chat-typing-bubble";
+
+        const avatar = document.createElement("div");
+        avatar.className = "chat-avatar";
+        avatar.textContent = "AI";
+
+        const content = document.createElement("div");
+        content.className = "chat-content";
+
+        const typing = document.createElement("div");
+        typing.className = "chat-typing";
+        typing.innerHTML = '<span class="chat-typing-dot"></span><span class="chat-typing-dot"></span><span class="chat-typing-dot"></span>';
+
+        content.appendChild(typing);
+        bubble.appendChild(avatar);
+        bubble.appendChild(content);
+        chatMessagesContainer.appendChild(bubble);
+        chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const indicator = document.getElementById("chat-typing-bubble");
+        if (indicator) indicator.remove();
+      }
+
+      function updateCitedPolicies(cited) {
+        if (!cited || !cited.length) {
+          chatCitedContainer.hidden = true;
+          return;
+        }
+        chatCitedList.replaceChildren();
+        for (const p of cited) {
+          const card = document.createElement("a");
+          card.className = "chat-cited-card";
+          card.href = p.brochure_url || "#";
+          card.target = "_blank";
+          card.rel = "noopener";
+          card.innerHTML = `<strong>${p.policy_name}</strong> (Plan ${p.plan_number}) · ${p.category} <span style="color:var(--color-accent);font-weight:600;">Brochure ↗</span>`;
+          chatCitedList.appendChild(card);
+        }
+        chatCitedContainer.hidden = false;
+      }
+
+      chatForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const msg = chatInput.value.trim();
+        if (!msg) return;
+
+        chatInput.value = "";
+        chatInput.style.height = "auto";
+        chatSendBtn.disabled = true;
+
+        appendChatMessage("user", msg);
+        showTypingIndicator();
+
+        try {
+          const resp = await fetch("/chat", {
+            method: "POST",
+            headers: authHeaders(),
+            body: JSON.stringify({
+              message: msg,
+              history: chatHistory.slice(-6)
+            })
+          });
+
+          removeTypingIndicator();
+
+          if (!resp.ok) {
+            const err = await safeJson(resp);
+            appendChatMessage("assistant", `I encountered an issue connecting to the policy assistant: ${err.detail || "Please try again."}`);
+            return;
+          }
+
+          const data = await resp.json();
+          appendChatMessage("assistant", data.reply);
+          chatHistory.push({ role: "user", content: msg });
+          chatHistory.push({ role: "assistant", content: data.reply });
+
+          if (data.cited_policies && data.cited_policies.length) {
+            updateCitedPolicies(data.cited_policies);
+          }
+        } catch (err) {
+          removeTypingIndicator();
+          appendChatMessage("assistant", "Network error: Unable to contact policy assistant service.");
+        } finally {
+          chatSendBtn.disabled = false;
+          chatInput.focus();
+        }
+      });
 
       // Multi-page routing: read pathname first (e.g. /account), fallback to hash (#account)
       const pathRoute = location.pathname.replace(/^\//, "");

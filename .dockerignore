@@ -11,3 +11,5 @@ deploy
 tests
 *.db
 *.log
+*.safetensors
+model_out/models
